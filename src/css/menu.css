@@ -1,0 +1,45 @@
+.menu{
+    justify-content: center;
+    top: 0px;
+    z-index: 11;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    transition: all 0.5s ease-in-out;
+    position: fixed;
+}
+
+.displayflex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.div-left{
+    width: 20%;
+}
+.logodiv{
+    height: 100%;
+    object-fit: cover;
+}
+.logoimg{
+    transition: all 0.5s ease-in-out;
+
+}
+
+.div-right{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-weight: 700;
+}
+
+.bottomborder{
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+.encapsulament{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

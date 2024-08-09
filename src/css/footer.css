@@ -1,0 +1,8 @@
+.mainfooter{
+    height: 400px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}

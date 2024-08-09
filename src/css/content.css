@@ -1,0 +1,128 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 2%;
+    font-family: 'Roboto';
+    align-items: center;
+}
+
+.adas{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.llista li{
+    margin-bottom: 2%;
+}
+.llista{
+    padding: 0;
+    margin:0;
+}
+
+.primer{
+    box-shadow: rgba(0, 0, 0, 0.35) 5px 10px 15px;
+    width: 50%;
+    padding: 3%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+    width: 30%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.textinferior{
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    text-align: justify;
+}
+
+.primerdiv{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #eeeeee;
+
+}
+
+.leftside{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.titols{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    display: flex;
+}
+.titol{
+    font-size: 25px;
+    font-weight: bold;
+    color:black;
+    display: flex;
+    margin-top:5%;
+
+
+}
+.quadrats{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 3%;
+
+}
+.primerquadrat{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+.divicona{
+    width: 20%;
+}
+.icona{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.subtext{
+    text-align: center;
+    display: flex;
+    color:black;
+    margin-top: 7%;
+    height: 100px;
+
+}
+
+.segonslider{
+    width: 100%;
+    
+}
+
+.segondiv{
+    width: 100%;
+    overflow: hidden;
+    height: 500px;
+    background-color: black;
+    position: relative;
+
+}
+
+.fotomercedes{
+
+    object-fit: contain;
+    width: 100%;
+    opacity: 0.4;
+}

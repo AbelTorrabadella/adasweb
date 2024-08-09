@@ -1,0 +1,53 @@
+.textportada{
+    position: absolute;
+    /* top: 0; */
+    z-index: 10;
+    color: black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
+    justify-content: center;
+}
+
+.spantext{
+    font-size: 45px;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+.textpetit{
+    text-align: center;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    font-size: 20px;
+}
+.hora{
+    display: block;
+    height: 20px;
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    padding: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid white;
+    border-color: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 10px;
+}
+
+.hora:hover{
+    border: 2px solid white;
+    color:#8db8ca;
+    background-color: transparent;
+
+}
