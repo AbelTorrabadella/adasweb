@@ -29,6 +29,7 @@ const Slider2 = (props) => {
             return (
                 <SwiperSlide className='swiper2'>
                     <img src={imatge.foto} className='sliderfoto2'></img>
+                    <div className='titols2'>{imatge.titol}</div>
                 </SwiperSlide>
             )
         })}

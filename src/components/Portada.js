@@ -37,7 +37,7 @@ function Portada() {
     <div>
       <div className="slider">
       <video loop autoPlay muted style={{width:"100%"}}>       
-        <source src={require('../img/video2.mp4')} type="video/mp4" />
+        <source src={require('../img/video3.mp4')} type="video/mp4" />
       </video>
       </div>
       <div className="textportada" style={{left:dreta, opacity:opacitat}}>

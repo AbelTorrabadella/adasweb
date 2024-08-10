@@ -8,11 +8,17 @@ import durabilitat from "../img/durabilitat.png"
 import seguretat from "../img/escut.png"
 import fiabilitat from "../img/fiabilitat.png"
 import normes from "../img/normas.png"
-import mercedes from "../img/mercedes.jpg"
+import mercedes from "../img/mercedes.png"
 import golf from "../img/golf.jpeg"
-import golf2 from "../img/golf2.jpeg"
-
-
+import byd from "../img/byd.png"
+import Slider from './Slider';
+import three from "../img/360.jpg"
+import radars from "../img/radars.jpeg";
+import carretera from "../img/carretera.jpeg"
+import texa from "../img/texa.png"
+import sensor from "../img/sensor.png"
+import camera from "../img/camera.png"
+import radar from "../img/radar.png"
 function Content(props) {
     const slides = [
         {foto: foto1},
@@ -20,6 +26,11 @@ function Content(props) {
         {foto: foto3},
 
       ]
+    const slides2 = [
+        {foto: carretera, titol:""},
+        {foto: three, titol:""},
+        {foto: byd, titol:""},
+    ]
       const handleScroll = () => {
         const position = window.pageYOffset;
         setScrollPosition(position);
@@ -112,27 +123,47 @@ function Content(props) {
             </div>
         </div>
         <div className='segondiv' style={{marginTop:"3%"}}>
-            <img className='fotomercedes' src={golf}></img>
-            <div className='titols' 
-            style={{
-                position:"absolute", 
-                display:"flex",
-                alignItems:"center",
-                justifyContent:"center",
-                color:"white",
-                top:"0",
-                bottom:"0",
-                left:"0",
-                right:"0",
-                fontSize:"50px"
-            }}
-            
-            
-            >TALLER CERTIFICAT TEXA</div>
-
+            <Slider2 className="slider2" imatges={slides2}></Slider2>
         </div>
-        <div className='tercerdiv' style={{marginTop:"3%"}}>
-            <div className='titols'>MARQUES AMB LES QUE TREBALLEM</div>
+        <div className='tercerdiv' style={{marginTop:"3%", alignItems:"center", display:"flex", flexDirection:"column"}}>
+            <div className='titols' style={{backgroundColor:"black", width:"100%", marginBottom:"3%", color:"white"}}>TIPUS DE SISTEMES</div>
+            <div style={{display:"flex", alignItems:"center", justifyContent:"space-evenly", width:"100%"}}>
+                <div className='tipus1'>
+                    <div>
+                        <img src={camera} className='tipussensors'></img>
+                    </div>
+                    <div>
+                        <div className='titolssensors'>CÀMERAS</div>
+                        <div>Les càmeres en els cotxes són utilitzades per capturar imatges visuals del seu entorn. Això inclou altres vehicles, senyals de trànsit, vianants i marques vials.</div>
+                    </div>
+
+                </div>
+
+                <div className='tipus1'>
+                    <div>
+                        <img src={sensor} className='tipussensors' ></img>
+                    </div>
+                    <div>
+                        <div className='titolssensors'>SENSORS</div>
+                        <div>Els cotxes actuals estan plens de sensors, però si ens referim als </div>
+                    </div>
+
+
+                </div>
+
+                <div className='tipus1'>
+                    <div>
+                        <img src={radar} className='tipussensors'></img>
+                    </div>
+                    <div>
+                        <div className='titolssensors'>RADARS I LIDARS</div>
+                        <div>Els radars mesuren la distància, velocitat i direcció d'objectes propers utilitzant ones de ràdio.</div>
+                        <div>Mentre que el lidar utilitza làsers per crear una imatge 3D de l'entorn, mesurant amb precisió la distància a objectes.</div>
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
