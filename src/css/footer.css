@@ -1,8 +1,87 @@
 .mainfooter{
-    height: 400px;
+    height: 500px;
     width: 100%;
     align-items: center;
     display: flex;
     justify-content: center;
-    background-color: black;
+    flex-direction: column;
+    background: rgb(26, 26, 26);
+}
+
+.topside{
+    height: 400px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.botside{
+    height: 100px;
+    align-items: center;
+    width: 80%;
+    color: #fffef2;
+    justify-content: right;
+    display: flex;
+
+}
+
+.ralla{
+    background-color: #fffef2;
+    height: 1px;
+}
+
+.ralla2{
+    height: 200px;
+    width: 1px;
+    background-color: #fffef2;
+}
+
+.divfooter{
+    color: #fffef2;
+    text-align: justify;
+    width: 20%;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+}
+
+.divfooter2{
+    color: #fffef2;
+    text-align: center;
+    width: 20%;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.divicons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+}
+
+
+.icons{
+    width: 50px  !important;
+    height: 50px !important;
+    cursor: pointer;
+}
+
+.titolsfooter{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.espaiat2{
+    margin-left: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }

@@ -45,7 +45,7 @@ function Portada() {
         <span className="textpetit">
             A la Planxisteria oferim serveis de planxa i pintura, així com la calibració de sistemes ADAS per garantir la seguretat i eficiència del teu vehicle.
         </span>
-      <div style={{display:"flex", justifyContent:"center"}}>
+      <div style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
         <div className="hora" onClick={() => {navigate('contacte')}}>DEMANA HORA</div>
       </div>
       </div>

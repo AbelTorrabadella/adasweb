@@ -48,11 +48,14 @@
     color:rgb(0, 0, 0);
     background-color: white;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .hora:hover{
     border: 2px solid white;
-    color:#8db8ca;
+    color:#000000;
     background-color: transparent;
+    font-size: 20px;
 
 }

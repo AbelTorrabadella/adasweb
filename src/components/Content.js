@@ -31,7 +31,7 @@ function Content(props) {
         {foto: three, titol:""},
         {foto: byd, titol:""},
     ]
-      const handleScroll = () => {
+    const handleScroll = () => {
         const position = window.pageYOffset;
         setScrollPosition(position);
     };
@@ -48,6 +48,7 @@ function Content(props) {
     const [opacitat, setOpacitat] = useState("0")
     const [opacitat1, setOpacitat1] = useState("0")
     const [opacitat2, setOpacitat2] = useState("0")
+    const [AmpladaRalla3, setAmpladaRalla3] = useState("0")
 
     useEffect(() => {
         if (scrollPosition > 500) {
@@ -59,6 +60,9 @@ function Content(props) {
             setOpacitat1('1');
         }
 
+        if (scrollPosition > 1900) {
+            setAmpladaRalla3('80%');
+        }
       }, [scrollPosition]);
 
     return (
@@ -125,11 +129,12 @@ function Content(props) {
         <div className='segondiv' style={{marginTop:"3%"}}>
             <Slider2 className="slider2" imatges={slides2}></Slider2>
         </div>
-        <div className='tercerdiv' style={{marginTop:"3%", alignItems:"center", display:"flex", flexDirection:"column"}}>
-            <div className='titols' style={{backgroundColor:"black", width:"100%", marginBottom:"3%", color:"white"}}>TIPUS DE SISTEMES</div>
+        <div className='ralla3' style={{width:AmpladaRalla3}}></div>
+        <div className='tercerdiv' style={{ alignItems:"center", display:"flex", flexDirection:"column"}}>
+            <div className='titols' style={{width:"80%", marginBottom:"3%"}}>TIPUS DE SISTEMES</div>
             <div style={{display:"flex", alignItems:"center", justifyContent:"space-evenly", width:"100%"}}>
                 <div className='tipus1'>
-                    <div>
+                    <div className='divnegre'>
                         <img src={camera} className='tipussensors'></img>
                     </div>
                     <div>
@@ -139,11 +144,11 @@ function Content(props) {
 
                 </div>
 
-                <div className='tipus1'>
-                    <div>
-                        <img src={sensor} className='tipussensors' ></img>
+                <div className='tipus1' style={{background:"#1a1a1a"}}>
+                    <div className='divnegre' style={{backgroundColor:"white"}}>
+                        <img src={sensor} style={{filter:"none"}} className='tipussensors' ></img>
                     </div>
-                    <div>
+                    <div style={{color:"white"}}>
                         <div className='titolssensors'>SENSORS</div>
                         <div>Els cotxes actuals estan plens de sensors, però si ens referim als </div>
                     </div>
@@ -152,7 +157,7 @@ function Content(props) {
                 </div>
 
                 <div className='tipus1'>
-                    <div>
+                    <div className='divnegre'>
                         <img src={radar} className='tipussensors'></img>
                     </div>
                     <div>
@@ -166,11 +171,8 @@ function Content(props) {
             </div>
 
         </div>
+        <div className='ralla3' style={{width:AmpladaRalla3}}></div>
 
-        <div className='quartdiv' style={{marginTop:"3%"}}>
-            <div className='titols'>PER QUÈ TRIAR-NOS?</div>
-
-        </div>
     </div>
 )
 }
