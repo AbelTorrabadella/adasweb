@@ -10,9 +10,10 @@
 
 .adas{
     display: flex;
-    width: 100%;
+    width: 80%;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin-bottom: 5%;
 }
 .llista li{
     margin-bottom: 2%;
@@ -24,16 +25,19 @@
 
 .primer{
     box-shadow: rgba(0, 0, 0, 0.35) 5px 10px 15px;
-    width: 50%;
-    padding: 3%;
+    padding: 5%;
     justify-content: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 5%;
-    width: 30%;
-    height: 200px;
     border-radius: 10px;
+    height: 250px;
+    
+}
+
+.primergrid{
+    height: 100%;
 }
 
 .textinferior{
@@ -83,13 +87,14 @@
 
 }
 .primerquadrat{
-    width: 20%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 300px;
 }
+
 .divicona{
     width: 20%;
 }
@@ -151,12 +156,13 @@
 }
 
 .tipus1{
-    width: 20%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
+    width: 75%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px !important;
     height: 500px;
     border-radius: 10px;
     padding: 2%;
     text-align: center;
+    justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;

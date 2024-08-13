@@ -19,6 +19,12 @@ import texa from "../img/texa.png"
 import sensor from "../img/sensor.png"
 import camera from "../img/camera.png"
 import radar from "../img/radar.png"
+
+import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+
 function Content(props) {
     const slides = [
         {foto: foto1},
@@ -65,64 +71,96 @@ function Content(props) {
         }
       }, [scrollPosition]);
 
+      const Item = styled(Paper)(({ theme }) => ({
+
+      }));
     return (
     <div className="content">
         <div className='adas'>
-            <div className='primer'  style={{opacity:opacitat, transition:"all 0.5s ease-in-out"}}>
-                <div className='titols' style={{justifyContent:"center"}}>QUÈ SON ELS SISTEMES ADAS?</div>
-                <span className='textinferior'>
-                    Els sistemes d'Assistència Avançada al Conductor (ADAS) milloren la seguretat i l'eficiència dels vehicles. <br></br>Inclouen funcions com el control de creuer adaptatiu i l'assistència de manteniment de carril, que redueixen el risc d'accidents i proporcionen una conducció més còmoda i confiable.
-                </span>
-            </div>
+        <Grid container spacing={2}>
+            <Grid item xs={12} md={6} xl={6}>
+                <Item>
+                    <div className='primer'  style={{opacity:opacitat, transition:"all 0.5s ease-in-out"}}>
+                        <div className='titols' style={{justifyContent:"center"}}>QUÈ SON ELS SISTEMES ADAS?</div>
+                        <span className='textinferior'>
+                            Els sistemes d'Assistència Avançada al Conductor (ADAS) milloren la seguretat i l'eficiència dels vehicles. <br></br>Inclouen funcions com el control de creuer adaptatiu i l'assistència de manteniment de carril, que redueixen el risc d'accidents i proporcionen una conducció més còmoda i confiable.
+                        </span>
+                    </div>
+                </Item>
+            </Grid>
 
-            <div className='primer'  style={{opacity:opacitat2, transition:"all 1s ease-in-out"}}>
-                <div className='titols' style={{justifyContent:"center"}}>QUAN CAL CALIBRAR ELS SISTEMES ADAS?</div>
-                <span className='textinferior' style={{textAlign:"justify"}}>
-                    <ul style={{fontWeight:'bold'}} className='llista'>
-                        <li>Després de Reemplaçar el Parabrisa</li>
-                        <li>Després de Reparacions a la Suspensió o Direcció</li>
-                        <li>Després d'un Accident</li>
-                        <li>Després de Reemplaçar o Reparar els Para-xocs</li>
-                        <li>Quan Apareixen Advertències al Panell de Control</li>
-                        <li>Revisió Periòdica</li>
-
-                    </ul>
-                </span>
-            </div>
-
-        </div> 
+            <Grid item xs={12} md={6} xl={6}>
+                <Item>
+                    <div className='primer'  style={{opacity:opacitat2, transition:"all 1s ease-in-out"}}>
+                        <div className='titols' style={{justifyContent:"center"}}>QUAN CAL CALIBRAR ELS SISTEMES ADAS?</div>
+                        <span className='textinferior' style={{textAlign:"justify"}}>
+                            <ul style={{fontWeight:'bold'}} className='llista'>
+                                <li>Després de Reemplaçar el Parabrisa</li>
+                                <li>Després de Reparacions a la Suspensió o Direcció</li>
+                                <li>Després d'un Accident</li>
+                                <li>Després de Reemplaçar o Reparar els Para-xocs</li>
+                                <li>Quan Apareixen Advertències al Panell de Control</li>
+                                <li>Revisió Periòdica</li>
+                            </ul>
+                        </span>
+                    </div>
+                    </Item>
+            </Grid>
+        </Grid>
+        </div>
         <div className='primerdiv'>
             <div className='leftside'>
                 <div className='titols' style={{display:"flex", justifyContent:"center", opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>PERQUE CAL CALIBRAR ELS SENSORS I RADARS DEL TEU COTXE?</div>
                 <div style={{display:"flex"}} className='quadrats'>
-                    <div className='primerquadrat' style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
-                        <div className='divicona'><img className='icona' src={seguretat}></img></div>
-                        <div className='titol'>SEGURETAT</div>
-                        <div className='subtext'>
-                            Els sistemes ADAS milloren la seguretat activa del vehicle evitant accidents amb funcions com el manteniment de carril i la frenada automàtica. Una mala calibració pot causar respostes inadequades en situacions de risc.                        </div>
-                    </div>
-                    <div className='primerquadrat' style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
-                        <div className='divicona'><img className='icona' src={fiabilitat}></img></div>
-                        <div className='titol'>FIABILITAT</div>
-                        <div className='subtext'>
-                            La precisió dels sensors i radars és essencial per detectar obstacles i vehicles amb exactitud, evitant falses alarmes i garantint una resposta adequada en temps real.
+                <Grid container spacing={2} style={{display:"flex", justifyContent:"center"}}>
+                    <Grid item xs={12} md={5} xl={3}>
+                        <Item  style={{ backgroundColor:"transparent", boxShadow:"none"}}>
+                        <div className='primerquadrat' style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
+                            <div className='divicona'><img className='icona' src={seguretat}></img></div>
+                            <div className='titol'>SEGURETAT</div>
+                            <div className='subtext'>
+                                Els sistemes ADAS milloren la seguretat activa del vehicle evitant accidents amb funcions com el manteniment de carril i la frenada automàtica. Una mala calibració pot causar respostes inadequades en situacions de risc.                        </div>
                         </div>
-                    </div>
-                    <div className='primerquadrat' style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
-                        <div className='divicona'><img className='icona' src={normes}></img></div>
-                        <div className='titol'>COMPLIMENT DE NORMES</div>
-                        <div className='subtext'>
-                            Les normatives de seguretat viària exigeixen que els sistemes ADAS funcionin correctament. Sensors descalibrats poden implicar sancions i responsabilitats legals en cas d'accident.
-                        </div>
-                    </div>
-                    <div className='primerquadrat' style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
-                        <div className='divicona'><img className='icona' src={durabilitat}></img></div>
+                        </Item>
+                    </Grid>
 
-                        <div className='titol'>DURABILITAT I EFICIÈNCIA</div>
-                        <div className='subtext'>
-                            Una bona calibració assegura una major vida útil dels components del vehicle i contribueix a un consum de combustible més eficient gràcies a sistemes com el control de creuer adaptatiu.
+                    <Grid item xs={12} md={5} xl={3}>
+                        <Item style={{ backgroundColor:"transparent", boxShadow:"none"}}>
+                        <div className='primerquadrat' style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
+                            <div className='divicona'><img className='icona' src={fiabilitat}></img></div>
+                            <div className='titol'>FIABILITAT</div>
+                            <div className='subtext'>
+                                La precisió dels sensors i radars és essencial per detectar obstacles i vehicles amb exactitud, evitant falses alarmes i garantint una resposta adequada en temps real.
+                            </div>
                         </div>
-                </div>
+                        </Item>
+                    </Grid>
+                    
+                    <Grid item xs={12} md={5} xl={3}>
+                        <Item style={{ backgroundColor:"transparent", boxShadow:"none"}}>
+                        <div className='primerquadrat' style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
+                            <div className='divicona'><img className='icona' src={normes}></img></div>
+                            <div className='titol'>COMPLIMENT DE NORMES</div>
+                            <div className='subtext'>
+                                Les normatives de seguretat viària exigeixen que els sistemes ADAS funcionin correctament. Sensors descalibrats poden implicar sancions i responsabilitats legals en cas d'accident.
+                            </div>
+                        </div>
+                        </Item>
+                    </Grid>
+                    
+                    <Grid item xs={12} md={5} xl={3}>
+                        <Item style={{ backgroundColor:"transparent", boxShadow:"none"}}>
+                        <div className='primerquadrat' style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
+                            <div className='divicona'><img className='icona' src={durabilitat}></img></div>
+                            <div className='titol'>DURABILITAT I EFICIÈNCIA</div>
+                            <div className='subtext'>
+                                Una bona calibració assegura una major vida útil dels components del vehicle i contribueix a un consum de combustible més eficient gràcies a sistemes com el control de creuer adaptatiu.
+                            </div>
+                        </div>
+                        </Item>
+                    </Grid>
+                </Grid>
+                    
             </div>
             </div>
         </div>
@@ -131,42 +169,57 @@ function Content(props) {
         </div>
         <div className='ralla3' style={{width:AmpladaRalla3}}></div>
         <div className='tercerdiv' style={{ alignItems:"center", display:"flex", flexDirection:"column"}}>
+
             <div className='titols' style={{width:"80%", marginBottom:"3%"}}>TIPUS DE SISTEMES</div>
             <div style={{display:"flex", alignItems:"center", justifyContent:"space-evenly", width:"100%"}}>
-                <div className='tipus1'>
-                    <div className='divnegre'>
-                        <img src={camera} className='tipussensors'></img>
-                    </div>
-                    <div>
-                        <div className='titolssensors'>CÀMERAS</div>
-                        <div>Les càmeres en els cotxes són utilitzades per capturar imatges visuals del seu entorn. Això inclou altres vehicles, senyals de trànsit, vianants i marques vials.</div>
-                    </div>
 
-                </div>
+            <Grid container spacing={2} style={{width:"80%"}}>
+            <Grid item xs={12} md={4} xl={4}>
+                <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none"}}>
+                    <div className='tipus1'>
+                        <div className='divnegre'>
+                            <img src={camera} className='tipussensors'></img>
+                        </div>
+                        <div>
+                            <div className='titolssensors'>CÀMERAS</div>
+                            <div>Les càmeres en els cotxes són utilitzades per capturar imatges visuals del seu entorn. Això inclou altres vehicles, senyals de trànsit, vianants i marques vials.</div>
+                        </div>
 
-                <div className='tipus1' style={{background:"#1a1a1a"}}>
-                    <div className='divnegre' style={{backgroundColor:"white"}}>
-                        <img src={sensor} style={{filter:"none"}} className='tipussensors' ></img>
-                    </div>
-                    <div style={{color:"white"}}>
-                        <div className='titolssensors'>SENSORS</div>
-                        <div>Els cotxes actuals estan plens de sensors, però si ens referim als </div>
                     </div>
 
+                </Item>
+            </Grid>
 
-                </div>
-
-                <div className='tipus1'>
-                    <div className='divnegre'>
-                        <img src={radar} className='tipussensors'></img>
+            <Grid item xs={12} md={4} xl={4}>
+                <Item style={{ display:"flex", justifyContent:"center",boxShadow:"none"}}>
+                    <div className='tipus1' style={{background:"#1a1a1a"}}>
+                        <div className='divnegre' style={{backgroundColor:"white"}}>
+                            <img src={sensor} style={{filter:"none"}} className='tipussensors' ></img>
+                        </div>
+                        <div style={{color:"white"}}>
+                            <div className='titolssensors'>SENSORS</div>
+                            <div>Els cotxes actuals estan plens de sensors, però si ens referim als </div>
+                        </div>
                     </div>
-                    <div>
-                        <div className='titolssensors'>RADARS I LIDARS</div>
-                        <div>Els radars mesuren la distància, velocitat i direcció d'objectes propers utilitzant ones de ràdio.</div>
-                        <div>Mentre que el lidar utilitza làsers per crear una imatge 3D de l'entorn, mesurant amb precisió la distància a objectes.</div>
-                    </div>
+                </Item>
+            </Grid>
+            <Grid item xs={12} md={4} xl={4}>
+                <Item style={{ display:"flex", justifyContent:"center",boxShadow:"none"}}>
+                    <div className='tipus1'>
+                        <div className='divnegre'>
+                            <img src={radar} className='tipussensors'></img>
+                        </div>
+                        <div>
+                            <div className='titolssensors'>RADARS I LIDARS</div>
+                            <div>Els radars mesuren la distància, velocitat i direcció d'objectes propers utilitzant ones de ràdio.</div>
+                            <div>Mentre que el lidar utilitza làsers per crear una imatge 3D de l'entorn, mesurant amb precisió la distància a objectes.</div>
+                        </div>
 
-                </div>
+                    </div>
+                </Item>
+            </Grid>
+            
+        </Grid>
 
             </div>
 
