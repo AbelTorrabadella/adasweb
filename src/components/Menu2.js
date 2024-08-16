@@ -26,7 +26,7 @@ function Menu2(props) {
   }, [props.clicked]);
   return (
     <div>
-        <div className="petit" style={{display:"flex",opacity:opacitatmenu, width:ampladamenu2, alignItems:"center", transition:"all 0.5s ease-in-out"}}>      
+        <div className="petit" style={{display:"flex",flexDirection:"column", opacity:opacitatmenu, width:ampladamenu2, alignItems:"center", transition:"all 0.5s ease-in-out"}}>      
         <div className="nav2" onClick={() => {navigate('treball');  props.setClicked(false)}}>
             CALIBRACIONS
         </div>

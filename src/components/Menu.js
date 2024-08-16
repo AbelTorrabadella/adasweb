@@ -31,6 +31,7 @@ function Menu(props) {
   const [ralla2, setRalla2] = useState("0%")
   const [ralla3, setRalla3] = useState("0%")
   const [ralla4, setRalla4] = useState("0%")
+  const [mobileheight, setmobileheight] = useState("55%")
   const [ampladamenu, setAmpladamenu] = useState(false)
   const [opacitatCreu, setOpacitatcreu] = useState(0)
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -79,24 +80,38 @@ function Menu(props) {
   }, []);
   useEffect(() => {
     console.log({windowSize});
+    console.log(clicked)
   }, [windowSize]);
 
   useEffect(() => {
     if (windowSize < 1000){
       setVerdader(true)
+      setAlturaMenu("55%")
+
     }
     else if (windowSize > 1000){
       setVerdader(false)
       setClicked(false)
+
     }
     else if (clicked === true){
       setVerdader(false)
       setAmpladamenu(true)
       setOpacitatcreu(1)
     }
+    if (clicked === false && windowSize < 1000) { //SI NO HE OBERT EL MENU EN UN MOBIL
+      setAlturaMenu("12%")
+    }
+    if (clicked === true && windowSize < 1000) { //SI HE OBERT EL MENU EN UN MOBIL (ES IGUAL A ON)
+      setAlturaMenu("55%")
+    }
+    if (props.isPortada === true && windowSize > 1000) { //SI ES LA PORTADA PER UNA PANTALLA NORMAL SERÀ 21
+      setAlturaMenu("21%")
+    }
+    
   })
   return (
-    <div className="menu" style={{display: (props.isPortada ? "flex" : 'flex'), backgroundColor:(props.isPortada ? colorMenu : 'white'), color:(props.isPortada ? colorLletres : 'black'), height: (props.isPortada ? alturaMenu : "12%")}}>
+    <div className="menu" style={{display: (props.isPortada ? "flex" : 'flex'), backgroundColor:(props.isPortada ? colorMenu : 'white'), color:(props.isPortada ? colorLletres : 'black'), height: (alturaMenu)}}>
       <div className='displayflex' style={{width:"100%"}}>
         <div className='div-left'>
           <div className='logodiv' onClick={() => {navigate('')}}>
