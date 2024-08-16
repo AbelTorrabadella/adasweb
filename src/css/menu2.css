@@ -1,7 +1,7 @@
 .petit{
     position: absolute;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     z-index: 11;
     background: white;
     height: 100%;
@@ -23,4 +23,9 @@
     height: 100vh;
     left: 0;
     top: 100%;
+}
+
+.nav2{
+    font-size: 20px;
+    font-weight: 600;
 }
