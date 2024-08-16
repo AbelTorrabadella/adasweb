@@ -27,13 +27,13 @@ function Menu2(props) {
   return (
     <div>
         <div className="petit" style={{display:"flex",opacity:opacitatmenu, width:ampladamenu2, alignItems:"center", transition:"all 0.5s ease-in-out"}}>      
-        <div className="nav2" onClick={() => {navigate('treball')}}>
+        <div className="nav2" onClick={() => {navigate('treball');  props.setClicked(false)}}>
             CALIBRACIONS
         </div>
-        <div className="nav2" onClick={() => {navigate('tipus')}}>TIPUS D'ADAS</div>
-        <div className="nav2" onClick={() => {navigate('faqs')}}>FAQs</div>
+        <div className="nav2" onClick={() => {navigate('tipus'); props.setClicked(false)}}>TIPUS D'ADAS</div>
+        <div className="nav2" onClick={() => {navigate('faqs');  props.setClicked(false)}}>FAQs</div>
         {/*<div className="" onClick={() => {navigate('localitzacio')}}>LOCALITZACIÓ</div>*/}        
-        <div className='nav2' onClick={() => {navigate('contacte')}}>CONTACTE</div>
+        <div className='nav2' onClick={() => {navigate('contacte');  props.setClicked(false)}}>CONTACTE</div>
         
         </div>
         <div className='gran' style={{opacity:opacitatgran, transition:"all 0.5s ease-in-out"}}>

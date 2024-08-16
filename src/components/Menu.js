@@ -120,9 +120,8 @@ function Menu(props) {
              cursor:"pointer"
             
             }} 
-             
              onClick={() => setClicked(false)} />
-          <Menu2 clicked={clicked}></Menu2>
+          <Menu2 clicked={clicked} setClicked={setClicked}></Menu2>
         </div>
         <div className='div-right' style={{display: verdader ? "none" : ""}}>
         <Grid container spacing={2} style={{display:"flex", alignItems:"center", justifyContent:"space-evenly"}}>
