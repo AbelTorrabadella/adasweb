@@ -32,7 +32,7 @@ function Menu(props) {
   const [ralla3, setRalla3] = useState("0%")
   const [ralla4, setRalla4] = useState("0%")
   const [ampladamenu, setAmpladamenu] = useState(false)
-
+  const [opacitatCreu, setOpacitatcreu] = useState(0)
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
       const position = window.pageYOffset;
@@ -92,6 +92,7 @@ function Menu(props) {
     else if (clicked === true){
       setVerdader(false)
       setAmpladamenu(true)
+      setOpacitatcreu(1)
     }
   })
   return (
@@ -103,11 +104,25 @@ function Menu(props) {
           </div>
         </div>
         <div style={{ display: (verdader && !clicked) ? "block" : "none", width:"30%", height:"20%"}} onClick={() => setClicked(true)}>
-          <MenuIcon style={{width:"100%", height:"100%"}}></MenuIcon>
+          <MenuIcon style={{width:"100%", height:"100%", cursor:"pointer"}}></MenuIcon>
         </div>
-        <div style={{display: clicked ? "flex":"none"}}>
-          <CloseIcon style={{display:"flex", zIndex:"12"}} onClick={() => setClicked(false)} />
-          <Menu2 ampladamenu={ampladamenu} verdader = {verdader}></Menu2>
+        <div style={{display: clicked ? "flex":"none", alignItems:"center", justifyContent:"center"}}>
+          <CloseIcon style={{
+            display:"flex",
+             zIndex:"12",
+             position:"absolute",
+             top:"15px",
+             left:"0",
+             right:"0",
+             margin:"auto",
+             transition:"all 1s ease-in-out",
+             opacity:{opacitatCreu},
+             cursor:"pointer"
+            
+            }} 
+             
+             onClick={() => setClicked(false)} />
+          <Menu2 clicked={clicked}></Menu2>
         </div>
         <div className='div-right' style={{display: verdader ? "none" : ""}}>
         <Grid container spacing={2} style={{display:"flex", alignItems:"center", justifyContent:"space-evenly"}}>
@@ -137,14 +152,14 @@ function Menu(props) {
                 </div>
                 </Item>
             </Grid>
-            <Grid item xs={12} md={2} xl={2}>
+            {/*<Grid item xs={12} md={2} xl={2}>
                 <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none", backgroundColor:"transparent"}}>
                 <div className='encapsulament' onClick={() => {navigate('localitzacio')}} onMouseEnter={() => {setRalla3(("100%"))}} onMouseLeave={()=> {setRalla3(("0%"))}}>
                   <div className="bottomborder">LOCALITZACIÓ</div>
                   <div className="ralla" style={{width:ralla3, height:"2px", backgroundColor:colorLletres, transition:"all 0.4s ease-in-out"}}></div>
                 </div>
                 </Item>
-            </Grid>
+            </Grid>*/}
             <Grid item xs={12} md={2} xl={2}>
                 <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none", backgroundColor:"transparent"}}>
                 <div className='encapsulament' onClick={() => {navigate('contacte')}} onMouseEnter={() => {setRalla4(("100%"))}} onMouseLeave={()=> {setRalla4(("0%"))}}>
