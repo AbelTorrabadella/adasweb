@@ -55,9 +55,9 @@ function Footer(props) {
     <div className="mainfooter" >
       <div className="topside">
       <Grid container spacing={2} style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
-          <Grid item xs={8} md={2} xl={2} sx={{ height: { md: '400px',xl: '400px'}}}>
-              <Item  style={{ backgroundColor:"transparent", boxShadow:"none", display:"flex", alignItems:"center"}}>
-              <div className="leftdiv2" style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
+          <Grid item xs={8} md={2} xl={2} sx={{ height: { md: '400px',xl: '400px'}}}  style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
+              <Item  style={{ backgroundColor:"transparent", boxShadow:"none"}}>
+              <div className="leftdiv2">
                 <img src={logo} style={{maxWidth:"100%"}}></img>
               </div>
               </Item>
@@ -72,14 +72,14 @@ function Footer(props) {
               </div>
               <div style={{display:"flex", alignItems:"center", justifyContent:"space-between"}}>
                 <PlaceIcon></PlaceIcon>
-                <span className="espaiat2">C/ Llobregat, 19 <br></br>(Poligon Industrial La Plana), Aviá 08610</span>
+                <span className="espaiat2">C/ Llobregat, 19 (Poligon Industrial La Plana), Aviá 08610</span>
               </div>
               <div className="titolsfooter" style={{marginTop:"50px"}}>
                   HORARI
               </div>
               <div style={{display:"flex", alignItems:"center", justifyContent:"space-between"}}>
                 <AccessAlarmIcon></AccessAlarmIcon>
-                <span className="espaiat2">Dill a Div: 8:00-13:00 i 15:00-18:00</span>
+                <span className="espaiat2">Dill a Div: 8:00-13:00 <br></br>i 15:00-18:00</span>
               </div>
 
             </div>

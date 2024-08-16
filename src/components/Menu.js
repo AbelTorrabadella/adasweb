@@ -96,19 +96,19 @@ function Menu(props) {
             <img src={logo} className='logoimg' width={(props.isPortada ? ampladaLogo : "30%")}></img>
           </div>
         </div>
-        <div style={{ display: (verdader && !clicked) ? "block" : "none" }} onClick={() => setClicked(true)}>
-          <MenuIcon></MenuIcon>
+        <div style={{ display: (verdader && !clicked) ? "block" : "none", width:"30%", height:"20%"}} onClick={() => setClicked(true)}>
+          <MenuIcon style={{width:"100%", height:"100%"}}></MenuIcon>
         </div>
-        <div style={{display: clicked ? "block":"none"}}>
+        <div style={{display: clicked ? "flex":"none"}}>
           <Menu2></Menu2>
         </div>
         <div className='div-right' style={{display: verdader ? "none" : ""}}>
         <Grid container spacing={2} style={{display:"flex", alignItems:"center", justifyContent:"space-evenly"}}>
-            <Grid item xs={12} md={2} xl={2} sx={{ setPetit: {xs:true, md:false }}}>
+            <Grid item xs={12} md={2} xl={2} sx={{ setPetit: {xs:true, md:false }}} >
                 <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none", backgroundColor:"transparent"}}>
-                <div className='encapsulament'>
-                  <div className="bottomborder" onClick={() => {navigate('treball')}} onMouseEnter={() => {setRalla(("100%"))}} onMouseLeave={()=> {setRalla(("0%"))}}>
-                    COM TREBALLEM</div>
+                <div className='encapsulament' onMouseEnter={() => {setRalla(("100%"))}} onMouseLeave={()=> {setRalla(("0%"))}}>
+                  <div className="bottomborder" onClick={() => {navigate('treball')}}>
+                    CALIBRACIONS</div>
                   <div className="ralla"  style={{width:ralla, height:"2px", backgroundColor:colorLletres, transition:"all 0.4s ease-in-out"}}></div>
                 </div>
                 </Item>
@@ -124,8 +124,8 @@ function Menu(props) {
             </Grid>
             <Grid item xs={12} md={2} xl={2}>
                 <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none", backgroundColor:"transparent"}}>
-                <div className='encapsulament' onClick={() => {navigate('faqs')}} onMouseEnter={() => {setRalla2(("100%"))}} onMouseLeave={()=> {setRalla2(("0%"))}}>
-                  <div className="bottomborder">FAQs</div>
+                <div className='encapsulament'  onMouseEnter={() => {setRalla2(("100%"))}} onMouseLeave={()=> {setRalla2(("0%"))}}>
+                  <div className="bottomborder" onClick={() => {navigate('faqs')}}>FAQs</div>
                   <div className="ralla" style={{width:ralla2, height:"2px", backgroundColor:colorLletres, transition:"all 0.4s ease-in-out"}}></div>
                 </div>
                 </Item>

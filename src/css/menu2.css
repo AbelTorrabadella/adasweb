@@ -1,0 +1,9 @@
+.petit{
+    width: 100%;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    z-index: 11;
+    background: white;
+    height: 100%;
+}

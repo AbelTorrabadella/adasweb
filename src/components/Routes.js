@@ -3,7 +3,7 @@ import PublicLayout from "./PublicLayout";
 import Portada from "./Portada";
 import Contacte from "./Contacte";
 import Tipus from "./Tipus";
-
+import Treball from "./Treball";
 const routes = (isPortada) => [
     {
     path: "/",
@@ -12,6 +12,7 @@ const routes = (isPortada) => [
         { path: "/", element: <Portada />},
         { path: "/Contacte", element: <Contacte />},
         { path: "/Tipus", element: <Tipus />},
+        { path: "/Treball", element: <Treball />},
 
     ],
 }
