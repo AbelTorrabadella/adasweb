@@ -12,7 +12,12 @@ import Grid from '@mui/material/Grid';
 import { useTheme } from "@emotion/react";
 import MenuIcon from '@mui/icons-material/Menu';
 import Menu2 from "./Menu2";
+import CloseIcon from '@mui/icons-material/Close';
+
+
+
 function Menu(props) {
+
   const [colorMenu, setColorMenu] = useState("transparent")
   const [colorLletres, setColorLletres] = useState("black")
   const [alturaMenu, setAlturaMenu] = useState("21%")
@@ -26,6 +31,7 @@ function Menu(props) {
   const [ralla2, setRalla2] = useState("0%")
   const [ralla3, setRalla3] = useState("0%")
   const [ralla4, setRalla4] = useState("0%")
+  const [ampladamenu, setAmpladamenu] = useState(false)
 
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
@@ -85,7 +91,7 @@ function Menu(props) {
     }
     else if (clicked === true){
       setVerdader(false)
-
+      setAmpladamenu(true)
     }
   })
   return (
@@ -100,7 +106,8 @@ function Menu(props) {
           <MenuIcon style={{width:"100%", height:"100%"}}></MenuIcon>
         </div>
         <div style={{display: clicked ? "flex":"none"}}>
-          <Menu2></Menu2>
+          <CloseIcon style={{display:"flex", zIndex:"12"}} onClick={() => setClicked(false)} />
+          <Menu2 ampladamenu={ampladamenu} verdader = {verdader}></Menu2>
         </div>
         <div className='div-right' style={{display: verdader ? "none" : ""}}>
         <Grid container spacing={2} style={{display:"flex", alignItems:"center", justifyContent:"space-evenly"}}>

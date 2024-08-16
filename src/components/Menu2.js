@@ -1,13 +1,24 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-function Menu2() {
+import '../css/menu2.css';
+import CloseIcon from '@mui/icons-material/Close';
+function Menu2(props) {
     const navigate = useNavigate();
+    const [ampladamenu2, setAmpladamenu2] = useState("0%")
 
   /*--------------------------------------------------*/
+  useEffect(() => {
+    if (props.ampladamenu !== true) {
+        setAmpladamenu2('100%');
+    }
+    else {
+        setAmpladamenu2("0%")
+    }
+
+  }, []);
   return (
-    <div className="petit" style={{display:"flex", flexDirection:"column", width:"80%", alignItems:"center"}}>      
+    <div className="petit" style={{display:"flex", flexDirection:"column", width:ampladamenu2, alignItems:"center", transition:"all 1s ease-in-out"}}>      
         <div>
-            X
         </div>
         <div className="" onClick={() => {navigate('treball')}}>
             CALIBRACIONS
