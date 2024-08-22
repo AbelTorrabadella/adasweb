@@ -4,6 +4,9 @@
     background-color: black;
     margin-right: 3%;
 }
+.perque{
+    margin-bottom: 5%;
+}
 .ralla5{
     width: 65%;
     height: 1px;
@@ -57,18 +60,72 @@
 .foto{
     max-width: 100%;
     max-height: 100%;
+    border-radius: 10px;
+    margin-top: 10%;
 }
 
 .itemfoto{
     max-width: 100%;
+    box-shadow: none;
+
 }
 
 .itemfoto img{
     width: 100%;
+    border-radius: 10px;
 }
 
 .tittles{
     font-size: 21px;
     font-weight: 600;
+}
+
+.rodona{
+    position: relative;
+    display: inline-block;
+    margin-top: -4px;
+    font-family: Rajdhani, sans-serif;
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 700;
+    color: #e4e1e5;
+    margin-right: 20px;
+}
+.englobat {
     margin-top: 10%;
+
+}
+
+.textimatge{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+.textimatge span{
+    font-size: 65px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.861);
+}
+
+.botohora{
+    cursor:pointer;
+    background-color: white;
+    height: 50px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-top: 8%;
+}
+
+.rallaboto{
+    height:1px;
+    background-color: black;
+    margin-right: 10px;
+    transition: all 0.25s ease-in-out;
+}
+
+.botohora:hover{
+    cursor:pointer
 }

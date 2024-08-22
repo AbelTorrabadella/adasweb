@@ -1,0 +1,33 @@
+.sliderfoto3{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper3{
+    width: 100%;
+    height: 500px;
+
+}
+
+.swiper-button-prev, .swiper-button-next{
+    color: white !important;
+}
+
+:root {
+    --swiper-theme-color: white !important; 
+}
+
+.titols3 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right:0;
+    font-size:50px;
+}

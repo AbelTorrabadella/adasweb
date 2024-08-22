@@ -174,52 +174,52 @@ function Content(props) {
             <div style={{display:"flex", alignItems:"center", justifyContent:"space-evenly", width:"100%"}}>
 
             <Grid container spacing={2} style={{width:"80%"}}>
-            <Grid item xs={12} md={4} xl={4}>
-                <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none"}}>
-                    <div className='tipus1'>
-                        <div className='divnegre'>
-                            <img src={camera} className='tipussensors'></img>
-                        </div>
-                        <div>
-                            <div className='titolssensors'>CÀMERAS</div>
-                            <div>Les càmeres en els cotxes són utilitzades per capturar imatges visuals del seu entorn. Això inclou altres vehicles, senyals de trànsit, vianants i marques vials.</div>
+                <Grid item xs={12} md={4} xl={4}>
+                    <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none"}}>
+                        <div className='tipus1'>
+                            <div className='divnegre'>
+                                <img src={camera} className='tipussensors'></img>
+                            </div>
+                            <div>
+                                <div className='titolssensors'>CÀMERAS</div>
+                                <div>Les càmeres en els cotxes són utilitzades per capturar imatges visuals del seu entorn. Això inclou altres vehicles, senyals de trànsit, vianants i marques vials.</div>
+                            </div>
+
                         </div>
 
-                    </div>
+                    </Item>
+                </Grid>
 
-                </Item>
-            </Grid>
+                <Grid item xs={12} md={4} xl={4}>
+                    <Item style={{ display:"flex", justifyContent:"center",boxShadow:"none"}}>
+                        <div className='tipus1' style={{background:"#1a1a1a"}}>
+                            <div className='divnegre' style={{backgroundColor:"white"}}>
+                                <img src={sensor} style={{filter:"none"}} className='tipussensors' ></img>
+                            </div>
+                            <div style={{color:"white"}}>
+                                <div className='titolssensors'>SENSORS</div>
+                                <div>Els cotxes actuals estan plens de sensors, però si ens referim als </div>
+                            </div>
+                        </div>
+                    </Item>
+                </Grid>
+                <Grid item xs={12} md={4} xl={4}>
+                    <Item style={{ display:"flex", justifyContent:"center",boxShadow:"none"}}>
+                        <div className='tipus1'>
+                            <div className='divnegre'>
+                                <img src={radar} className='tipussensors'></img>
+                            </div>
+                            <div>
+                                <div className='titolssensors'>RADARS I LIDARS</div>
+                                <div>Els radars mesuren la distància, velocitat i direcció d'objectes propers utilitzant ones de ràdio.</div>
+                                <div>Mentre que el lidar utilitza làsers per crear una imatge 3D de l'entorn, mesurant amb precisió la distància a objectes.</div>
+                            </div>
 
-            <Grid item xs={12} md={4} xl={4}>
-                <Item style={{ display:"flex", justifyContent:"center",boxShadow:"none"}}>
-                    <div className='tipus1' style={{background:"#1a1a1a"}}>
-                        <div className='divnegre' style={{backgroundColor:"white"}}>
-                            <img src={sensor} style={{filter:"none"}} className='tipussensors' ></img>
                         </div>
-                        <div style={{color:"white"}}>
-                            <div className='titolssensors'>SENSORS</div>
-                            <div>Els cotxes actuals estan plens de sensors, però si ens referim als </div>
-                        </div>
-                    </div>
-                </Item>
-            </Grid>
-            <Grid item xs={12} md={4} xl={4}>
-                <Item style={{ display:"flex", justifyContent:"center",boxShadow:"none"}}>
-                    <div className='tipus1'>
-                        <div className='divnegre'>
-                            <img src={radar} className='tipussensors'></img>
-                        </div>
-                        <div>
-                            <div className='titolssensors'>RADARS I LIDARS</div>
-                            <div>Els radars mesuren la distància, velocitat i direcció d'objectes propers utilitzant ones de ràdio.</div>
-                            <div>Mentre que el lidar utilitza làsers per crear una imatge 3D de l'entorn, mesurant amb precisió la distància a objectes.</div>
-                        </div>
-
-                    </div>
-                </Item>
-            </Grid>
+                    </Item>
+                </Grid>
             
-        </Grid>
+            </Grid>
 
             </div>
 

@@ -5,12 +5,15 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+import Slider3 from './Slider3';
+import { useNavigate } from 'react-router-dom';
 
 import experiencia from "../img/experiencia.png"
 import qualitat from "../img/qualitat.png"
 import innovacio from "../img/innovacio.png"
 import cupra from "../img/CUPRA.jpg"
 import leon from "../img/leon.jpeg"
+import mercedes2 from "../img/mercedes2.jpg"
 
 import primera from "../img/grid1/1.jpg"
 import segona from "../img/grid1/2.jpg"
@@ -22,14 +25,23 @@ import setena from "../img/grid1/7.jpg"
 import vuitena from "../img/grid1/8.jpg"
 import novena from "../img/grid1/9.jpg"
 
+import accident from "../img/accident.jpeg"
+import golfverd from "../img/foto2.jpg"
 function Treball() {
+  const navigate = useNavigate();
+  const [ampladaralla, setAmpladaralla] = useState("0%")
   const Item = styled(Paper)(({ theme }) => ({
 
   }));
+  const slides3 = [
+    {imatges: accident, titol:"EVITA ACCIDENTS"},
+    {imatges: golfverd, titol:"EVITA ACCIDENTS23"},
+
+]
   /*--------------------------------------------------*/
   return (
-    <div className="treball" style={{ width:"80%", marginBottom:"15%"}}>      
-      <div className='perque'>
+    <div className="treball" style={{ width:"100%", marginBottom:"15%", display:"flex", flexDirection:"column", alignItems:"center"}}>      
+      <div className='perque' style={{ width:"80%"}}>
         <div style={{display:"flex", alignItems:"center"}}>
             <div className='ralla4'></div>
             <div className='titols'>PER QUÈ TRIAR-NOS?</div>
@@ -50,7 +62,7 @@ function Treball() {
                         </div>
       
                         <div className='undertext'>
-                          Sempre betllem pel millor resultat possible
+                          Sempre betllem pel millor resultat possible.
                         </div>
                       </div>
                     </div>
@@ -69,7 +81,7 @@ function Treball() {
                         </div>
       
                         <div className='undertext'>
-                          Comptem amb l'experiencia de tota una vida dedicada al sector
+                          Comptem amb l'experiencia de tota una vida dedicada al sector.
                         </div>
                       </div>
                     </div>
@@ -97,58 +109,114 @@ function Treball() {
                   </Item>
               </Grid>
             </Grid>
-        </div>
-        <div style={{display:"flex", alignItems:"center"}}>
-            <div className='ralla4'></div>
-            <div className='titols'>CALIBRACIONS</div>
-            <div className='ralla5' style={{width:"70%"}}></div>
+          </div>
         </div>
 
-        <div style={{display:"flex", alignItems:"center",justifyContent:"space-around"}}>
+        <div style={{display:"flex", alignItems:"center",justifyContent:"space-around",width:"80%"}}>
             <div className='fotodiv1'>
               <img src={cupra} className='foto'></img>
             </div>
             <div className='text'>
-              <div className='titols' style={{borderBottom:"1px solid black"}}>CALIBRACIÓ D'ADAS MULTIMARCA</div>
-              <div style={{display:"flex", alignItems:"center"}}>
-                <div className='rodona'></div>
+              <div className='titols' style={{borderBottom:"1px solid black"}}>ELS NOSTRES SERVEIS</div>
+              <div style={{display:"flex", alignItems:"center"}} className='englobat'>
+                <div className='rodona'>01</div>
                 <div>
                   <div className='tittles'>CALIBRACIONS MULTIMARCA</div>
                   <span>A La Planxisteria oferim serveis de calibració per a sistemes ADAS multimarca. </span>
                 </div>
 
               </div>
-              <div style={{display:"flex", alignItems:"center"}}>
-                <div className='rodona'></div>
+              <div style={{display:"flex", alignItems:"center"}} className='englobat'>
+                <div className='rodona'>02</div>
+                <div>
+                  <div className='tittles'>PLANXA I PINTURA</div>
+                  <span>També oferim servei de planxa i pintura pel seu vehicle.</span>
+                </div>
+              </div>
+              <div style={{display:"flex", alignItems:"center"}} className='englobat'>
+                <div className='rodona'>03</div>
                 <div>
                   <div className='tittles'>EXPERIÈNCIA</div>
                   <span>Disposem de l'experiència i les eines necessàries per assegurar que els sistemes d'assistència a la conducció funcionin correctament i amb la màxima precisió.</span>
                 </div>
               </div>
-              <div style={{display:"flex", alignItems:"center"}}>
-                <div className='rodona'></div>
+              <div style={{display:"flex", alignItems:"center"}} className='englobat'>
+                <div className='rodona'>04</div>
                 <div>
-                  <div className='tittles'>COMPROMIS</div>
-                  <span>Ens comprometem a proporcionar un servei de qualitat, adaptat a les necessitats específiques de cada client.</span>
+                  <div className='tittles'>CERTIFICAT DE CALIBRACIÓ</div>
+                  <span>Fem entrega d'un certificat que acredita que la calibració dels radars, càmeres, sensors i lidars del vehicle ha estat realitzada de manera correcta i conforme als estàndards tècnics exigits.</span>
                 </div>
               </div>
               </div>
             </div>
-        <div style={{display:"flex", alignItems:"center",justifyContent:"space-around", marginTop:"5%"}}>
-            <div className='text'>
-            <div className='titols'>CERTIFICAT DE CALIBRACIÓ</div>
-            <div>asdadasdadasdadadac adasd aadasd ad adad asdad ad ad</div>
-            </div>
+        <div style={{display:"flex", alignItems:"center",justifyContent:"space-around", marginTop:"5%",width:"80%"}}>
+        <div className='text'>
+              <div className='titols' style={{borderBottom:"1px solid black"}}>PER QUÈ ESCOLLIR-NOS?</div>
+              <div style={{display:"flex", alignItems:"center"}} className='englobat'>
+                <div className='rodona'>05</div>
+                <div>
+                  <div className='tittles'>TECNOLOGIA AVANÇADA</div>
+                  <span>Utilitzem equips d'última generació que ens permeten garantir la màxima precisió en totes les calibracions, assegurant que el seu vehicle compleixi amb els requeriments més estrictes del sector. </span>
+                </div>
+
+              </div>
+              <div style={{display:"flex", alignItems:"center"}} className='englobat'>
+                <div className='rodona'>06</div>
+                <div>
+                  <div className='tittles'>ATENCIÓ PERSONALITZADA</div>
+                  <span>Oferim un tracte proper i personalitzat, adaptant-nos a les necessitats específiques de cada client i vehicle per oferir solucions a mida.</span>
+                </div>
+              </div>
+              <div style={{display:"flex", alignItems:"center"}} className='englobat'>
+                <div className='rodona'>07</div>
+                <div>
+                  <div className='tittles'>GARANTIA I SEGURETAT</div>
+                  <span>Totes les nostres intervencions estan garantides, oferint-li la tranquil·litat de saber que el seu vehicle està en mans de professionals qualificats i amb experiència.</span>
+                </div>
+              </div>
+              <div style={{display:"flex", alignItems:"center"}} className='englobat'>
+                <div className='rodona'>08</div>
+                <div>
+                  <div className='tittles'>CONFIANÇA I TRANSPARÈNCIA</div>
+                  <span>Els nostres clients confien en nosaltres per la nostra transparència en els processos i per oferir sempre la millor relació qualitat-preu.</span>
+                </div>
+              </div>
+              </div>
             <div className='fotodiv1'>
-              <img src={leon} className='foto'></img>
+              <img src={mercedes2} className='foto'></img>
             </div>
         </div>
-        <div style={{display:"flex", alignItems:"center"}}>
-            <div className='ralla4'></div>
-            <div className='titols'>CANVI DE PARABRISES D'UN GOLF</div>
-            <div className='ralla5' style={{width:"63%"}}></div>
+        <div style={{width:"100%", height:"500px", marginTop:"5%", position:"relative"}}>
+            <img src={accident} 
+            style={{
+              maxWidth: "100%",
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              zIndex:"1",
+              position:"relative"
+            }}>
+            </img>
+            <div  className='textimatge' style={{zIndex:"1"}}>
+              <span>
+                  EVITA ACCIDENTS
+              </span>
+              <div className='botohora' onClick={() => {navigate('/contacte')}}  onMouseEnter={() => {setAmpladaralla("15%")}} onMouseLeave={() => {setAmpladaralla("0%")}}>
+              <div className='rallaboto' style={{
+                width:ampladaralla,
+
+              }}></div>
+                DEMANA HORA
+              </div>
+            </div>
+
         </div>
-        <div className='grid1'>
+        <div style={{display:"flex", alignItems:"center", width:"80%"}}>
+            <div className='ralla4'></div>
+            <div className='titols'>CANVI DE PARABRISES</div>
+            <div className='ralla5' style={{width:"65%"}}></div>
+        </div>
+        <div className='grid1' style={{width:"80%"}}>
           <Grid container spacing={2} style={{display:"flex", alignItems:"center", justifyContent:"space-evenly"}}>
                 <Grid item xs={12} md={4} xl={4}>
                     <Item className='itemfoto'>
@@ -197,7 +265,7 @@ function Treball() {
                 </Grid>
             </Grid>
         </div>
-        <div style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
+        <div style={{display:"flex", alignItems:"center", justifyContent:"center",width:"80%"}}>
             <div className='ralla4' style={{width:"20%"}}></div>
             <div className='titols'>MÉS EXEMPLES A LES XARXES SOCIALS</div>
             <div className='ralla5' style={{width:"20%"}}></div>
@@ -205,7 +273,6 @@ function Treball() {
         <div>
           <iframe width="800" height="555" src="https://www.youtube.com/embed/lfoyvTRs2Po?si=jyHImIJb4ykN2NEa" frameborder="0" allowFullScreen ></iframe>
         </div>
-      </div>
 
     </div>
 )
