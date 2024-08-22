@@ -49,12 +49,12 @@
 }
 
 .text{
-    width: 50%;
+    width: 100%;
     text-align: justify;
     font-size: 18px;
 }
 .fotodiv1{
-    width: 40%;
+    width: 80%;
 }
 
 .foto{

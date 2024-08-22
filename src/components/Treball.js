@@ -113,10 +113,17 @@ function Treball() {
         </div>
 
         <div style={{display:"flex", alignItems:"center",justifyContent:"space-around",width:"80%"}}>
-            <div className='fotodiv1'>
-              <img src={cupra} className='foto'></img>
-            </div>
-            <div className='text'>
+        <Grid container spacing={2} style={{display:"flex", alignItems:"center", justifyContent:"space-evenly"}}>
+              <Grid item xs={12} md={6} xl={6}>
+                  <Item style={{boxShadow:"none", backgroundColor:"transparent"}}>
+                  <div className='fotodiv1'>
+                    <img src={cupra} className='foto'></img>
+                  </div>
+                  </Item>
+              </Grid>
+              <Grid item xs={12} md={6} xl={6}>
+                <Item style={{boxShadow:"none", backgroundColor:"transparent"}}>
+              <div className='text'>
               <div className='titols' style={{borderBottom:"1px solid black"}}>ELS NOSTRES SERVEIS</div>
               <div style={{display:"flex", alignItems:"center"}} className='englobat'>
                 <div className='rodona'>01</div>
@@ -147,44 +154,59 @@ function Treball() {
                   <span>Fem entrega d'un certificat que acredita que la calibració dels radars, càmeres, sensors i lidars del vehicle ha estat realitzada de manera correcta i conforme als estàndards tècnics exigits.</span>
                 </div>
               </div>
-              </div>
+                  </div>
+                </Item>
+              </Grid>
+            </Grid>
             </div>
-        <div style={{display:"flex", alignItems:"center",justifyContent:"space-around", marginTop:"5%",width:"80%"}}>
-        <div className='text'>
-              <div className='titols' style={{borderBottom:"1px solid black"}}>PER QUÈ ESCOLLIR-NOS?</div>
-              <div style={{display:"flex", alignItems:"center"}} className='englobat'>
-                <div className='rodona'>05</div>
-                <div>
-                  <div className='tittles'>TECNOLOGIA AVANÇADA</div>
-                  <span>Utilitzem equips d'última generació que ens permeten garantir la màxima precisió en totes les calibracions, assegurant que el seu vehicle compleixi amb els requeriments més estrictes del sector. </span>
-                </div>
 
-              </div>
-              <div style={{display:"flex", alignItems:"center"}} className='englobat'>
-                <div className='rodona'>06</div>
-                <div>
-                  <div className='tittles'>ATENCIÓ PERSONALITZADA</div>
-                  <span>Oferim un tracte proper i personalitzat, adaptant-nos a les necessitats específiques de cada client i vehicle per oferir solucions a mida.</span>
-                </div>
-              </div>
-              <div style={{display:"flex", alignItems:"center"}} className='englobat'>
-                <div className='rodona'>07</div>
-                <div>
-                  <div className='tittles'>GARANTIA I SEGURETAT</div>
-                  <span>Totes les nostres intervencions estan garantides, oferint-li la tranquil·litat de saber que el seu vehicle està en mans de professionals qualificats i amb experiència.</span>
-                </div>
-              </div>
-              <div style={{display:"flex", alignItems:"center"}} className='englobat'>
-                <div className='rodona'>08</div>
-                <div>
-                  <div className='tittles'>CONFIANÇA I TRANSPARÈNCIA</div>
-                  <span>Els nostres clients confien en nosaltres per la nostra transparència en els processos i per oferir sempre la millor relació qualitat-preu.</span>
-                </div>
-              </div>
-              </div>
-            <div className='fotodiv1'>
-              <img src={mercedes2} className='foto'></img>
-            </div>
+        <div style={{display:"flex", alignItems:"center",justifyContent:"space-around", marginTop:"5%",width:"80%"}}>
+        <Grid container spacing={2} style={{display:"flex", alignItems:"center", justifyContent:"space-evenly"}}>
+              <Grid item xs={12} md={6} xl={6}>
+                  <Item style={{boxShadow:"none", backgroundColor:"transparent"}}>
+                    <div className='text'>
+                    <div className='titols' style={{borderBottom:"1px solid black"}}>PER QUÈ ESCOLLIR-NOS?</div>
+                    <div style={{display:"flex", alignItems:"center"}} className='englobat'>
+                      <div className='rodona'>05</div>
+                      <div>
+                        <div className='tittles'>TECNOLOGIA AVANÇADA</div>
+                        <span>Utilitzem equips d'última generació que ens permeten garantir la màxima precisió en totes les calibracions, assegurant que el seu vehicle compleixi amb els requeriments més estrictes del sector. </span>
+                      </div>
+
+                    </div>
+                    <div style={{display:"flex", alignItems:"center"}} className='englobat'>
+                      <div className='rodona'>06</div>
+                      <div>
+                        <div className='tittles'>ATENCIÓ PERSONALITZADA</div>
+                        <span>Oferim un tracte proper i personalitzat, adaptant-nos a les necessitats específiques de cada client i vehicle per oferir solucions a mida.</span>
+                      </div>
+                    </div>
+                    <div style={{display:"flex", alignItems:"center"}} className='englobat'>
+                      <div className='rodona'>07</div>
+                      <div>
+                        <div className='tittles'>GARANTIA I SEGURETAT</div>
+                        <span>Totes les nostres intervencions estan garantides, oferint-li la tranquil·litat de saber que el seu vehicle està en mans de professionals qualificats i amb experiència.</span>
+                      </div>
+                    </div>
+                    <div style={{display:"flex", alignItems:"center"}} className='englobat'>
+                      <div className='rodona'>08</div>
+                      <div>
+                        <div className='tittles'>CONFIANÇA I TRANSPARÈNCIA</div>
+                        <span>Els nostres clients confien en nosaltres per la nostra transparència en els processos i per oferir sempre la millor relació qualitat-preu.</span>
+                      </div>
+                    </div>
+                    </div>
+                  </Item>
+              </Grid>
+              <Grid item xs={12} md={6} xl={6}>
+                  <Item style={{boxShadow:"none", backgroundColor:"transparent"}}>
+                    <div className='fotodiv1' style={{marginLeft:"20%"}}>
+                      <img src={mercedes2} className='foto'></img>
+                    </div>
+                    </Item>
+                </Grid>
+            </Grid>
+
         </div>
         <div style={{width:"100%", height:"500px", marginTop:"5%", position:"relative"}}>
             <img src={accident} 
