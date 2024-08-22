@@ -108,7 +108,9 @@ function Menu(props) {
     if (props.isPortada === true && windowSize > 1000) { //SI ES LA PORTADA PER UNA PANTALLA NORMAL SERÀ 21
       setAlturaMenu("21%")
     }
-
+    if (scrollPosition > 0 && windowSize < 1000) {
+      setAlturaMenu("12%")
+    }
     
   })
   return (
