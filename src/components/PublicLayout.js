@@ -7,7 +7,7 @@ const PublicLayout = (props) => {
     return (
     <div>
         <Menu isPortada={props.isPortada}/>
-        <div style={{display:"flex",justifyContent:"center" ,position:(props.isPortada ? "" : "relative"), top: (props.isPortada ? "0" : "200px")}}>
+        <div style={{display:"flex",justifyContent:"center" ,position:(props.isPortada ? "" : "relative"), marginTop: (props.isPortada ? "0" : "200px")}}>
             <Outlet />
         </div>
         <Footer />

@@ -219,7 +219,7 @@ function Content(props) {
                     </Item>
                 </Grid>
             
-            </Grid>
+        </Grid>
 
             </div>
 

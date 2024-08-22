@@ -36,8 +36,8 @@ function Treball() {
   const slides3 = [
     {imatges: accident, titol:"EVITA ACCIDENTS"},
     {imatges: golfverd, titol:"EVITA ACCIDENTS23"},
-
 ]
+
   /*--------------------------------------------------*/
   return (
     <div className="treball" style={{ width:"100%", marginBottom:"15%", display:"flex", flexDirection:"column", alignItems:"center"}}>      
