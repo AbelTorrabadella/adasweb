@@ -36,7 +36,7 @@ function Portada() {
   return (
     <div className="error" style={{width:"100%", height:"auto"}}>
       <div className="slider">
-      <video loop autoPlay muted>       
+      <video loop autoPlay muted playsinline >       
         <source src={require('../img/video3.mp4')} type="video/mp4" />
       </video>
       </div>
