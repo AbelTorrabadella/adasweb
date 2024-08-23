@@ -4,6 +4,8 @@ import Portada from "./Portada";
 import Contacte from "./Contacte";
 import Tipus from "./Tipus";
 import Treball from "./Treball";
+import Preguntes from "./Preguntes"
+
 const routes = (isPortada) => [
     {
     path: "/",
@@ -13,6 +15,7 @@ const routes = (isPortada) => [
         { path: "/Contacte", element: <Contacte />},
         { path: "/Tipus", element: <Tipus />},
         { path: "/Treball", element: <Treball />},
+        { path: "/Preguntes", element: <Preguntes />},
 
     ],
 }

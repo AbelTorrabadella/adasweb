@@ -31,7 +31,7 @@ function Menu2(props) {
             CALIBRACIONS
         </div>
         <div className="nav2" onClick={() => {navigate('tipus'); props.setClicked(false)}}>TIPUS D'ADAS</div>
-        <div className="nav2" onClick={() => {navigate('faqs');  props.setClicked(false)}}>FAQs</div>
+        <div className="nav2" onClick={() => {navigate('preguntes');  props.setClicked(false)}}>FAQs</div>
         {/*<div className="" onClick={() => {navigate('localitzacio')}}>LOCALITZACIÓ</div>*/}        
         <div className='nav2' onClick={() => {navigate('contacte');  props.setClicked(false)}}>CONTACTE</div>
         

@@ -23,28 +23,25 @@ function Footer(props) {
   const [OpacitatRalla, setOpacitatRalla] = useState(0)
   const [alçadafooter, setAlçadafooter] = useState("500px")
   const [alçadafooter2, setAlçadafooter2] = useState("400px")
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const [formatpetit2, setFormatPetit2] = useState(false)
 
-
-  const handleScroll = () => {
-  const position = window.pageYOffset;
-    setScrollPosition(position);
-  };
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        window.scrollTo(0,0);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-    useEffect(() => {
-      if (scrollPosition > 2700) {
-          setAmpladaRalla('80%');
-          setOpacitatRalla(1);
-          console.log(scrollPosition)
-      }
-    }, [scrollPosition]);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  useEffect(() => {
+    console.log({windowSize});
+    if (windowSize < 800){
+      setFormatPetit2(true)
+    }
+  }, [windowSize]);
 
     const Item = styled(Paper)(({ theme }) => ({
 
@@ -52,7 +49,7 @@ function Footer(props) {
 
 
   return (  
-    <div className="mainfooter" >
+    <div className="mainfooter" style={{marginTop: (formatpetit2 ? "40%" : "5%")}}>
       <div className="topside">
       <Grid container spacing={2} style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
           <Grid item xs={8} md={2} xl={2} sx={{ height: { md: '400px',xl: '400px'}}}  style={{display:"flex", justifyContent:"center", alignItems:"center"}}>

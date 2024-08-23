@@ -40,7 +40,7 @@ function Treball() {
 
   /*--------------------------------------------------*/
   return (
-    <div className="treball" style={{ width:"100%", marginBottom:"15%", display:"flex", flexDirection:"column", alignItems:"center"}}>      
+    <div className="treball" style={{ width:"100%", display:"flex", flexDirection:"column", alignItems:"center", marginBottom:"10%"}}>      
       <div className='perque' style={{ width:"80%"}}>
         <div style={{display:"flex", alignItems:"center"}}>
             <div className='ralla4'></div>

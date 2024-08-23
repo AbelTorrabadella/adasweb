@@ -21,7 +21,7 @@ function Menu(props) {
   const [colorMenu, setColorMenu] = useState("transparent")
   const [colorLletres, setColorLletres] = useState("black")
   const [alturaMenu, setAlturaMenu] = useState("21%")
-  const [ampladaLogo, setAmpladaLogo] = useState("55%")
+  const [ampladaLogo, setAmpladaLogo] = useState("60%")
   const navigate = useNavigate();
   const [windowSize, setWindowSize] = useState(window.innerWidth);
   const [verdader, setVerdader] = useState(false)
@@ -31,10 +31,10 @@ function Menu(props) {
   const [ralla2, setRalla2] = useState("0%")
   const [ralla3, setRalla3] = useState("0%")
   const [ralla4, setRalla4] = useState("0%")
-  const [mobileheight, setmobileheight] = useState("55%")
   const [ampladamenu, setAmpladamenu] = useState(false)
   const [opacitatCreu, setOpacitatcreu] = useState(0)
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [formatpetit, setFormatPetit] = useState(false)
   const handleScroll = () => {
       const position = window.pageYOffset;
       setScrollPosition(position);
@@ -52,14 +52,12 @@ function Menu(props) {
     if (scrollPosition > 0 && colorMenu == 'transparent') {
       setColorMenu('#fff');
       setColorLletres("black")
-      setAmpladaLogo("30%")
     }
     else if (scrollPosition == 0 && colorMenu == '#fff') {
       setColorMenu('transparent');
       setColorLletres("black")
-      setAmpladaLogo("55%")
-
     }
+
   }, [scrollPosition]);
 
   const Item = styled(Paper)(({ theme }) => ({
@@ -103,23 +101,25 @@ function Menu(props) {
     if (clicked === true && windowSize < 1000) { //SI HE OBERT EL MENU EN UN MOBIL (ES IGUAL A ON)
       setAlturaMenu("55%")
     }
-    if (props.isPortada === true && windowSize > 1000) { //SI ES LA PORTADA PER UNA PANTALLA NORMAL SERÀ 21
+    if (props.isPortada === true && windowSize > 1000 && scrollPosition === 0) { //Si es la portada i no he fet scroll en pc
       setAlturaMenu("21%")
+      setAmpladaLogo("60%")
     }
-    if (scrollPosition > 0 && windowSize > 1000 ) {
-      setAlturaMenu("12%")
-    }
-    if (props.isPortada === false > 0 && windowSize > 1000 ) { //SI NO ES PORTADA PER PC
+    if ((props.isPortada === false || scrollPosition > 0) && windowSize > 1000 ) { //si no es portada o he fet scroll en pc
       setAlturaMenu("15%")
+      setAmpladaLogo("40%")
+    }
+    if (windowSize < 1000){
+        setFormatPetit(true)
     }
   })
 
   return (
     <div className="menu" style={{ display: (props.isPortada ? "flex" : 'flex'), backgroundColor:(props.isPortada ? colorMenu : 'white'), color:(props.isPortada ? colorLletres : 'black'), height: (alturaMenu)}}>
       <div className='displayflex' style={{width:"100%"}}>
-        <div className='div-left'>
+        <div className='div-left' style={{width: (formatpetit ? "40%" : "20%")}}>
           <div className='logodiv' onClick={() => {navigate('')}}>
-            <img src={logo} className='logoimg' width={(props.isPortada ? ampladaLogo : "37%")}></img>
+            <img src={logo} className='logoimg' style={{width: ampladaLogo, cursor:"pointer"}}></img>
           </div>
         </div>
         <div style={{ display: (verdader && !clicked) ? "block" : "none", width:"30%", height:"20%"}} onClick={() => setClicked(true)}>
@@ -165,7 +165,7 @@ function Menu(props) {
             <Grid item xs={12} md={2} xl={2}>
                 <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none", backgroundColor:"transparent"}}>
                 <div className='encapsulament'  onMouseEnter={() => {setRalla2(("100%"))}} onMouseLeave={()=> {setRalla2(("0%"))}}>
-                  <div className="bottomborder" onClick={() => {navigate('faqs')}}>FAQs</div>
+                  <div className="bottomborder" onClick={() => {navigate('preguntes')}}>FAQs</div>
                   <div className="ralla" style={{width:ralla2, height:"2px", backgroundColor:colorLletres, transition:"all 0.4s ease-in-out"}}></div>
                 </div>
                 </Item>
@@ -173,7 +173,7 @@ function Menu(props) {
             {/*<Grid item xs={12} md={2} xl={2}>
                 <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none", backgroundColor:"transparent"}}>
                 <div className='encapsulament' onClick={() => {navigate('localitzacio')}} onMouseEnter={() => {setRalla3(("100%"))}} onMouseLeave={()=> {setRalla3(("0%"))}}>
-                  <div className="bottomborder">LOCALITZACIÓ</div>
+                  <div className="bottomborder">GALERIA?</div>
                   <div className="ralla" style={{width:ralla3, height:"2px", backgroundColor:colorLletres, transition:"all 0.4s ease-in-out"}}></div>
                 </div>
                 </Item>

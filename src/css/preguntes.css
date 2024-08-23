@@ -1,0 +1,28 @@
+.preguntes{
+    width: 80%;
+}
+.pregunta{
+    font-weight: 700;
+    font-size: 25px;
+}
+.item{
+    display: flex;
+    text-align: justify;
+    margin-top: 8%;
+}
+
+.numero2{
+    position: relative;
+    display: inline-block;
+    margin-top: -4px;
+    font-family: Rajdhani, sans-serif;
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 700;
+    color: #e4e1e5;
+    margin-right: 20px;
+}
+
+.resposta{
+    margin-top: 5%;
+}

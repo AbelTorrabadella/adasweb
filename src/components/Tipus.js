@@ -21,7 +21,7 @@ function Tipus() {
 
     }));
   return (
-    <div className="primer2" style={{marginTop:"2%"}}>
+    <div className="primer2" style={{marginTop:"2%",marginBottom:"3%"}}>
         <div style={{width:"80%", height:"1px", backgroundColor:"black"}} ></div>
 
         <div className='titols' style={{justifyContent:"center"}}>TIPUS D'ADAS</div>
