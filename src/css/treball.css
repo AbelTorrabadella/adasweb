@@ -29,6 +29,7 @@
 }
 .icon{
     width: 100%;
+    max-width: 70px;
 }
 .iconfoto{
     max-width: 100%;

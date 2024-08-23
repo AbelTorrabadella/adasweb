@@ -21,7 +21,7 @@ function Tipus() {
 
     }));
   return (
-    <div className="primer2">
+    <div className="primer2" style={{marginTop:"2%"}}>
         <div style={{width:"80%", height:"1px", backgroundColor:"black"}} ></div>
 
         <div className='titols' style={{justifyContent:"center"}}>TIPUS D'ADAS</div>
@@ -232,7 +232,7 @@ function Tipus() {
                     </Grid>
                 </Grid>
             </div>
-            <div style={{marginTop:"5%"}}>
+            <div style={{marginTop:"3%"}}>
                 <div style={{width:"100%", height:"1px", backgroundColor:"black"}}></div>
                 <span className='titols'>POTS CONSULTAR MÉS INFORMACIÓ A LA PÀGINA DE LA DGT</span>
                 <div className='link'><a href='https://www.dgt.es/muevete-con-seguridad/conviertete-en-un-buen-conductor/Sistemas-avanzados-de-ayuda-a-la-conduccion-ADAS-/'><div className='boto3'>DGT</div></a></div>

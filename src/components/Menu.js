@@ -98,7 +98,7 @@ function Menu(props) {
       setOpacitatcreu(1)
     }
     if (clicked === false && windowSize < 1000) { //SI NO HE OBERT EL MENU EN UN MOBIL
-      setAlturaMenu("18%")
+      setAlturaMenu("21%")
     }
     if (clicked === true && windowSize < 1000) { //SI HE OBERT EL MENU EN UN MOBIL (ES IGUAL A ON)
       setAlturaMenu("55%")
@@ -115,7 +115,7 @@ function Menu(props) {
   })
 
   return (
-    <div className="menu" style={{display: (props.isPortada ? "flex" : 'flex'), backgroundColor:(props.isPortada ? colorMenu : 'white'), color:(props.isPortada ? colorLletres : 'black'), height: (alturaMenu)}}>
+    <div className="menu" style={{ display: (props.isPortada ? "flex" : 'flex'), backgroundColor:(props.isPortada ? colorMenu : 'white'), color:(props.isPortada ? colorLletres : 'black'), height: (alturaMenu)}}>
       <div className='displayflex' style={{width:"100%"}}>
         <div className='div-left'>
           <div className='logodiv' onClick={() => {navigate('')}}>

@@ -292,8 +292,8 @@ function Treball() {
             <div className='titols'>MÉS EXEMPLES A LES XARXES SOCIALS</div>
             <div className='ralla5' style={{width:"20%"}}></div>
         </div>
-        <div>
-          <iframe width="800" height="555" src="https://www.youtube.com/embed/lfoyvTRs2Po?si=jyHImIJb4ykN2NEa" frameborder="0" allowFullScreen ></iframe>
+        <div style={{width:"70%", height:"555px"}}>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/lfoyvTRs2Po?si=jyHImIJb4ykN2NEa" frameborder="0" allowFullScreen ></iframe>
         </div>
 
     </div>

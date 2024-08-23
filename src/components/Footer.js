@@ -127,8 +127,8 @@ function Footer(props) {
           </Grid>
       </Grid>
       </div>
-      <div className="ralla" style={{width:AmpladaRalla, transition: "all 2s ease-in-out"}}></div>
-      <div className="botside" style={{opacity:OpacitatRalla, transition: "all 2.5s ease-in-out"}}>
+      <div className="ralla" style={{width:"80%", transition: "all 2s ease-in-out"}}></div>
+      <div className="botside">
           Abel Torrabadella Vila
       </div>
     </div>
