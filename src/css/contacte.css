@@ -1,0 +1,127 @@
+.mapa{
+    filter:grayscale(1);
+    transition: all 0.5s ease-in-out;
+}
+
+.mapa:hover{
+    filter:grayscale(0);
+
+}
+
+.maincontacte{
+    width: 100%;
+}
+
+.mapa{
+    width: 100%;
+    max-width: 100%;
+}
+.mapa iframe{
+    width: 100%;
+    height: 1000px;
+    border:none;
+}
+
+.formulari2{
+    position: absolute;
+    top: 140px;
+    right: 100px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    width: 30%;
+    align-items: center;
+    height: 50%;
+    max-height: 700px;
+}
+
+.grid3{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.align{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.encap1{
+    height: 200px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px !important;
+    border-radius: 10px;
+    padding: 50px;
+
+}
+
+
+.encap{
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+
+.iconphon{
+    width: 60px;
+    height: 60px;
+}
+
+.div_contacte1{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.inputafegir{
+    border-top: none;
+    border-left: none;
+    border-right:none;
+    margin-top: 20%;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    outline: none;
+
+}
+.inputafegir::placeholder{
+    color: black;
+}
+.enviarcontacte{
+    height: 50px;
+    font-size: 18px;
+    font-weight: 700;
+   
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+
+    background-color: white;
+    color: black;
+    border:1px solid black;
+    border-right: none;
+    border-left: none;
+}
+
+.enviarcontacte:hover{
+    background-color: black;
+    color: white;
+    border: none;
+
+}
+.divajuntador{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    bottom: 6%;
+    width: 50%;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    margin-top: 8%;
+}

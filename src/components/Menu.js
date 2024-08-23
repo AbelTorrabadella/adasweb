@@ -21,7 +21,7 @@ function Menu(props) {
   const [colorMenu, setColorMenu] = useState("transparent")
   const [colorLletres, setColorLletres] = useState("black")
   const [alturaMenu, setAlturaMenu] = useState("21%")
-  const [ampladaLogo, setAmpladaLogo] = useState("50%")
+  const [ampladaLogo, setAmpladaLogo] = useState("55%")
   const navigate = useNavigate();
   const [windowSize, setWindowSize] = useState(window.innerWidth);
   const [verdader, setVerdader] = useState(false)
@@ -52,14 +52,12 @@ function Menu(props) {
     if (scrollPosition > 0 && colorMenu == 'transparent') {
       setColorMenu('#fff');
       setColorLletres("black")
-      setAlturaMenu("12%")
       setAmpladaLogo("30%")
     }
     else if (scrollPosition == 0 && colorMenu == '#fff') {
       setColorMenu('transparent');
       setColorLletres("black")
-      setAlturaMenu("21%")
-      setAmpladaLogo("50%")
+      setAmpladaLogo("55%")
 
     }
   }, [scrollPosition]);
@@ -87,8 +85,8 @@ function Menu(props) {
     if (windowSize < 1000){
       setVerdader(true)
       setAlturaMenu("55%")
-
     }
+
     else if (windowSize > 1000){
       setVerdader(false)
       setClicked(false)
@@ -111,14 +109,17 @@ function Menu(props) {
     if (scrollPosition > 0 && windowSize > 1000 ) {
       setAlturaMenu("12%")
     }
-    
+    if (props.isPortada === false > 0 && windowSize > 1000 ) { //SI NO ES PORTADA PER PC
+      setAlturaMenu("15%")
+    }
   })
+
   return (
     <div className="menu" style={{display: (props.isPortada ? "flex" : 'flex'), backgroundColor:(props.isPortada ? colorMenu : 'white'), color:(props.isPortada ? colorLletres : 'black'), height: (alturaMenu)}}>
       <div className='displayflex' style={{width:"100%"}}>
         <div className='div-left'>
           <div className='logodiv' onClick={() => {navigate('')}}>
-            <img src={logo} className='logoimg' width={(props.isPortada ? ampladaLogo : "30%")}></img>
+            <img src={logo} className='logoimg' width={(props.isPortada ? ampladaLogo : "37%")}></img>
           </div>
         </div>
         <div style={{ display: (verdader && !clicked) ? "block" : "none", width:"30%", height:"20%"}} onClick={() => setClicked(true)}>
