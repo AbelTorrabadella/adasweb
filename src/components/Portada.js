@@ -32,11 +32,12 @@ function Portada() {
     }
   }, [primeravegada]);
 
+  const [ampladaralla, setAmpladaralla] = useState("0%")
 
   return (
     <div className="error" style={{width:"100%", height:"auto"}}>
       <div className="slider">
-      <video loop autoPlay muted playsinline fullscreen={false} resizeMode="contain" controls={false} >       
+      <video loop autoPlay muted playsinline fullscreen={false} resizeMode="contain" controls={false} className="video">       
         <source src={require('../img/video3.mp4')} type="video/mp4" />
       </video>
       </div>
@@ -46,7 +47,12 @@ function Portada() {
             A la Planxisteria oferim serveis de planxa i pintura, així com la calibració de sistemes ADAS per garantir la seguretat i eficiència del teu vehicle.
         </span>
       <div style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
-        <div className="hora" onClick={() => {navigate('contacte')}}>DEMANA HORA</div>
+      <div className='botohora2' onClick={() => {navigate('/contacte')}}  onMouseEnter={() => {setAmpladaralla("15%")}} onMouseLeave={() => {setAmpladaralla("0%")}}>
+              <div className='rallaboto2' style={{
+                width:ampladaralla,
+        }}></div>
+          DEMANA HORA
+        </div>        
       </div>
       </div>
       <div className="content">

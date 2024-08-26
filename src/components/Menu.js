@@ -116,14 +116,15 @@ function Menu(props) {
 
   return (
     <div className="menu" style={{ display: (props.isPortada ? "flex" : 'flex'), backgroundColor:(props.isPortada ? colorMenu : 'white'), color:(props.isPortada ? colorLletres : 'black'), height: (alturaMenu)}}>
-      <div className='displayflex' style={{width:"100%"}}>
+
         <div className='div-left' style={{width: (formatpetit ? "40%" : "20%")}}>
           <div className='logodiv' onClick={() => {navigate('')}}>
-            <img src={logo} className='logoimg' style={{width: ampladaLogo, cursor:"pointer"}}></img>
+            <img src={logo} className='logoimg' style={{width: "100%",height: "100%",objectFit:"contain",cursor:"pointer", maxHeight:"100%"}}></img>
           </div>
-        </div>
-        <div style={{ display: (verdader && !clicked) ? "block" : "none", width:"30%", height:"20%"}} onClick={() => setClicked(true)}>
-          <MenuIcon style={{width:"100%", height:"100%", cursor:"pointer"}}></MenuIcon>
+        </div>  
+
+        <div style={{ display: (verdader && !clicked) ? "block" : "none", width:"30%", height:"100%"}} onClick={() => setClicked(true)}>
+          <MenuIcon style={{width:"20%", height:"100%", cursor:"pointer"}}></MenuIcon>
         </div>
         <div style={{display: clicked ? "flex":"none", alignItems:"center", justifyContent:"center"}}>
           <CloseIcon style={{
@@ -188,7 +189,6 @@ function Menu(props) {
             </Grid>
           </Grid>
         </div>
-      </div>  
 
     </div>
   )
