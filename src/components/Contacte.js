@@ -16,11 +16,12 @@ import emailjs from '@emailjs/browser';
 function Contacte(props) {
   const form = useRef();
   const [mobil, setMobil] = useState(false)
+  const [opacitatenviat, setOpacitatenviat] = useState("0")
   const Item = styled(Paper)(({ theme }) => ({
 
   }));
   const [windowSize, setWindowSize] = useState(window.innerWidth);
-  const [ampladaralla24, setAmpladaralla24] = useState("0px");
+  const [enviat, setEnviat] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -70,8 +71,9 @@ function Contacte(props) {
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12799.66134173008!2d1.8798719089942884!3d42.0491690700205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a5071054045d19%3A0x67f62feaf4edcd2d!2sLa%20Planxisteria!5e0!3m2!1sca!2ses!4v1724400984654!5m2!1sca!2ses" 
         allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-        <div className='contacte' style={{display:"flex", alignItems:"center", justifyContent:"center"}} >
-            <form ref={form} onSubmit={enviarmail} className='formulari2' style={{position: (mobil ? "relative" : "absolute"), top: (mobil ? "30px" : "0px"), right: (mobil ? "0" : "100px"), width: (mobil ? "100%" : "30%"), padding:"20px"}}>
+        <div className='contacte' style={{display: enviat ? "none" : "flex", alignItems:"center", justifyContent:"center"}} >
+            <form ref={form} onSubmit={enviarmail}  className='formulari2'
+            style={{position: (mobil ? "relative" : "absolute"), top: (mobil ? "30px" : "0px"), right: (mobil ? "0" : "100px"), width: (mobil ? "100%" : "30%"), padding:"20px"}}>
                 <h1>CONTACTE</h1>
                 <div className='div_contacte1'>
                     <input className='inputafegir' style={{marginTop:"5%"}} name="nom" placeholder='Nom i cognoms'/>
@@ -81,9 +83,15 @@ function Contacte(props) {
                     <input className='inputafegir' name="consulta"  placeholder='Consulta' type='string'/>
                 </div>
                 <div className='divajuntador'>
-                    <input type="submit" className='enviarcontacte' value="Enviar"  ></input>
+                    <input type="submit" className='enviarcontacte' value="Enviar"  onClick={() => {setEnviat(true); setOpacitatenviat("1");}}></input>
                 </div>
             </form>
+        </div>
+        <div className="enviatok" style={{display: enviat ? "flex" : "none",
+          position: (mobil ? "relative" : "absolute"), top: (mobil ? "30px" : "0px"), 
+          right: (mobil ? "0" : "100px"), width: (mobil ? "100%" : "30%"), padding:"20px"}}>
+          <span style={{ opacity: opacitatenviat}}>LA CONSULTA S'HA ENVIAT CORRECTAMENT!</span>
+          <span style={{ opacity: opacitatenviat}}>MOTLES GRÀCIES!</span>
         </div>
         <div className="varis">
             <Grid className="grid3" container spacing={2}>
