@@ -93,7 +93,7 @@ function Footer(props) {
                   <div style={{display:"flex", flexDirection:"column"}} className="spans">
                     <div style={{display:"flex", alignItems:"center", justifyContent:"space-between"}}>
                       <EmailIcon></EmailIcon>
-                      <span className="espaiat2">xavigil@laplanxisteria.cat</span>
+                      <span className="espaiat2">adas@laplanxiteria.cat</span>
                     </div>
 
                     <div style={{marginTop:"20px"}}>

@@ -11,6 +11,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
 import PlaceIcon from '@mui/icons-material/Place';
+import emailjs from '@emailjs/browser';
 
 function Contacte(props) {
   const form = useRef();
@@ -44,6 +45,25 @@ function Contacte(props) {
     }
   } )
 
+
+  //FORMULARI:
+  
+  const {
+    register,
+    handleSubmit, //FORMULARI DE CONTACTE
+    setValue,
+    formState: { errors },
+  } = useForm();
+
+  const enviarmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_gqal8ji', 'template_690rfh8', form.current, {
+        publicKey: '3dkM_UN6L43ySjOUC',
+      })
+  };
+
   return (
     <div className="maincontacte">
       <div className="mapa" style={{display: (mobil ? "none" : "block")}}>
@@ -51,21 +71,20 @@ function Contacte(props) {
         allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
         <div className='contacte' style={{display:"flex", alignItems:"center", justifyContent:"center"}} >
-            <form ref={form} className='formulari2' style={{position: (mobil ? "relative" : "absolute"), top: (mobil ? "30px" : "0px"), right: (mobil ? "0" : "100px"), width: (mobil ? "100%" : "30%"), padding:"20px"}}>
+            <form ref={form} onSubmit={enviarmail} className='formulari2' style={{position: (mobil ? "relative" : "absolute"), top: (mobil ? "30px" : "0px"), right: (mobil ? "0" : "100px"), width: (mobil ? "100%" : "30%"), padding:"20px"}}>
                 <h1>CONTACTE</h1>
                 <div className='div_contacte1'>
                     <input className='inputafegir' style={{marginTop:"5%"}} name="nom" placeholder='Nom i cognoms'/>
                     <input className='inputafegir' name="email"  placeholder='Email'/>
-                    <input className='inputafegir' name="tel"  placeholder='Telèfon' type='sting'/>
-                    <input className='inputafegir' name="empresa"  placeholder='Empresa' type='sting'/>
-                    <input className='inputafegir' name="consulta"  placeholder='Consulta' type='sting'/>
+                    <input className='inputafegir' name="tel"  placeholder='Telèfon' type='string'/>
+                    <input className='inputafegir' name="empresa"  placeholder='Empresa' type='srting'/>
+                    <input className='inputafegir' name="consulta"  placeholder='Consulta' type='string'/>
                 </div>
                 <div className='divajuntador'>
-                    <input type="submit" className='enviarcontacte' value="ENVIAR"  ></input>
+                    <input type="submit" className='enviarcontacte' value="Enviar"  ></input>
                 </div>
             </form>
         </div>
-       
         <div className="varis">
             <Grid className="grid3" container spacing={2}>
               <Grid item xs={12} md={2} xl={2}>
@@ -85,7 +104,7 @@ function Contacte(props) {
                       <EmailIcon style={{height:"60px", width:"60px"}}></EmailIcon>
                       <div className="encap">CORREU</div>
                       <div className="align">
-                        <span>xavigil@laplanxisteria.cat</span>
+                        <span>adas@laplanxiteria.cat</span>
                       </div>
                     </div>
                   </Item>
@@ -113,11 +132,6 @@ function Contacte(props) {
                   </Item>
               </Grid>
             </Grid>
-
-
-
-            
-
         </div>
     </div>
   );
