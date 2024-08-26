@@ -51,7 +51,7 @@ function Contacte(props) {
         allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
         <div className='contacte' style={{display:"flex", alignItems:"center", justifyContent:"center"}} >
-            <form ref={form} className='formulari2' style={{position: (mobil ? "relative" : "absolute"), top: (mobil ? "30px" : "0"), right: (mobil ? "0" : "100px"), width: (mobil ? "100%" : "30%")}}>
+            <form ref={form} className='formulari2' style={{position: (mobil ? "relative" : "absolute"), top: (mobil ? "30px" : "0px"), right: (mobil ? "0" : "100px"), width: (mobil ? "100%" : "30%"), padding:"20px"}}>
                 <h1>CONTACTE</h1>
                 <div className='div_contacte1'>
                     <input className='inputafegir' style={{marginTop:"5%"}} name="nom" placeholder='Nom i cognoms'/>
