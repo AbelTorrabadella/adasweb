@@ -5,6 +5,16 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 function Preguntes() {
+    const [path, setPath] = useState(window.location.pathname)
+    const [ampladaralla3, setAmpladaralla3] = useState("0")
+    useEffect (() => {
+        if (path === "/preguntes"){
+            setAmpladaralla3("100%")
+        }
+        else{
+            setAmpladaralla3("0%")
+        }
+    })
     const Item = styled(Paper)(({ theme }) => ({
 
     }));
@@ -12,8 +22,10 @@ function Preguntes() {
   return (
     <div className="preguntes">
         <div className='titols'>
-            PREGUNTES FREQÜENTS
+            <span>PREGUNTES FREQÜENTS</span>
         </div>
+        <div style={{width:ampladaralla3, height:"1px", backgroundColor:"black", transition:"all 1s ease-in-out"}}></div>
+
         <Grid container spacing={10}>
             <Grid item xs={12} md={4} xl={6}>
                 <Item style={{boxShadow:"none", backgroundColor:"transparent"}}>
