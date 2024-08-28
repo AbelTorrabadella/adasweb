@@ -65,6 +65,14 @@ function Contacte(props) {
       })
   };
 
+  function IsEmpty() {
+    const consultaField = form.current.querySelector('[name="consulta"]');
+  
+    if (consultaField.value) {
+      setEnviat(true);
+      setOpacitatenviat("1");    
+    } 
+  }
   return (
     <div className="maincontacte">
       <div className="mapa" style={{display: (mobil ? "none" : "block")}}>
@@ -76,14 +84,14 @@ function Contacte(props) {
             style={{position: (mobil ? "relative" : "absolute"), top: (mobil ? "30px" : "0px"), right: (mobil ? "0" : "100px"), width: (mobil ? "100%" : "30%"), padding:"20px"}}>
                 <h1>CONTACTE</h1>
                 <div className='div_contacte1'>
-                    <input className='inputafegir' style={{marginTop:"5%"}} name="nom" placeholder='Nom i cognoms'/>
-                    <input className='inputafegir' name="email"  placeholder='Email'/>
-                    <input className='inputafegir' name="tel"  placeholder='Telèfon' type='string'/>
+                    <input className='inputafegir' style={{marginTop:"5%"}} name="nom" placeholder='Nom i cognoms *' required/>
+                    <input className='inputafegir' name="email"  placeholder='Email *' required/>
+                    <input className='inputafegir' name="tel"  placeholder='Telèfon *' type='string' required/>
                     <input className='inputafegir' name="empresa"  placeholder='Empresa' type='srting'/>
-                    <input className='inputafegir' name="consulta"  placeholder='Consulta' type='string'/>
+                    <input className='inputafegir' name="consulta"  placeholder='Consulta *' type='string' required/>
                 </div>
                 <div className='divajuntador'>
-                    <input type="submit" className='enviarcontacte' value="Enviar"  onClick={() => {setEnviat(true); setOpacitatenviat("1");}}></input>
+                    <input type="submit" className='enviarcontacte' value="Enviar"  onClick={() => {IsEmpty()}}></input>
                 </div>
             </form>
         </div>
