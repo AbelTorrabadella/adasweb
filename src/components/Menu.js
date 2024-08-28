@@ -26,7 +26,7 @@ function Menu(props) {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
   const [verdader, setVerdader] = useState(false)
   const [clicked, setClicked] = useState(false)
-  const [ralla, setRalla] = useState("0%")
+  const [ralla, setRalla] = useState("0")
   const [ralla1, setRalla1] = useState("0%")
   const [ralla2, setRalla2] = useState("0%")
   const [ralla3, setRalla3] = useState("0%")
@@ -145,19 +145,19 @@ function Menu(props) {
         </div>
         <div className='div-right' style={{display: verdader ? "none" : ""}}>
         <Grid container spacing={2} style={{display:"flex", alignItems:"center", justifyContent:"space-evenly"}}>
-            <Grid item xs={12} md={2} xl={2} sx={{ setPetit: {xs:true, md:false }}} >
+            <Grid item xs={12} md={2} xl={2} sx={{ setPetit: {xs:true, md:false }}} style={{transition:"all 0.5s ease-in-out"}} >
                 <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none", backgroundColor:"transparent"}}>
-                <div className='encapsulament' onMouseEnter={() => {setRalla(("100%"))}} onMouseLeave={()=> {setRalla(("0%"))}}>
-                  <div className="bottomborder" onClick={() => {navigate('treball')}}>
+                <div className='encapsulament'onMouseEnter={() => {setRalla(("1"))}} onMouseLeave={()=> {setRalla(("0"))}}>
+                  <div className="bottomborder" onClick={() => {navigate('treball'); window.scrollTo(0, 0);}}>
                     CALIBRACIONS</div>
-                  <div className="ralla"  style={{width:ralla, height:"2px", backgroundColor:colorLletres, transition:"all 0.4s ease-in-out"}}></div>
+                  <div className="ralla" style={{width:"100%",opacity:ralla ,height:"2px", backgroundColor:colorLletres, transition:"all 0.4s ease-in-out"}}></div>
                 </div>
                 </Item>
             </Grid>
             <Grid item xs={12} md={2} xl={2}>
                 <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none", backgroundColor:"transparent"}}>
                 <div className='encapsulament' onMouseEnter={() => {setRalla1(("100%"))}} onMouseLeave={()=> {setRalla1(("0%"))}}>
-                  <div className="bottomborder" onClick={() => {navigate('tipus')}}>TIPUS D'ADAS</div>
+                  <div className="bottomborder" onClick={() => {navigate('tipus');window.scrollTo(0, 0);}}>TIPUS D'ADAS</div>
                   <div className="ralla" style={{width:ralla1, height:"2px", backgroundColor:colorLletres, transition:"all 0.4s ease-in-out"}}></div>
                 </div>
             
@@ -166,7 +166,7 @@ function Menu(props) {
             <Grid item xs={12} md={2} xl={2}>
                 <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none", backgroundColor:"transparent"}}>
                 <div className='encapsulament'  onMouseEnter={() => {setRalla2(("100%"))}} onMouseLeave={()=> {setRalla2(("0%"))}}>
-                  <div className="bottomborder" onClick={() => {navigate('preguntes')}}>FAQs</div>
+                  <div className="bottomborder" onClick={() => {navigate('preguntes'); window.scrollTo(0, 0);}}>FAQs</div>
                   <div className="ralla" style={{width:ralla2, height:"2px", backgroundColor:colorLletres, transition:"all 0.4s ease-in-out"}}></div>
                 </div>
                 </Item>
@@ -181,7 +181,7 @@ function Menu(props) {
             </Grid>*/}
             <Grid item xs={12} md={2} xl={2}>
                 <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none", backgroundColor:"transparent"}}>
-                <div className='encapsulament' onClick={() => {navigate('contacte')}} onMouseEnter={() => {setRalla4(("100%"))}} onMouseLeave={()=> {setRalla4(("0%"))}}>
+                <div className='encapsulament' onClick={() => {navigate('contacte');window.scrollTo(0, 0);}} onMouseEnter={() => {setRalla4(("100%"))}} onMouseLeave={()=> {setRalla4(("0%"))}}>
                   <div className="bottomborder">CONTACTE</div>
                   <div className="ralla" style={{width:ralla4, height:"2px", backgroundColor:colorLletres, transition:"all 0.4s ease-in-out"}}></div>
                 </div>

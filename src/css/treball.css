@@ -68,6 +68,7 @@
 .itemfoto{
     max-width: 100%;
     box-shadow: none;
+    cursor: pointer;
 
 }
 
@@ -126,3 +127,100 @@
     margin-right: 10px;
     transition: all 0.25s ease-in-out;
 }
+
+
+
+.div-imatgess{
+    position: relative;
+    padding-top: 195px;
+    margin-bottom: 3%;
+}
+
+.imatgess img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+.titol-imatges{
+    font-size: 50px;
+    font-family: 'Gotham Bold', sans-serif;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; 
+}
+
+.bottomhr{
+    margin-bottom: 3%;
+}
+
+.div-clicked{
+    width: 100%;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    margin: auto;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: #000000cf;
+    z-index: 110;
+    display: none;
+}
+
+.obert {
+    display: flex;
+}
+
+.tencar{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 90px;
+    top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-clicked-img {
+    max-width: 50% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    width: 100% !important;
+}
+
+.tencar .css-i4bv87-MuiSvgIcon-root{
+    fill: white !important; 
+    font-size: 4rem !important;
+    padding:2% !important;
+
+}
+.esquerra_img {
+    fill: white  !important;
+    transition: transform .2s  !important; /* Animation */
+    margin-left: 1%;
+  }
+  
+  .dreta_img {
+    fill: white !important;
+    transition: transform .2s !important; /* Animation */
+    margin-right: 1%;
+  
+  }
+  .arrows2{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+  }

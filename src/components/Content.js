@@ -55,6 +55,7 @@ function Content(props) {
     const [opacitat1, setOpacitat1] = useState("0")
     const [opacitat2, setOpacitat2] = useState("0")
     const [AmpladaRalla3, setAmpladaRalla3] = useState("0")
+    const [opacitatImg, setopacitatImg] = useState("1")
 
     useEffect(() => {
         if (scrollPosition > 500) {
@@ -78,9 +79,9 @@ function Content(props) {
     <div className="content">
         <div className='adas'>
         <Grid container spacing={2}>
-            <Grid item xs={12} md={6} xl={6}>
+            <Grid item xs={12} md={6} xl={6} style={{opacity:opacitat, transition:"all 1s ease-in-out"}}>
                 <Item>
-                    <div className='primer'  style={{opacity:opacitat, transition:"all 0.5s ease-in-out"}}>
+                    <div className='primer'>
                         <div className='titols' style={{justifyContent:"center"}}>QUÈ SON ELS SISTEMES ADAS?</div>
                         <span className='textinferior'>
                             Els sistemes d'Assistència Avançada al Conductor (ADAS) milloren la seguretat i l'eficiència dels vehicles. <br></br>Inclouen funcions com el control de creuer adaptatiu i l'assistència de manteniment de carril, que redueixen el risc d'accidents i proporcionen una conducció més còmoda i confiable.
@@ -89,9 +90,9 @@ function Content(props) {
                 </Item>
             </Grid>
 
-            <Grid item xs={12} md={6} xl={6}>
+            <Grid item xs={12} md={6} xl={6}  style={{opacity:opacitat, transition:"all 1s ease-in-out"}}>
                 <Item>
-                    <div className='primer'  style={{opacity:opacitat2, transition:"all 1s ease-in-out"}}>
+                    <div className='primer'>
                         <div className='titols' style={{justifyContent:"center"}}>QUAN CAL CALIBRAR ELS SISTEMES ADAS?</div>
                         <span className='textinferior' style={{textAlign:"justify"}}>
                             <ul style={{fontWeight:'bold'}} className='llista'>
@@ -113,9 +114,9 @@ function Content(props) {
                 <div className='titols' style={{display:"flex", justifyContent:"center", opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>PERQUE CAL CALIBRAR ELS SENSORS I RADARS DEL TEU COTXE?</div>
                 <div style={{display:"flex"}} className='quadrats'>
                 <Grid container spacing={2} style={{display:"flex", justifyContent:"center"}}>
-                    <Grid item xs={12} md={5} xl={3}>
+                    <Grid item xs={12} md={5} xl={3} style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
                         <Item  style={{ backgroundColor:"transparent", boxShadow:"none"}}>
-                        <div className='primerquadrat' style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
+                        <div className='primerquadrat'>
                             <div className='divicona'><img className='icona' src={seguretat}></img></div>
                             <div className='titol'>SEGURETAT</div>
                             <div className='subtext'>
@@ -124,9 +125,9 @@ function Content(props) {
                         </Item>
                     </Grid>
 
-                    <Grid item xs={12} md={5} xl={3}>
+                    <Grid item xs={12} md={5} xl={3}  style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
                         <Item style={{ backgroundColor:"transparent", boxShadow:"none"}}>
-                        <div className='primerquadrat' style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
+                        <div className='primerquadrat'>
                             <div className='divicona'><img className='icona' src={fiabilitat}></img></div>
                             <div className='titol'>FIABILITAT</div>
                             <div className='subtext'>
@@ -136,9 +137,9 @@ function Content(props) {
                         </Item>
                     </Grid>
                     
-                    <Grid item xs={12} md={5} xl={3}>
+                    <Grid item xs={12} md={5} xl={3}  style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
                         <Item style={{ backgroundColor:"transparent", boxShadow:"none"}}>
-                        <div className='primerquadrat' style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
+                        <div className='primerquadrat'>
                             <div className='divicona'><img className='icona' src={normes}></img></div>
                             <div className='titol'>COMPLIMENT DE NORMES</div>
                             <div className='subtext'>
@@ -148,9 +149,9 @@ function Content(props) {
                         </Item>
                     </Grid>
                     
-                    <Grid item xs={12} md={5} xl={3}>
+                    <Grid item xs={12} md={5} xl={3}  style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
                         <Item style={{ backgroundColor:"transparent", boxShadow:"none"}}>
-                        <div className='primerquadrat' style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
+                        <div className='primerquadrat'>
                             <div className='divicona'><img className='icona' src={durabilitat}></img></div>
                             <div className='titol'>DURABILITAT I EFICIÈNCIA</div>
                             <div className='subtext'>
@@ -172,13 +173,12 @@ function Content(props) {
 
             <div className='titols' style={{width:"80%", marginBottom:"3%"}}>TIPUS DE SISTEMES</div>
             <div style={{display:"flex", alignItems:"center", justifyContent:"space-evenly", width:"100%"}}>
-
             <Grid container spacing={2} style={{width:"80%"}}>
-                <Grid item xs={12} md={4} xl={4}>
+                <Grid item xs={12} md={4} xl={4} style={{transition:"all 0.5s ease-in-out"}}>
                     <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none"}}>
                         <div className='tipus1'>
                             <div className='divnegre'>
-                                <img src={camera} className='tipussensors'></img>
+                                <img src={camera} style={{opacity:opacitatImg}} className='tipussensors'></img>
                             </div>
                             <div>
                                 <div className='titolssensors'>CÀMERAS</div>
@@ -194,11 +194,11 @@ function Content(props) {
                     <Item style={{ display:"flex", justifyContent:"center",boxShadow:"none"}}>
                         <div className='tipus1' style={{background:"#1a1a1a"}}>
                             <div className='divnegre' style={{backgroundColor:"white"}}>
-                                <img src={sensor} style={{filter:"none"}} className='tipussensors' ></img>
+                                <img src={sensor} style={{filter:"none",opacity:opacitatImg, transition:"all 0.5s ease-in-out"}} className='tipussensors' ></img>
                             </div>
                             <div style={{color:"white"}}>
                                 <div className='titolssensors'>SENSORS</div>
-                                <div>Els cotxes actuals estan plens de sensors, però si ens referim als </div>
+                                <div>Els sensors en els cotxes moderns tenen un paper crucial en la conducció assistida i autònoma, ja que proporcionen informació detallada sobre l'entorn que envolta el vehicle.</div>
                             </div>
                         </div>
                     </Item>
@@ -207,7 +207,7 @@ function Content(props) {
                     <Item style={{ display:"flex", justifyContent:"center",boxShadow:"none"}}>
                         <div className='tipus1'>
                             <div className='divnegre'>
-                                <img src={radar} className='tipussensors'></img>
+                                <img src={radar} className='tipussensors' style={{opacity:opacitatImg, transition:"all 0.5s ease-in-out"}}></img>
                             </div>
                             <div>
                                 <div className='titolssensors'>RADARS I LIDARS</div>

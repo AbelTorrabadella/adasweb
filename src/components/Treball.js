@@ -7,13 +7,16 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Slider3 from './Slider3';
 import { useNavigate } from 'react-router-dom';
-
 import experiencia from "../img/experiencia.png"
 import qualitat from "../img/qualitat.png"
 import innovacio from "../img/innovacio.png"
 import cupra from "../img/CUPRA.jpg"
 import leon from "../img/leon.jpeg"
 import mercedes2 from "../img/mercedes2.jpg"
+
+import CloseIcon from '@mui/icons-material/Close';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 
 import primera from "../img/grid1/1.jpg"
 import segona from "../img/grid1/2.jpg"
@@ -28,15 +31,61 @@ import novena from "../img/grid1/9.jpg"
 import accident from "../img/accident.jpeg"
 import golfverd from "../img/foto2.jpg"
 function Treball() {
+  //IMATGES---------------------------------------------------------------
+  const [imatges, setImatges] = useState([primera,segona,tercera,quarta,cinquena,sisena,setena,vuitena,novena])
+  const [imatgeSeleccionada, setImatgeSeleccionada] = useState(0);
+
+  function dreta(){
+    setImatgeSeleccionada(imatgeSeleccionada + 1);
+    if (imatgeSeleccionada == imatges.length -1){
+      setImatgeSeleccionada(0);
+    }
+  }
+  function esquerra(){
+    setImatgeSeleccionada(imatgeSeleccionada - 1);
+    if (imatgeSeleccionada == 0){
+      setImatgeSeleccionada(imatges.length-1);
+    }
+  }
+  function onClickImatge(index){
+    setFotoOberta(true);
+    setImatgeSeleccionada(index)
+
+  }
+  function tencarImatge(){
+    setFotoOberta(false);
+  }
+  //---------------------------------------------------------------IMATGES
+
   const navigate = useNavigate();
+  const [opacitat3, setOpacitat3] = useState("1")
+  const [opacitat4, setOpacitat4] = useState("0")
+
   const [ampladaralla, setAmpladaralla] = useState("0%")
   const Item = styled(Paper)(({ theme }) => ({
 
   }));
-  const slides3 = [
-    {imatges: accident, titol:"EVITA ACCIDENTS"},
-    {imatges: golfverd, titol:"EVITA ACCIDENTS23"},
-]
+
+const handleScroll = () => {
+  const position = window.pageYOffset;
+  setScrollPosition(position);
+};
+const [scrollPosition, setScrollPosition] = useState(0);
+const [fotoOberta, setFotoOberta] = useState(false);
+
+useEffect(() => {
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  window.scrollTo(0,0);
+  return () => {
+      window.removeEventListener('scroll', handleScroll);
+  };
+}, []);
+
+useEffect(() => {
+  if (scrollPosition > 500) {
+      setOpacitat4('1');
+}
+}, [scrollPosition]);
 
   /*--------------------------------------------------*/
   return (
@@ -69,7 +118,7 @@ function Treball() {
                   </Item>
               </Grid>
 
-              <Grid item xs={12} md={4} xl={4} sx={{ setPetit: {xs:true, md:false }}} >
+              <Grid item xs={12} md={4} xl={4} sx={{ setPetit: {xs:true, md:false }}}>
                   <Item style={{boxShadow:"none", backgroundColor:"transparent"}}>
                     <div className='flex2'>
                       <div className="icon">
@@ -113,7 +162,7 @@ function Treball() {
         </div>
 
         <div style={{display:"flex", alignItems:"center",justifyContent:"space-around",width:"80%"}}>
-        <Grid container spacing={2} style={{display:"flex", alignItems:"center", justifyContent:"space-evenly"}}>
+        <Grid container spacing={2} style={{display:"flex", alignItems:"center", justifyContent:"space-evenly",opacity:opacitat3, transition:"all 0.5s ease-in-out"}}>
               <Grid item xs={12} md={6} xl={6}>
                   <Item style={{boxShadow:"none", backgroundColor:"transparent"}}>
                   <div className='fotodiv1'>
@@ -161,7 +210,7 @@ function Treball() {
             </div>
 
         <div style={{display:"flex", alignItems:"center",justifyContent:"space-around", marginTop:"5%",width:"80%"}}>
-        <Grid container spacing={2} style={{display:"flex", alignItems:"center", justifyContent:"space-evenly"}}>
+        <Grid container spacing={2} style={{display:"flex", alignItems:"center", justifyContent:"space-evenly",opacity:opacitat4, transition:"all 0.5s ease-in-out"}}>
               <Grid item xs={12} md={6} xl={6}>
                   <Item style={{boxShadow:"none", backgroundColor:"transparent"}}>
                     <div className='text'>
@@ -239,54 +288,32 @@ function Treball() {
             <div className='ralla5' style={{width:"65%"}}></div>
         </div>
         <div className='grid1' style={{width:"80%"}}>
-          <Grid container spacing={2} style={{display:"flex", alignItems:"center", justifyContent:"space-evenly"}}>
-                <Grid item xs={12} md={4} xl={4}>
-                    <Item className='itemfoto'>
-                        <img src={primera}></img>
-                    </Item>
+          <Grid container spacing={2} className="grid1">
+            {imatges.map((imatge, index) => {
+              return (
+              <Grid item xs={12} md={6} xl={4}>
+                <Item className='itemfoto'>
+                    <div className='imatgess' onClick={() => {onClickImatge(index)}}>
+                      <img src={imatge}></img>     
+                    </div>
+                </Item>
                 </Grid>
-                <Grid item xs={12} md={4} xl={4}>
-                    <Item className='itemfoto'>
-                        <img src={segona}></img>
-                    </Item>
-                </Grid>
-                <Grid item xs={12} md={4} xl={4}>
-                    <Item className='itemfoto'>
-                        <img src={tercera}></img>
-                    </Item>
-                </Grid>
-                <Grid item xs={12} md={4} xl={4}>
-                    <Item className='itemfoto'>
-                        <img src={quarta}></img>
-                    </Item>
-                </Grid>
-                <Grid item xs={12} md={4} xl={4}>
-                    <Item className='itemfoto'>
-                        <img src={cinquena}></img>
-                    </Item>
-                </Grid>
-                <Grid item xs={12} md={4} xl={4}>
-                    <Item className='itemfoto'>
-                        <img src={sisena}></img>
-                    </Item>
-                </Grid>
-                <Grid item xs={12} md={4} xl={4}>
-                    <Item className='itemfoto'>
-                        <img src={setena}></img>
-                    </Item>
-                </Grid>
-                <Grid item xs={12} md={4} xl={4}>
-                    <Item className='itemfoto'>
-                        <img src={vuitena}></img>
-                    </Item>
-                </Grid>
-                <Grid item xs={12} md={4} xl={4}>
-                    <Item className='itemfoto'>
-                        <img src={novena}></img>
-                    </Item>
-                </Grid>
-            </Grid>
+              )
+            })}
+          </Grid>
         </div>
+        <div className={'div-clicked ' + (fotoOberta ? 'obert' : '')} style={{transition:'all 1s ease-in-out'}}>
+          <img src={imatges[imatgeSeleccionada]} className='div-clicked-img'></img>
+          <div className='arrows2'>
+
+          <div className="esquerra_img" onClick={esquerra}><KeyboardArrowLeftIcon htmlColor='#fff' sx={{width: '70px', height: '70px', cursor:"pointer"}}/></div>
+          <div className="dreta_img" onClick={dreta}><KeyboardArrowRightIcon htmlColor='#fff' sx={{width: '70px', height: '70px',cursor:"pointer"}}/></div>
+
+          </div>
+          <div className='tencar' onClick={() => {tencarImatge()}}>
+            <CloseIcon className='close' style={{cursor:"pointer"}}></CloseIcon>
+          </div>    
+        </div>   
         <div style={{display:"flex", alignItems:"center", justifyContent:"center",width:"80%"}}>
             <div className='ralla4' style={{width:"20%"}}></div>
             <div className='titols'>MÉS EXEMPLES A LES XARXES SOCIALS</div>
