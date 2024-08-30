@@ -18,13 +18,18 @@
     height: 100vh;
     object-fit: cover;
     z-index: -1;
-    
+    pointer-events: none;
+
 
 }
 .slider{
     overflow: hidden;
     z-index: -1;
 
+}
+
+.slider .video{
+    pointer-events: none;
 }
 
 .spantext{

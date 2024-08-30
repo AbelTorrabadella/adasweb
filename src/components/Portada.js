@@ -37,7 +37,7 @@ function Portada() {
   return (
     <div className="error" style={{width:"100%", height:"auto"}}>
       <div className="slider">
-      <video loop autoPlay muted playsinline fullscreen={false} resizeMode="contain" controls={false} className="video" style={{pointerEvents:"none"}}>       
+      <video loop autoPlay muted playsinline fullscreen={false} resizeMode="contain" controls={false} className="video" >       
         <source src={require('../img/video3.mp4')} type="video/mp4" />
       </video>
       </div>

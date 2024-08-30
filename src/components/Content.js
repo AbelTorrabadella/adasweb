@@ -141,7 +141,7 @@ function Content(props) {
                         <Item style={{ backgroundColor:"transparent", boxShadow:"none"}}>
                         <div className='primerquadrat'>
                             <div className='divicona'><img className='icona' src={normes}></img></div>
-                            <div className='titol'>COMPLIMENT DE NORMES</div>
+                            <div className='titol'>COMPLIMENT NORMATIU</div>
                             <div className='subtext'>
                                 Les normatives de seguretat viària exigeixen que els sistemes ADAS funcionin correctament. Sensors descalibrats poden implicar sancions i responsabilitats legals en cas d'accident.
                             </div>
