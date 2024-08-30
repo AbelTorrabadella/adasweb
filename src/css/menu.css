@@ -1,7 +1,7 @@
 .menu{
     justify-content: space-around;
     top: 0px;
-    z-index: 11;
+    z-index: 121;
     width: 100%;
     color: rgb(0, 0, 0);
     transition: all 0.5s ease-in-out;
