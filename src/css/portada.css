@@ -19,19 +19,16 @@
     object-fit: cover;
     z-index: -1;
     pointer-events: none;
+    position: relative;
 
 
 }
 .slider{
     overflow: hidden;
     z-index: -1;
+    position: relative;
 
 }
-
-.slider .video{
-    pointer-events: none;
-}
-
 .spantext{
     font-size: 45px;
     width: 100%;
