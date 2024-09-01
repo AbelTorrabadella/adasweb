@@ -272,7 +272,7 @@ useEffect(() => {
               <span>
                   EVITA ACCIDENTS
               </span>
-              <div className='botohora' onClick={() => {navigate('/contacte')}}  onMouseEnter={() => {setAmpladaralla("15%")}} onMouseLeave={() => {setAmpladaralla("0%")}}>
+              <div className='botohora' onClick={() => {navigate('/contacte');window.scrollTo(0, 0);}}  onMouseEnter={() => {setAmpladaralla("15%")}} onMouseLeave={() => {setAmpladaralla("0%")}}>
               <div className='rallaboto' style={{
                 width:ampladaralla,
 

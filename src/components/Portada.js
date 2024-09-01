@@ -47,7 +47,7 @@ function Portada() {
             A la Planxisteria oferim serveis de planxa i pintura, així com la calibració de sistemes ADAS per garantir la seguretat i eficiència del teu vehicle.
         </span>
       <div style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
-      <div className='botohora2' onClick={() => {navigate('/contacte')}}  onMouseEnter={() => {setAmpladaralla("15%")}} onMouseLeave={() => {setAmpladaralla("0%")}}>
+      <div className='botohora2' onClick={() => {navigate('/contacte');window.scrollTo(0, 0);}}  onMouseEnter={() => {setAmpladaralla("15%")}} onMouseLeave={() => {setAmpladaralla("0%")}}>
               <div className='rallaboto2' style={{
                 width:ampladaralla,
         }}></div>

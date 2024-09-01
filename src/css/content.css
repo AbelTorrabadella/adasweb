@@ -104,7 +104,7 @@
 }
 
 .subtext{
-    text-align: center;
+    text-align: justify;
     display: flex;
     color:black;
     margin-top: 7%;
@@ -152,13 +152,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .tipus1{
     width: 75%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px !important;
     height: 500px;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 2%;
     text-align: center;
     align-items: center;
