@@ -82,7 +82,7 @@ useEffect(() => {
 }, []);
 
 useEffect(() => {
-  if (scrollPosition > 500) {
+  if (scrollPosition > 400) {
       setOpacitat4('1');
 }
 }, [scrollPosition]);
