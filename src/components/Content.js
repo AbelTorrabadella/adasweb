@@ -13,9 +13,7 @@ import golf from "../img/golf.jpeg"
 import byd from "../img/byd.png"
 import Slider from './Slider';
 import three from "../img/360.jpg"
-import radars from "../img/radars.jpeg";
 import carretera from "../img/carretera.jpeg"
-import texa from "../img/texa.png"
 import sensor from "../img/sensor.png"
 import camera from "../img/camera.png"
 import radar from "../img/radar.png"
