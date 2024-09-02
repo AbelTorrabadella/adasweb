@@ -91,7 +91,7 @@ useEffect(() => {
   return (
     <div className="treball" style={{ width:"100%", display:"flex", flexDirection:"column", alignItems:"center", marginBottom:"10%"}}>      
       <div className='perque' style={{ width:"80%"}}>
-        <div style={{display:"flex", alignItems:"center"}}>
+        <div style={{display:"flex", alignItems:"center", width:"100%"}}>
             <div className='ralla4'></div>
             <div className='titols'>PER QUÈ TRIAR-NOS?</div>
             <div className='ralla5'></div>
@@ -100,7 +100,7 @@ useEffect(() => {
         <div className='motius'>
             <Grid container spacing={2} style={{display:"flex", alignItems:"center", justifyContent:"space-evenly"}}>
               <Grid item xs={12} md={4} xl={4}>
-                  <Item style={{boxShadow:"none", backgroundColor:"transparent"}}>
+                  <Item style={{boxShadow:"none", backgroundColor:"transparent"}} className='itemgrid2'>
                     <div className='flex2'>
                       <div className="icon">
                         <img src={qualitat} className='iconfoto'></img>
@@ -119,7 +119,7 @@ useEffect(() => {
               </Grid>
 
               <Grid item xs={12} md={4} xl={4} sx={{ setPetit: {xs:true, md:false }}}>
-                  <Item style={{boxShadow:"none", backgroundColor:"transparent"}}>
+                  <Item style={{boxShadow:"none", backgroundColor:"transparent"}} className='itemgrid2'>
                     <div className='flex2'>
                       <div className="icon">
                         <img src={experiencia} className='iconfoto'></img>
@@ -138,7 +138,7 @@ useEffect(() => {
                   </Item>
               </Grid>
               <Grid item xs={12} md={4} xl={4} sx={{ setPetit: {xs:true, md:false }}} >
-                  <Item style={{boxShadow:"none", backgroundColor:"transparent"}}>
+                  <Item style={{boxShadow:"none", backgroundColor:"transparent"}} className='itemgrid2'>
 
                     <div className='flex2'>
                       <div className="icon">
