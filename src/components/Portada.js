@@ -6,6 +6,7 @@ import foto1 from "../img/foto1.png"
 import foto2 from "../img/foto2.jpg"
 import foto3 from "../img/foto3.png"
 import video1 from "../img/video.mp4"
+import fotomobil from "../img/fotomobil.jpg"
 import { useNavigate } from 'react-router-dom';
 
 function Portada() {
@@ -19,6 +20,32 @@ function Portada() {
   const [primeravegada, setPrimeravegada] = useState(true)
   const [dreta, setDreta] = useState("-50%")
   const [opacitat, setOpacitat] = useState("0")
+
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const [mobil2, setMobil2] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  useEffect(() => {
+    console.log({windowSize});
+  }, [windowSize]);
+
+  useEffect(()=> {
+    if (windowSize < 1000){ //PANTALLA MOBIL
+      setMobil2(true)
+    }
+    else {
+      setMobil2(false)
+    }
+  } )
 
   useEffect(() => {
     if (primeravegada == true && path == "/") {
@@ -37,7 +64,8 @@ function Portada() {
   return (
     <div className="error" style={{width:"100%", height:"auto"}}>
       <div className="slider">
-      <video loop  muted playsinline fullscreen={false} resizeMode="contain" controls={false} className="video" >       
+      <img style={{display: mobil2 ? "block" : "none"}} src={fotomobil}></img>
+      <video loop autoPlay muted playsinline fullscreen={false} resizeMode="contain" controls={false} className="video" style={{display: mobil2 ? "none" : "block"}}>       
         <source src={require('../img/video3.mp4')} type="video/mp4" />
       </video>
       </div>

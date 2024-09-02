@@ -66,7 +66,7 @@ function Contacte(props) {
   };
 
   function IsEmpty() {
-    const consultaField = form.current.querySelector('[name="consulta"]');
+    const consultaField = form.current.querySelector('[name="consulta"]'); //Aixo es per si els camps no estan plens del formulari
   
     if (consultaField.value) {
       setEnviat(true);
