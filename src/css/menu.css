@@ -1,6 +1,5 @@
 .menu{
     justify-content: space-around;
-    top: 0px;
     z-index: 50;
     width: 100%;
     color: rgb(0, 0, 0);
@@ -41,4 +40,25 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.topdeltot{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    justify-content: center;
+    z-index: 99;
+    position: absolute;
+    width: 100%;
+    transition: all 1s ease-in-out;
+    font-size: 18px;
+    margin-top: 1%;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    margin-left: 5%;
+
 }

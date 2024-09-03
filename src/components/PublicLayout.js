@@ -31,7 +31,7 @@ const PublicLayout = (props) => {
           setAlturamenu2("0")
         }
         else if (windowSize > 1000 && props.isPortada === false) {
-            setAlturamenu2("140px")
+            setAlturamenu2("220px")
           }
       } )
 

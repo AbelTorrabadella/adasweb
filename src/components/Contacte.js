@@ -12,6 +12,7 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
 import PlaceIcon from '@mui/icons-material/Place';
 import emailjs from '@emailjs/browser';
+import { CheckBox } from "@mui/icons-material";
 
 function Contacte(props) {
   const form = useRef();
@@ -81,7 +82,7 @@ function Contacte(props) {
       </div>
         <div className='contacte' style={{display: enviat ? "none" : "flex", alignItems:"center", justifyContent:"center"}} >
             <form ref={form} onSubmit={enviarmail}  className='formulari2'
-            style={{position: (mobil ? "relative" : "absolute"), top: (mobil ? "30px" : "0px"), right: (mobil ? "0" : "100px"), width: (mobil ? "100%" : "30%"), padding:"20px"}}>
+            style={{position: (mobil ? "relative" : "absolute"), top: (mobil ? "30px" : "0px"), right: (mobil ? "0" : "150px"), width: (mobil ? "100%" : "30%"), padding:"20px"}}>
                 <h1>CONTACTE</h1>
                 <div className='div_contacte1'>
                     <input className='inputafegir' style={{marginTop:"5%"}} name="nom" placeholder='Nom i cognoms *' required/>
@@ -89,6 +90,7 @@ function Contacte(props) {
                     <input className='inputafegir' name="tel"  placeholder='Telèfon *' type='string' required/>
                     <input className='inputafegir' name="empresa"  placeholder='Empresa' type='srting'/>
                     <input className='inputafegir' name="consulta"  placeholder='Consulta *' type='string' required/>
+                    <p style={{fontSize:"18px", color:"black", marginTop:"10%"}}><input type="checkbox" id="scales" name="scales" required />Accepto la <a target=" " href="/politica">politica de privacitat</a></p>
                 </div>
                 <div className='divajuntador'>
                     <input type="submit" className='enviarcontacte' value="Enviar"  onClick={() => {IsEmpty()}}></input>

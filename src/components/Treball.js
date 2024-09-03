@@ -5,57 +5,18 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import Slider3 from './Slider3';
 import { useNavigate } from 'react-router-dom';
 import experiencia from "../img/experiencia.png"
 import qualitat from "../img/qualitat.png"
 import innovacio from "../img/innovacio.png"
 import cupra from "../img/CUPRA.jpg"
-import leon from "../img/leon.jpeg"
 import mercedes2 from "../img/mercedes2.jpg"
 
-import CloseIcon from '@mui/icons-material/Close';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
-
-import primera from "../img/grid1/1.jpg"
-import segona from "../img/grid1/2.jpg"
-import tercera from "../img/grid1/3.jpg"
-import quarta from "../img/grid1/4.jpg"
-import cinquena from "../img/grid1/5.jpg"
-import sisena from "../img/grid1/6.jpg"
-import setena from "../img/grid1/7.jpg"
-import vuitena from "../img/grid1/8.jpg"
-import novena from "../img/grid1/9.jpg"
+import maquinatexa from "../img/maquinatexa.jpg"
 
 import accident from "../img/accident.jpeg"
 import golfverd from "../img/foto2.jpg"
 function Treball() {
-  //IMATGES---------------------------------------------------------------
-  const [imatges, setImatges] = useState([primera,segona,tercera,quarta,cinquena,sisena,setena,vuitena,novena])
-  const [imatgeSeleccionada, setImatgeSeleccionada] = useState(0);
-
-  function dreta(){
-    setImatgeSeleccionada(imatgeSeleccionada + 1);
-    if (imatgeSeleccionada == imatges.length -1){
-      setImatgeSeleccionada(0);
-    }
-  }
-  function esquerra(){
-    setImatgeSeleccionada(imatgeSeleccionada - 1);
-    if (imatgeSeleccionada == 0){
-      setImatgeSeleccionada(imatges.length-1);
-    }
-  }
-  function onClickImatge(index){
-    setFotoOberta(true);
-    setImatgeSeleccionada(index)
-
-  }
-  function tencarImatge(){
-    setFotoOberta(false);
-  }
-  //---------------------------------------------------------------IMATGES
 
   const navigate = useNavigate();
   const [opacitat3, setOpacitat3] = useState("1")
@@ -71,7 +32,6 @@ const handleScroll = () => {
   setScrollPosition(position);
 };
 const [scrollPosition, setScrollPosition] = useState(0);
-const [fotoOberta, setFotoOberta] = useState(false);
 
 useEffect(() => {
   window.addEventListener('scroll', handleScroll, { passive: true });
@@ -111,7 +71,7 @@ useEffect(() => {
                         </div>
       
                         <div className='undertext'>
-                          Sempre betllem pel millor resultat possible.
+                          Sempre vetllem pel millor resultat possible.
                         </div>
                       </div>
                     </div>
@@ -130,7 +90,7 @@ useEffect(() => {
                         </div>
       
                         <div className='undertext'>
-                          Comptem amb l'experiencia de tota una vida dedicada al sector.
+                          Comptem amb l'experiència de tota una vida dedicada al sector.
                         </div>
                       </div>
                     </div>
@@ -148,19 +108,16 @@ useEffect(() => {
                         <div  className='smalltitles'>
                           Innovació
                         </div>
-      
                         <div className='undertext'>
-                          Som una empresa pionera a Catalunya que ofereix aquest servei
+                          Som una empresa pionera a Catalunya que ofereix aquest servei.
                         </div>
                       </div>
                     </div>
-                    
                   </Item>
               </Grid>
             </Grid>
           </div>
         </div>
-
         <div style={{display:"flex", alignItems:"center",justifyContent:"space-around",width:"80%"}}>
         <Grid container spacing={2} style={{display:"flex", alignItems:"center", justifyContent:"space-evenly",opacity:opacitat3, transition:"all 0.5s ease-in-out"}}>
               <Grid item xs={12} md={6} xl={6}>
@@ -280,40 +237,46 @@ useEffect(() => {
                 DEMANA HORA
               </div>
             </div>
-
         </div>
-        <div style={{display:"flex", alignItems:"center", width:"80%"}}>
-            <div className='ralla4'></div>
-            <div className='titols'>CANVI DE PARABRISES</div>
-            <div className='ralla5' style={{width:"65%"}}></div>
-        </div>
-        <div className='grid1' style={{width:"80%"}}>
-          <Grid container spacing={2} className="grid1">
-            {imatges.map((imatge, index) => {
-              return (
-              <Grid item xs={12} md={6} xl={4}>
-                <Item className='itemfoto'>
-                    <div className='imatgess' onClick={() => {onClickImatge(index)}}>
-                      <img src={imatge}></img>     
-                    </div>
-                </Item>
-                </Grid>
-              )
-            })}
-          </Grid>
-        </div>
-        <div className={'div-clicked ' + (fotoOberta ? 'obert' : '')} style={{transition:'all 1s ease-in-out'}}>
-          <img src={imatges[imatgeSeleccionada]} className='div-clicked-img'></img>
-          <div className='arrows2'>
 
-          <div className="esquerra_img" onClick={esquerra}><KeyboardArrowLeftIcon htmlColor='#fff' sx={{width: '70px', height: '70px', cursor:"pointer"}}/></div>
-          <div className="dreta_img" onClick={dreta}><KeyboardArrowRightIcon htmlColor='#fff' sx={{width: '70px', height: '70px',cursor:"pointer"}}/></div>
-
+        <div style={{width:"80%", display:"flex", flexDirection:"column", alignItems:"center"}}>
+          <div style={{display:"flex", alignItems:"center", justifyContent:"center",width:"100%"}}>
+              <div className='ralla4' style={{width:"30%"}}></div>
+              <div className='titols'>SISTEMA DE CALIBRATGE</div>
+              <div className='ralla5' style={{width:"30%"}}></div>
           </div>
-          <div className='tencar' onClick={() => {tencarImatge()}}>
-            <CloseIcon className='close' style={{cursor:"pointer"}}></CloseIcon>
-          </div>    
-        </div>   
+          <Grid container spacing={2} style={{display:"flex", alignItems:"center", justifyContent:"space-evenly", marginBottom:"5%", textAlign:"justify"}}>
+              <Grid item xs={12} md={7} xl={7}>
+                  <Item style={{boxShadow:"none", backgroundColor:"transparent"}} className='itemgrid2'>
+                  <div className='divmaquina'>
+                    <img className='imgmaquina' src={maquinatexa}></img>
+                  </div>
+                  </Item>
+              </Grid>
+              <Grid item xs={12} md={7} xl={5}>
+                  <Item style={{boxShadow:"none", backgroundColor:"transparent"}} className='itemgrid2'>
+                    <div className='texttexa'>
+                      <div className='tittles'>TEXA RCCS 3</div>
+                      <p>
+                        Disposem del Sistema de Calibratge TEXA RCCS 3 d’última generació, el qual ens permet
+                        realizar calibracions estàtiques i dinàmiques, assegurant el correcte restabliment dels ADAS i
+                        garantint la seguretat del conductor.
+                      </p>
+                      <p>
+                        RCCS 3 BT amb Monitor és la solució de TEXA per a la configuració de radars, LIDAR, càmeres i sensors a través de la representació digital dels panells.
+                      </p>
+                      <p>
+                        Està equipat amb una pantalla HD de 75 polzades, definició 4K, que ofereix sempre una visualització òptima, complint amb la proporció 1:1 d'acord amb les especificacions de cada fabricant. 
+                      </p>
+                    </div>
+                  </Item>
+              </Grid>
+            </Grid>
+            <div style={{width:"60%", height:"auto"}}>
+                    <iframe width="100%" height="500px" src="https://www.youtube.com/embed/UufzjTgqIM8?si=dG5c87DsxMBvoa4Q" frameborder="0"  allowFullScreen></iframe>
+            </div>
+        </div>
+        
         <div style={{display:"flex", alignItems:"center", justifyContent:"center",width:"80%"}}>
             <div className='ralla4' style={{width:"20%"}}></div>
             <div className='titols'>MÉS EXEMPLES A LES XARXES SOCIALS</div>

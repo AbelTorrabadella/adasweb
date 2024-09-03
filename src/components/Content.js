@@ -95,11 +95,10 @@ function Content(props) {
                         <span className='textinferior' style={{textAlign:"justify"}}>
                             <ul style={{fontWeight:'bold'}} className='llista'>
                                 <li>Després de Reemplaçar el Parabrisa</li>
-                                <li>Després de Reparacions a la Suspensió o Direcció</li>
-                                <li>Després d'un Accident</li>
+                                <li>Després del desmuntatge/muntatge del suport del sensor radar</li>
                                 <li>Després de Reemplaçar o Reparar els Para-xocs</li>
                                 <li>Quan Apareixen Advertències al Panell de Control</li>
-                                <li>Revisió Periòdica</li>
+                                <li>Cops a la zona del radar</li>
                             </ul>
                         </span>
                     </div>
@@ -118,7 +117,8 @@ function Content(props) {
                             <div className='divicona'><img className='icona' src={seguretat}></img></div>
                             <div className='titol'>SEGURETAT</div>
                             <div className='subtext'>
-                                Els sistemes ADAS milloren la seguretat activa del vehicle evitant accidents amb funcions com el manteniment de carril i la frenada automàtica. Una mala calibració pot causar respostes inadequades en situacions de risc.                        </div>
+                                <p>Els sistemes ADAS milloren la seguretat activa del vehicle <b>evitant accidents</b> amb funcions com el manteniment de carril i la frenada automàtica. Una mala calibració pot causar respostes inadequades en situacions de risc.</p>                 
+                            </div>
                         </div>
                         </Item>
                     </Grid>
@@ -129,7 +129,7 @@ function Content(props) {
                             <div className='divicona'><img className='icona' src={fiabilitat}></img></div>
                             <div className='titol'>FIABILITAT</div>
                             <div className='subtext'>
-                                La precisió dels sensors i radars és essencial per detectar obstacles i vehicles amb exactitud, evitant falses alarmes i garantint una resposta adequada en temps real.
+                                <p>La precisió dels sensors i radars és <b>essencial</b> per detectar obstacles i vehicles amb <b>exactitud</b>, evitant falses alarmes i <b>garantint</b> una resposta adequada en temps real.</p>
                             </div>
                         </div>
                         </Item>
@@ -141,7 +141,7 @@ function Content(props) {
                             <div className='divicona'><img className='icona' src={normes}></img></div>
                             <div className='titol'>COMPLIMENT NORMATIU</div>
                             <div className='subtext'>
-                                Les normatives de seguretat viària exigeixen que els sistemes ADAS funcionin correctament. Sensors descalibrats poden implicar sancions i responsabilitats legals en cas d'accident.
+                                <p>Les normatives de <b>seguretat viària</b> exigeixen que els sistemes ADAS funcionin correctament. Sensors descalibrats poden implicar sancions i responsabilitats legals en cas d'accident.</p>
                             </div>
                         </div>
                         </Item>
@@ -153,7 +153,7 @@ function Content(props) {
                             <div className='divicona'><img className='icona' src={durabilitat}></img></div>
                             <div className='titol'>DURABILITAT I EFICIÈNCIA</div>
                             <div className='subtext'>
-                                Una bona calibració assegura una major vida útil dels components del vehicle i contribueix a un consum de combustible més eficient gràcies a sistemes com el control de creuer adaptatiu.
+                                <p>Una bona calibració assegura una <b>major vida útil</b> dels components del vehicle i contribueix a un consum de combustible <b>més eficient</b> gràcies a sistemes com el control de creuer adaptatiu.</p>
                             </div>
                         </div>
                         </Item>

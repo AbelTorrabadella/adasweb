@@ -69,7 +69,7 @@ function Footer(props) {
               </div>
               <div style={{display:"flex", alignItems:"center", justifyContent:"space-between"}}>
                 <PlaceIcon></PlaceIcon>
-                <span className="espaiat2">C/ Llobregat, 19 (Poligon Industrial La Plana), Aviá 08610</span>
+                <span className="espaiat2">C/ Llobregat, 19 (Polígon Industrial La Plana), Avià 08610</span>
               </div>
               <div className="titolsfooter" style={{marginTop:"50px"}}>
                   HORARI
