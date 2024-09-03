@@ -20,7 +20,12 @@ function Treball() {
 
   const navigate = useNavigate();
   const [opacitat3, setOpacitat3] = useState("1")
-  const [opacitat4, setOpacitat4] = useState("0")
+  const [opacitat4, setOpacitat4] = useState("1")
+  const [esquerra, setEsquerra] = useState("-1000px")
+  const [esquerra2, setEsquerra2] = useState("-1000px")
+
+  const [dreta, setDreta] = useState("-1000px")
+  const [dreta2, setDreta2] = useState("-1000px")
 
   const [ampladaralla, setAmpladaralla] = useState("0%")
   const Item = styled(Paper)(({ theme }) => ({
@@ -42,9 +47,22 @@ useEffect(() => {
 }, []);
 
 useEffect(() => {
+  console.log(scrollPosition)
+  if (scrollPosition != 0) {
+    setEsquerra('0px');
+}
   if (scrollPosition > 400) {
       setOpacitat4('1');
 }
+if (scrollPosition > 1500){
+    setDreta("0px")
+
+}
+  if (scrollPosition > 2200){
+    setDreta2("0px")
+
+  }
+
 }, [scrollPosition]);
 
   /*--------------------------------------------------*/
@@ -131,7 +149,7 @@ useEffect(() => {
                 <Item style={{boxShadow:"none", backgroundColor:"transparent"}}>
               <div className='text'>
               <div className='titols' style={{borderBottom:"1px solid black"}}>ELS NOSTRES SERVEIS</div>
-              <div style={{display:"flex", alignItems:"center"}} className='englobat'>
+              <div style={{display:"flex", alignItems:"center", right:esquerra, position:"relative", transition:"all 0.5s ease-in-out"}} className='englobat'>
                 <div className='rodona'>01</div>
                 <div>
                   <div className='tittles'>CALIBRACIONS MULTIMARCA</div>
@@ -226,7 +244,7 @@ useEffect(() => {
             }}>
             </img>
             <div  className='textimatge' style={{zIndex:"1"}}>
-              <span>
+              <span style={{position:"relative", right:dreta, transition:"all 0.5s ease-in-out"}}>
                   EVITA ACCIDENTS
               </span>
               <div className='botohora' onClick={() => {navigate('/contacte');window.scrollTo(0, 0);}}  onMouseEnter={() => {setAmpladaralla("15%")}} onMouseLeave={() => {setAmpladaralla("0%")}}>
@@ -246,7 +264,7 @@ useEffect(() => {
               <div className='ralla5' style={{width:"30%"}}></div>
           </div>
           <Grid container spacing={2} style={{display:"flex", alignItems:"center", justifyContent:"space-evenly", marginBottom:"5%", textAlign:"justify"}}>
-              <Grid item xs={12} md={7} xl={7}>
+              <Grid item xs={12} md={7} xl={7} style={{position:"relative",left:dreta2,transition:"all 0.5s ease-in-out"}}>
                   <Item style={{boxShadow:"none", backgroundColor:"transparent"}} className='itemgrid2'>
                   <div className='divmaquina'>
                     <img className='imgmaquina' src={maquinatexa}></img>
@@ -276,10 +294,9 @@ useEffect(() => {
                     <iframe width="100%" height="500px" src="https://www.youtube.com/embed/UufzjTgqIM8?si=dG5c87DsxMBvoa4Q" frameborder="0"  allowFullScreen></iframe>
             </div>
         </div>
-        
         <div style={{display:"flex", alignItems:"center", justifyContent:"center",width:"80%"}}>
             <div className='ralla4' style={{width:"20%"}}></div>
-            <div className='titols'>MÉS EXEMPLES A LES XARXES SOCIALS</div>
+            <div className='titols'>EXEMPLES A LES XARXES SOCIALS</div>
             <div className='ralla5' style={{width:"20%"}}></div>
         </div>
         <div style={{width:"70%", height:"555px"}}>
