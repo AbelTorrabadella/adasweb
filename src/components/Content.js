@@ -24,6 +24,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 
 function Content(props) {
+
     const slides = [
         {foto: foto1},
         {foto: foto2},
@@ -175,8 +176,8 @@ function Content(props) {
                 <Grid item xs={12} md={4} xl={4} style={{transition:"all 0.5s ease-in-out"}}>
                     <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none"}}>
                         <div className='tipus1'>
-                            <div className='divnegre'>
-                                <img src={camera} style={{opacity:opacitatImg}} className='tipussensors'></img>
+                            <div className='divnegre' style={{backgroundColor:"#1a1a1a1"}}>
+                                <img src={camera} className='tipussensors'></img>
                             </div>
                             <div>
                                 <div className='titolssensors'>CÀMARES</div>
@@ -202,10 +203,10 @@ function Content(props) {
                     </Item>
                 </Grid>
                 <Grid item xs={12} md={4} xl={4}>
-                    <Item style={{ display:"flex", justifyContent:"center",boxShadow:"none"}}>
+                    <Item style={{ display:"flex", justifyContent:"center",boxShadow:"none",transition:"all 0.5s ease-in-out"}}>
                         <div className='tipus1'>
                             <div className='divnegre'>
-                                <img src={radar} className='tipussensors' style={{opacity:opacitatImg, transition:"all 0.5s ease-in-out"}}></img>
+                                <img src={radar} className='tipussensors'></img>
                             </div>
                             <div>
                                 <div className='titolssensors'>RADARS I LIDARS</div>

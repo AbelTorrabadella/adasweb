@@ -28,7 +28,7 @@ function Preguntes() {
         </div>
 
         <Grid container spacing={10}>
-            <Grid item xs={12} md={4} xl={6}>
+            <Grid item xs={12} md={6} xl={6}>
                 <Item style={{boxShadow:"none", backgroundColor:"transparent"}}>
                     <div className='item'>
                         <span className='numero2'>01</span>
@@ -39,7 +39,7 @@ function Preguntes() {
                     </div>
                 </Item>
             </Grid>
-            <Grid item xs={12} md={4} xl={6}>
+            <Grid item xs={12} md={6} xl={6}>
                 <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none", backgroundColor:"transparent"}}>
                     <div className='item'>
                         <span className='numero2'>02</span>
@@ -50,7 +50,7 @@ function Preguntes() {
                     </div>
                 </Item>
             </Grid>
-            <Grid item xs={12} md={4} xl={6}>
+            <Grid item xs={12} md={6} xl={6}>
                 <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none", backgroundColor:"transparent"}}>
                     <div className='item'>
                         <span className='numero2'>03</span>
@@ -61,7 +61,7 @@ function Preguntes() {
                     </div>
                 </Item>
             </Grid>
-            <Grid item xs={12} md={4} xl={6}>
+            <Grid item xs={12} md={6} xl={6}>
                 <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none", backgroundColor:"transparent"}}>
                     <div className='item'>
                         <span className='numero2'>04</span>
