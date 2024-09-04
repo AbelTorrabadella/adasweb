@@ -228,7 +228,7 @@ useEffect(() => {
                   </Item>
               </Grid>
             </Grid>
-            <div style={{width:"80%", height:"auto", marginBottom:"5%"}}>
+            <div style={{width:"100%", height:"auto", marginBottom:"5%"}}>
                     <iframe width="100%" height="500px" src="https://www.youtube.com/embed/UufzjTgqIM8?si=dG5c87DsxMBvoa4Q" frameborder="0"  allowFullScreen></iframe>
             </div>
         </div>
