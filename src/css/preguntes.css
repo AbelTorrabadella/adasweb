@@ -1,6 +1,6 @@
 .preguntes{
     width: 80%;
-    margin-bottom: 10%;
+    margin-bottom: 8%;
 }
 .pregunta{
     font-weight: 700;
@@ -26,4 +26,5 @@
 
 .resposta{
     margin-top: 5%;
+    font-size: 18px;
 }

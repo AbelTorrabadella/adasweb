@@ -108,7 +108,7 @@ function Content(props) {
         </div>
         <div className='primerdiv'>
             <div className='leftside'>
-                <div className='titols' style={{display:"flex", justifyContent:"center", opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>PERQUE CAL CALIBRAR ELS SENSORS I RADARS DEL TEU COTXE?</div>
+                <div className='titols' style={{display:"flex", justifyContent:"center", opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>PERQUÈ CAL CALIBRAR ELS SENSORS I RADARS DEL TEU COTXE?</div>
                 <div style={{display:"flex"}} className='quadrats'>
                 <Grid container spacing={2} style={{display:"flex", justifyContent:"space-around"}}>
                     <Grid item xs={12} md={5} xl={2.5} style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
@@ -179,7 +179,7 @@ function Content(props) {
                                 <img src={camera} style={{opacity:opacitatImg}} className='tipussensors'></img>
                             </div>
                             <div>
-                                <div className='titolssensors'>CÀMERAS</div>
+                                <div className='titolssensors'>CÀMARES</div>
                                 <div>Les càmeres en els cotxes són utilitzades per capturar imatges visuals del seu entorn. Això inclou altres vehicles, senyals de trànsit, vianants i marques vials.</div>
                             </div>
 

@@ -17,15 +17,28 @@ import lka from "../img/tipus/lka.jpg"
 import aebpc from "../img/tipus/aebpc.png"
 import ess from "../img/tipus/ess.jpg"
 function Tipus() {
+    const [ampleralla3, setAmpleralla3] = useState("0%")
+    const [primeravegada3, setPrimeravegada3] = useState(true)
+    const [path, setPath] = useState(window.location.pathname)
+
+    useEffect (() => {
+        if (path === "/tipus"){
+            setAmpleralla3("100%")
+        }
+        else{
+            setAmpleralla3("0%")
+
+        }
+    })
     const Item = styled(Paper)(({ theme }) => ({
 
     }));
   return (
-    <div className="primer2" style={{marginTop:"2%",marginBottom:"3%"}}>
-        <div style={{width:"80%", height:"1px", backgroundColor:"black"}} ></div>
-
-        <div className='titols' style={{justifyContent:"center"}}>TIPUS D'ADAS</div>
-        <div style={{width:"80%", height:"1px", backgroundColor:"black", marginBottom:"5%"}} ></div>
+    <div className="primer2" style={{marginBottom:"3%"}}>
+        <div style={{display:"flex",flexDirection:"column", marginBottom:"4%", marginTop:"2%", textAlign:"justify", width:"80%"}}>
+          <h1>TIPUS DE SISTEMES ADAS</h1>
+          <div style={{height:"2px", width:ampleralla3, backgroundColor:"black", transition:"all 1s ease-in-out"}}></div>
+        </div>
             <div className="tipus">
                 <Grid container spacing={2}>
                     <Grid item xs={12} md={6} xl={4}>
@@ -235,7 +248,7 @@ function Tipus() {
             <div style={{marginTop:"3%"}}>
                 <div style={{width:"100%", height:"1px", backgroundColor:"black"}}></div>
                 <span className='titols'>POTS CONSULTAR MÉS INFORMACIÓ A LA PÀGINA DE LA DGT</span>
-                <div className='link'><a href='https://www.dgt.es/muevete-con-seguridad/conviertete-en-un-buen-conductor/Sistemas-avanzados-de-ayuda-a-la-conduccion-ADAS-/'><div className='boto3'>DGT</div></a></div>
+                <div className='link'><a target=' ' href='https://www.dgt.es/muevete-con-seguridad/conviertete-en-un-buen-conductor/Sistemas-avanzados-de-ayuda-a-la-conduccion-ADAS-/'><div className='boto3'>DGT</div></a></div>
                 <div style={{width:"100%", height:"1px", backgroundColor:"black", marginBottom:"5%"}}></div>
 
             </div>

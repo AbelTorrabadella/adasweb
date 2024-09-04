@@ -104,7 +104,7 @@ function Menu(props) {
       setOpacitatcreu(1)
     }
     if (clicked === false && windowSize < 1000) { //SI NO HE OBERT EL MENU EN UN MOBIL
-      setAlturaMenu("21%")
+      setAlturaMenu("15%")
     }
     if (clicked === true && windowSize < 1000) { //SI HE OBERT EL MENU EN UN MOBIL (ES IGUAL A ON)
       setAlturaMenu("55%")
@@ -195,7 +195,7 @@ function Menu(props) {
                   <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none", backgroundColor:"transparent"}} className='itemgrid'>
                   <div className='encapsulament'>
                     <div className="bottomborder" onClick={() => {navigate('treball'); window.scrollTo(0, 0);}}>
-                      CALIBRACIONS</div>
+                      QUI SOM</div>
                   </div>
                   </Item>
               </Grid>

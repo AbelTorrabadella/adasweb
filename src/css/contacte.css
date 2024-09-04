@@ -58,7 +58,10 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px !important;
     border-radius: 10px;
     padding: 50px;
-
+    transition: all 0.25s ease-in-out;
+}
+.encap1:hover{
+    transform: scale(1.1);
 }
 .encap{
     font-size: 25px;

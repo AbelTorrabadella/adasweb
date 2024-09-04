@@ -49,7 +49,7 @@ function Footer(props) {
 
 
   return (  
-    <div className="mainfooter" style={{marginTop: (formatpetit2 ? "40%" : "5%")}}>
+    <div className="mainfooter" style={{marginTop: (formatpetit2 ? "40%" : "10%")}}>
       <div className="topside">
       <Grid container spacing={2} style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
           <Grid item xs={8} md={2} xl={2} sx={{ height: { md: '400px',xl: '400px'}}}  style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
@@ -88,12 +88,12 @@ function Footer(props) {
               <Item style={{ backgroundColor:"transparent", boxShadow:"none"}}>
                 <div className="divfooter">
                   <div className="titolsfooter">
-                      CONTACTE'NS
+                      CONTACTA'NS
                   </div>
                   <div style={{display:"flex", flexDirection:"column"}} className="spans">
                     <div style={{display:"flex", alignItems:"center", justifyContent:"space-between"}}>
                       <EmailIcon></EmailIcon>
-                      <span className="espaiat2">adas@laplanxiteria.cat</span>
+                      <span className="espaiat2">adas@laplanxisteria.cat</span>
                     </div>
 
                     <div style={{marginTop:"20px"}}>
@@ -115,7 +115,7 @@ function Footer(props) {
 
                       <div className="divicons">
                           <a target=" " href="https://www.instagram.com/laplanxisteria/"><InstagramIcon className="icons"></InstagramIcon></a>
-                          <a target=" " href="https://www.instagram.com/laplanxisteria/"><FacebookIcon className="icons"></FacebookIcon></a>
+                          <a target=" " href="https://www.facebook.com/people/Laplanxisteria/61565143776785/"><FacebookIcon className="icons"></FacebookIcon></a>
                           <a target=" " href="https://es.linkedin.com/company/la-planxisteria"><LinkedInIcon className="icons"></LinkedInIcon></a>
                           <a target=" " href="https://www.youtube.com/channel/UC2Yu0Nz9wsI4-7vJ0xm7uIQ"><YouTubeIcon className="icons"></YouTubeIcon></a>                  
                       </div>

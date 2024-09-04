@@ -12,7 +12,6 @@ import innovacio from "../img/innovacio.png"
 import cupra from "../img/CUPRA.jpg"
 import mercedes2 from "../img/mercedes2.jpg"
 
-import maquinatexa from "../img/maquinatexa.jpg"
 
 import accident from "../img/accident.jpeg"
 import golfverd from "../img/foto2.jpg"
@@ -25,8 +24,8 @@ function Treball() {
   const [esquerra2, setEsquerra2] = useState("-1000px")
 
   const [dreta, setDreta] = useState("-1000px")
-  const [dreta2, setDreta2] = useState("-1000px")
 
+  const [notdreta, setNotdreta] = useState("0")
   const [ampladaralla, setAmpladaralla] = useState("0%")
   const Item = styled(Paper)(({ theme }) => ({
 
@@ -58,20 +57,21 @@ if (scrollPosition > 1500){
     setDreta("0px")
 
 }
-  if (scrollPosition > 2200){
-    setDreta2("0px")
-
-  }
-
 }, [scrollPosition]);
+  useEffect(() =>{
+    if (dreta === "0px"){
+      setNotdreta("1")
+    }
+
+  })
 
   /*--------------------------------------------------*/
   return (
     <div className="treball" style={{ width:"100%", display:"flex", flexDirection:"column", alignItems:"center", marginBottom:"10%"}}>      
       <div className='perque' style={{ width:"80%"}}>
-        <div style={{display:"flex", alignItems:"center", width:"100%"}}>
+        <div style={{display:"flex", alignItems:"center", width:"100%", marginTop:"2%"}}>
             <div className='ralla4'></div>
-            <div className='titols'>PER QUÈ TRIAR-NOS?</div>
+            <h1 >LA PLANXISTERIA</h1>
             <div className='ralla5'></div>
 
         </div>
@@ -149,7 +149,7 @@ if (scrollPosition > 1500){
                 <Item style={{boxShadow:"none", backgroundColor:"transparent"}}>
               <div className='text'>
               <div className='titols' style={{borderBottom:"1px solid black"}}>ELS NOSTRES SERVEIS</div>
-              <div style={{display:"flex", alignItems:"center", right:esquerra, position:"relative", transition:"all 0.5s ease-in-out"}} className='englobat'>
+              <div style={{display:"flex", alignItems:"center", position:"relative", transition:"all 0.5s ease-in-out"}} className='englobat'>
                 <div className='rodona'>01</div>
                 <div>
                   <div className='tittles'>CALIBRACIONS MULTIMARCA</div>
@@ -175,7 +175,7 @@ if (scrollPosition > 1500){
                 <div className='rodona'>04</div>
                 <div>
                   <div className='tittles'>CERTIFICAT DE CALIBRACIÓ</div>
-                  <span>Fem entrega d'un certificat que acredita que la calibració dels radars, càmeres, sensors i lidars del vehicle ha estat realitzada de manera correcta i conforme als estàndards tècnics exigits.</span>
+                  <span>Fem entrega d'un certificat que acredita que la calibració dels radars, càmeres, sensors i lidars del vehicle ha estat realitzada de manera correcta i conforme els estàndards tècnics exigits.</span>
                 </div>
               </div>
                   </div>
@@ -244,7 +244,7 @@ if (scrollPosition > 1500){
             }}>
             </img>
             <div  className='textimatge' style={{zIndex:"1"}}>
-              <span style={{position:"relative", right:dreta, transition:"all 0.5s ease-in-out"}}>
+              <span style={{position:"relative", right:dreta, opacity:notdreta ,transition:"all 0.5s ease-in-out"}}>
                   EVITA ACCIDENTS
               </span>
               <div className='botohora' onClick={() => {navigate('/contacte');window.scrollTo(0, 0);}}  onMouseEnter={() => {setAmpladaralla("15%")}} onMouseLeave={() => {setAmpladaralla("0%")}}>
@@ -254,44 +254,6 @@ if (scrollPosition > 1500){
               }}></div>
                 DEMANA HORA
               </div>
-            </div>
-        </div>
-
-        <div style={{width:"80%", display:"flex", flexDirection:"column", alignItems:"center"}}>
-          <div style={{display:"flex", alignItems:"center", justifyContent:"center",width:"100%"}}>
-              <div className='ralla4' style={{width:"30%"}}></div>
-              <div className='titols'>SISTEMA DE CALIBRATGE</div>
-              <div className='ralla5' style={{width:"30%"}}></div>
-          </div>
-          <Grid container spacing={2} style={{display:"flex", alignItems:"center", justifyContent:"space-evenly", marginBottom:"5%", textAlign:"justify"}}>
-              <Grid item xs={12} md={7} xl={7} style={{position:"relative",left:dreta2,transition:"all 0.5s ease-in-out"}}>
-                  <Item style={{boxShadow:"none", backgroundColor:"transparent"}} className='itemgrid2'>
-                  <div className='divmaquina'>
-                    <img className='imgmaquina' src={maquinatexa}></img>
-                  </div>
-                  </Item>
-              </Grid>
-              <Grid item xs={12} md={7} xl={5}>
-                  <Item style={{boxShadow:"none", backgroundColor:"transparent"}} className='itemgrid2'>
-                    <div className='texttexa'>
-                      <div className='tittles'>TEXA RCCS 3</div>
-                      <p>
-                        Disposem del Sistema de Calibratge TEXA RCCS 3 d’última generació, el qual ens permet
-                        realizar calibracions estàtiques i dinàmiques, assegurant el correcte restabliment dels ADAS i
-                        garantint la seguretat del conductor.
-                      </p>
-                      <p>
-                        RCCS 3 BT amb Monitor és la solució de TEXA per a la configuració de radars, LIDAR, càmeres i sensors a través de la representació digital dels panells.
-                      </p>
-                      <p>
-                        Està equipat amb una pantalla HD de 75 polzades, definició 4K, que ofereix sempre una visualització òptima, complint amb la proporció 1:1 d'acord amb les especificacions de cada fabricant. 
-                      </p>
-                    </div>
-                  </Item>
-              </Grid>
-            </Grid>
-            <div style={{width:"60%", height:"auto"}}>
-                    <iframe width="100%" height="500px" src="https://www.youtube.com/embed/UufzjTgqIM8?si=dG5c87DsxMBvoa4Q" frameborder="0"  allowFullScreen></iframe>
             </div>
         </div>
         <div style={{display:"flex", alignItems:"center", justifyContent:"center",width:"80%"}}>

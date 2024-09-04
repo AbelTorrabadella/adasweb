@@ -46,7 +46,7 @@
     display: flex;
     align-items: center;
     background-color: transparent;
-    justify-content: center;
+    justify-content: space-evenly;
     z-index: 99;
     position: absolute;
     width: 100%;
@@ -59,6 +59,4 @@
     display: flex;
     align-items: center;
     background-color: transparent;
-    margin-left: 5%;
-
 }

@@ -28,8 +28,9 @@ function Menu2(props) {
     <div>
         <div className="petit" style={{display:"flex",flexDirection:"column", opacity:opacitatmenu, width:ampladamenu2, alignItems:"center", transition:"all 0.5s ease-in-out"}}>      
         <div className="nav2" onClick={() => {navigate('treball');  props.setClicked(false); window.scrollTo(0, 0);}}>
-            CALIBRACIONS
+            QUI SOM
         </div>
+        <div className="nav2" onClick={() => {navigate('com'); props.setClicked(false);window.scrollTo(0, 0);}}>COM HO FEM</div>
         <div className="nav2" onClick={() => {navigate('tipus'); props.setClicked(false);window.scrollTo(0, 0);}}>TIPUS D'ADAS</div>
         <div className="nav2" onClick={() => {navigate('preguntes');  props.setClicked(false);window.scrollTo(0, 0);}}>FAQs</div>
         {/*<div className="" onClick={() => {navigate('localitzacio')}}>LOCALITZACIÓ</div>*/}        

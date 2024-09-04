@@ -13,11 +13,14 @@ import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
 import PlaceIcon from '@mui/icons-material/Place';
 import emailjs from '@emailjs/browser';
 import { CheckBox } from "@mui/icons-material";
+import { useNavigate } from 'react-router-dom';
 
 function Contacte(props) {
   const form = useRef();
   const [mobil, setMobil] = useState(false)
   const [opacitatenviat, setOpacitatenviat] = useState("0")
+  const navigate = useNavigate();
+
   const Item = styled(Paper)(({ theme }) => ({
 
   }));
@@ -122,19 +125,19 @@ function Contacte(props) {
                       <EmailIcon style={{height:"60px", width:"60px"}}></EmailIcon>
                       <div className="encap">CORREU</div>
                       <div className="align">
-                        <span>adas@laplanxiteria.cat</span>
+                        <span>adas@laplanxisteria.cat</span>
                       </div>
                     </div>
                   </Item>
               </Grid>
               <Grid item xs={12} md={2} xl={2}>
                   <Item style={{boxShadow:"none"}}>
-                  <div className="encap1">
+                  <div className="encap1" style={{cursor:"pointer"}}><a style={{textDecoration:"none", color:"black"}} target=" " href="https://www.google.com/maps?ll=42.049157,1.88119&z=15&t=m&hl=ca&gl=ES&mapclient=embed&cid=7491227716355476781">
                     <PlaceIcon style={{height:"60px", width:"60px"}}></PlaceIcon>
                     <div className="encap">ADREÇA</div>
                     <div className="align">
-                      <span>C/ Llobregat, 19 (Poligon Industrial La Plana), Aviá 08610</span>
-                    </div>
+                      <span>C/ Llobregat, 19 (Polígon Industrial La Plana), Avià 08610</span>
+                    </div></a>
                   </div>
                   </Item>
               </Grid>
