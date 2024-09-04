@@ -33,7 +33,7 @@ function Preguntes() {
                     <div className='item'>
                         <span className='numero2'>01</span>
                         <div className='pack'>
-                            <div className='pregunta'>Si substitueixo el parabrises del meu cotxe i no desconecto la càmara, cal calibrar-la?</div>
+                            <div className='pregunta'>Si substitueixo el parabrises del meu cotxe i no desconnecto la càmara, cal calibrar-la?</div>
                             <div className='resposta'>Sempre que es substitueix un parabrises el posicionament de la càmara pot variar, per tan si que és obligatori calibrar la càmara.</div>
                         </div>
                     </div>
