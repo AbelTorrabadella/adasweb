@@ -104,7 +104,7 @@ function Menu(props) {
       setOpacitatcreu(1)
     }
     if (clicked === false && windowSize < 1000) { //SI NO HE OBERT EL MENU EN UN MOBIL
-      setAlturaMenu("15%")
+      setAlturaMenu("18%")
     }
     if (clicked === true && windowSize < 1000) { //SI HE OBERT EL MENU EN UN MOBIL (ES IGUAL A ON)
       setAlturaMenu("55%")
