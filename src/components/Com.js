@@ -17,9 +17,7 @@ import segona from "../img/grid1/2.jpg"
 import tercera from "../img/grid1/3.jpg"
 import quarta from "../img/grid1/4.jpg"
 import cinquena from "../img/grid1/5.jpg"
-import sisena from "../img/grid1/6.jpg"
-import setena from "../img/grid1/7.jpg"
-import vuitena from "../img/grid1/8.jpg"
+
 import novena from "../img/grid1/9.jpg"
 
 import CloseIcon from '@mui/icons-material/Close';
@@ -32,7 +30,7 @@ import maquinatexa from "../img/maquinatexa.jpg"
 function Com() {
   const [fotoOberta, setFotoOberta] = useState(false);
   //IMATGES---------------------------------------------------------------
-  const [imatges, setImatges] = useState([primera,segona,tercera,quarta,cinquena,sisena,setena,vuitena,novena])
+  const [imatges, setImatges] = useState([primera,segona,tercera,quarta,cinquena,novena])
   const [imatgeSeleccionada, setImatgeSeleccionada] = useState(0);
   const [ampleralla, setAmpleralla] = useState("0%")
   const [primeravegada2, setPrimeravegada2] = useState(true)
