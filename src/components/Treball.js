@@ -71,7 +71,7 @@ if (scrollPosition > 1500){
       <div className='perque' style={{ width:"80%"}}>
         <div style={{display:"flex", alignItems:"center", width:"100%", marginTop:"2%",marginBottom:"2%"}}>
             <div className='ralla4'></div>
-            <h1 >LA PLANXISTERIA</h1>
+            <h1 style={{minWidth:"280px"}}>LA PLANXISTERIA</h1>
             <div className='ralla5'></div>
 
         </div>
