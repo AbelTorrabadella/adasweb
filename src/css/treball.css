@@ -192,17 +192,6 @@
     display: flex;
 }
 
-.tencar{
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    right: 90px;
-    top: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    fill: white;
-}
 
 .div-clicked-img {
     max-width: 50% !important;
