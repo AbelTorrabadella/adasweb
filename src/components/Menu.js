@@ -107,7 +107,7 @@ function Menu(props) {
 
   useEffect(() => {
     if (clicked === true) {  //SI HE OBERT EL MENU EN UN MOBIL (ES IGUAL A ON)
-      setAlturaMenu("55%")
+      setAlturaMenu("60%")
 
     }
     else{  //SI NO HE OBERT EL MENU EN UN MOBIL
