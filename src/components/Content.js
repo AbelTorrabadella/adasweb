@@ -77,8 +77,8 @@ function Content(props) {
     return (
     <div className="content">
         <div className='adas'>
-        <Grid container spacing={2}>
-            <Grid item xs={12} md={6} xl={6} style={{opacity:opacitat, transition:"all 1s ease-in-out"}}>
+        <Grid container spacing={8}>
+            <Grid item xs={12} md={6} xl={6} className='gridprimer' style={{opacity:opacitat, transition:"all 0.5s ease-in-out"}}>
                 <Item>
                     <div className='primer'>
                         <div className='titols' style={{justifyContent:"center"}}>QUÈ SON ELS SISTEMES ADAS?</div>
@@ -89,7 +89,7 @@ function Content(props) {
                 </Item>
             </Grid>
 
-            <Grid item xs={12} md={6} xl={6}  style={{opacity:opacitat, transition:"all 1s ease-in-out"}}>
+            <Grid item xs={12} md={6} xl={6}  style={{opacity:opacitat, transition:"all 0.5s ease-in-out"}} className='gridprimer'>
                 <Item>
                     <div className='primer'>
                         <div className='titols' style={{justifyContent:"center"}}>QUAN CAL CALIBRAR ELS SISTEMES ADAS?</div>
