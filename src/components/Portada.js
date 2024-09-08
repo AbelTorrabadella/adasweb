@@ -65,8 +65,7 @@ function Portada() {
   return (
     <div className="error" style={{width:"100%", height:"auto"}}>
       <div className="slider">
-        <img style={{display: mobil2 ? "block" : "none"}} src={fotomobil}></img>
-        <video src={video} loop autoPlay={mobil2 ? false:true } muted playsinline fullscreen={false} resizeMode="contain" controls={false} className="video" style={{display: mobil2 ? "none" : "block"}}>       
+        <video src={video} loop autoPlay={mobil2 ? false:true } muted playsinline fullscreen={false} resizeMode="contain" controls={false} className="video">       
         </video>
       </div>
       <div className="textportada" style={{left:dreta, opacity:opacitat}}>
