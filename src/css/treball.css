@@ -193,38 +193,7 @@
 }
 
 
-.div-clicked-img {
-    max-width: 50% !important;
-    height: auto !important;
-    object-fit: contain !important;
-    width: 100% !important;
-}
 
-
-.esquerra_img {
-    fill: white  !important;
-    transition: transform .2s  !important; /* Animation */
-    margin-left: 1%;
-  }
-  
-  .dreta_img {
-    fill: white !important;
-    transition: transform .2s !important; /* Animation */
-    margin-right: 1%;
-  
-  }
-  .arrows2{
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    display: flex;
-    align-items: center;
-  }
 
 
   .divmaquina{
