@@ -7,7 +7,7 @@ import Treball from "./Treball";
 import Preguntes from "./Preguntes"
 import Politica from "./Politica"
 import Com from "./Com"
-
+import Prova from "./Prova"
 const routes = (isPortada) => [
     {
     path: "/",
@@ -20,6 +20,7 @@ const routes = (isPortada) => [
         { path: "/Preguntes", element: <Preguntes />},
         { path: "/Politica", element: <Politica />},
         { path: "/com", element: <Com />},
+        { path: "/Prova", element: <Prova />},
 
     ],
 }

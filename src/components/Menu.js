@@ -91,34 +91,39 @@ function Menu(props) {
     if (windowSize < 1000){
       setVerdader(true)
       setAlturaMenu("55%")
-    }
+      setFormatPetit(true)
 
+    }
     else if (windowSize > 1000){
       setVerdader(false)
       setClicked(false)
-
     }
     else if (clicked === true){
       setVerdader(false)
       setAmpladamenu(true)
       setOpacitatcreu(1)
     }
-    if (clicked === false && windowSize < 1000) { //SI NO HE OBERT EL MENU EN UN MOBIL
+  })
+
+  useEffect(() => {
+    if (clicked === true) {  //SI HE OBERT EL MENU EN UN MOBIL (ES IGUAL A ON)
+      setAlturaMenu("55%")
+
+    }
+    else{  //SI NO HE OBERT EL MENU EN UN MOBIL
       setAlturaMenu("18%")
     }
-    if (clicked === true && windowSize < 1000) { //SI HE OBERT EL MENU EN UN MOBIL (ES IGUAL A ON)
-      setAlturaMenu("55%")
-    }
-    if (props.isPortada === true && windowSize > 1000 && scrollPosition === 0) { //Si es la portada i no he fet scroll en pc
+  })
+
+  useEffect(() => {
+
+    if ((props.isPortada === true && scrollPosition === 0 )&& windowSize > 1000  ) { //Si es la portada i no he fet scroll en pc
       setAlturaMenu("21%")
       setAmpladaLogo("60%")
     }
     if ((props.isPortada === false || scrollPosition > 0) && windowSize > 1000 ) { //si no es portada o he fet scroll en pc
       setAlturaMenu("15%")
       setAmpladaLogo("40%")
-    }
-    if (windowSize < 1000){
-        setFormatPetit(true)
     }
   })
 

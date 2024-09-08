@@ -244,7 +244,7 @@ if (scrollPosition > 1500){
             }}>
             </img>
             <div  className='textimatge' style={{zIndex:"1"}}>
-              <span style={{position:"relative", right:dreta, opacity:notdreta ,transition:"all 0.5s ease-in-out"}}>
+              <span style={{position:"relative", left:dreta, opacity:notdreta ,transition:"all 0.5s ease-in-out"}}>
                   EVITA ACCIDENTS
               </span>
               <div className='botohora' onClick={() => {navigate('/contacte');window.scrollTo(0, 0);}}  onMouseEnter={() => {setAmpladaralla("15%")}} onMouseLeave={() => {setAmpladaralla("0%")}}>

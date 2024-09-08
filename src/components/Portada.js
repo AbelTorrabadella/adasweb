@@ -5,7 +5,7 @@ import Content from "./Content";
 import foto1 from "../img/foto1.png"
 import foto2 from "../img/foto2.jpg"
 import foto3 from "../img/foto3.png"
-import video1 from "../img/video.mp4"
+import video from "../img/video3.mp4"
 import fotomobil from "../img/fotomobil.jpg"
 import { useNavigate } from 'react-router-dom';
 
@@ -21,7 +21,7 @@ function Portada() {
   const [primeravegada, setPrimeravegada] = useState(true)
   const [dreta, setDreta] = useState("-50%")
   const [opacitat, setOpacitat] = useState("0")
-
+  
   const [windowSize, setWindowSize] = useState(window.innerWidth);
   const [mobil2, setMobil2] = useState(false)
 
@@ -66,13 +66,12 @@ function Portada() {
     <div className="error" style={{width:"100%", height:"auto"}}>
       <div className="slider">
         <img style={{display: mobil2 ? "block" : "none"}} src={fotomobil}></img>
-        <video loop autoPlay muted playsinline fullscreen={false} resizeMode="contain" controls={false} className="video" style={{display: mobil2 ? "none" : "block"}}>       
-          <source src={require('../img/video3.mp4')} type="video/mp4" />
+        <video src={video} loop autoPlay muted playsinline fullscreen={false} resizeMode="contain" controls={false} className="video" style={{display: mobil2 ? "none" : "block"}}>       
         </video>
       </div>
       <div className="textportada" style={{left:dreta, opacity:opacitat}}>
         <span className="spantext">CALIBREM SISTEMES ADAS</span>
-      <div style={{display:"flex", justifyContent:"center", alignItems:"center", top:"220px", position:"relative"}}>
+      <div style={{display:"flex", justifyContent:"center", alignItems:"center", top:"100px", position:"relative"}}>
       <div className='botohora2' onClick={() => {navigate('/contacte');window.scrollTo(0, 0);}}  onMouseEnter={() => {setAmpladaralla("15%")}} onMouseLeave={() => {setAmpladaralla("0%")}}>
               <div className='rallaboto2' style={{
                 width:ampladaralla,
