@@ -261,7 +261,7 @@ useEffect(() => {
 
           </div>
           <div className='tencar' onClick={() => {tencarImatge()}}>
-            <CloseIcon className='close' style={{cursor:"pointer"}}></CloseIcon>
+            <CloseIcon className='close2' style={{cursor:"pointer"}}></CloseIcon>
           </div>    
         </div>   
     </div>
