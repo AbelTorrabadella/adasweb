@@ -176,7 +176,7 @@ function Content(props) {
                 <Grid item xs={12} md={4} xl={4} style={{transition:"all 0.5s ease-in-out"}}>
                     <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none"}}>
                         <div className='tipus1'>
-                            <div className='divnegre' style={{backgroundColor:"#1a1a1a1"}}>
+                            <div className='divnegre'>
                                 <img src={camera} className='tipussensors'></img>
                             </div>
                             <div>

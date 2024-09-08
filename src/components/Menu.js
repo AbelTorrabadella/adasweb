@@ -88,13 +88,13 @@ function Menu(props) {
   }, [windowSize]);
 
   useEffect(() => {
-    if (windowSize < 1000){
+    if (windowSize < 1025){
       setVerdader(true)
       setAlturaMenu("55%")
       setFormatPetit(true)
 
     }
-    else if (windowSize > 1000){
+    else if (windowSize > 1025){
       setVerdader(false)
       setClicked(false)
     }
@@ -117,11 +117,11 @@ function Menu(props) {
 
   useEffect(() => {
 
-    if ((props.isPortada === true && scrollPosition === 0 )&& windowSize > 1000  ) { //Si es la portada i no he fet scroll en pc
+    if ((props.isPortada === true && scrollPosition === 0 )&& windowSize > 1025  ) { //Si es la portada i no he fet scroll en pc
       setAlturaMenu("21%")
       setAmpladaLogo("60%")
     }
-    if ((props.isPortada === false || scrollPosition > 0) && windowSize > 1000 ) { //si no es portada o he fet scroll en pc
+    if ((props.isPortada === false || scrollPosition > 0) && windowSize > 1025 ) { //si no es portada o he fet scroll en pc
       setAlturaMenu("15%")
       setAmpladaLogo("40%")
     }

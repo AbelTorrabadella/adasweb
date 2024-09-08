@@ -24,13 +24,13 @@ const PublicLayout = (props) => {
       }, [windowSize]);
     
       useEffect(()=> {
-        if (windowSize < 1000 && props.isPortada === false){ //PANTALLA MOBIL
+        if (windowSize < 1025 && props.isPortada === false){ //PANTALLA MOBIL
           setAlturamenu2("170px")
         }
-        else if (windowSize > 1000 && props.isPortada === true) {
+        else if (windowSize > 1025 && props.isPortada === true) {
           setAlturamenu2("0")
         }
-        else if (windowSize > 1000 && props.isPortada === false) {
+        else if (windowSize > 1025 && props.isPortada === false) {
             setAlturamenu2("220px")
           }
       } )

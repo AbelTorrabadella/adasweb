@@ -38,7 +38,7 @@ function Footer(props) {
   }, []);
   useEffect(() => {
     console.log({windowSize});
-    if (windowSize < 800){
+    if (windowSize < 1024){
       setFormatPetit2(true)
     }
   }, [windowSize]);
@@ -50,8 +50,8 @@ function Footer(props) {
 
   return (  
     <div className="mainfooter" style={{marginTop: (formatpetit2 ? "40%" : "10%")}}>
-      <div className="topside">
-      <Grid container spacing={2} style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
+      <div className="topside" style={{width: formatpetit2 ? "100%": "80%"}}>
+      <Grid container spacing={2} style={{display:"flex", justifyContent:formatpetit2 ? "center":"space-between", alignItems:"center"}}>
           <Grid item xs={8} md={2} xl={2} sx={{ height: { md: '400px',xl: '400px'}}}  style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
               <Item  style={{ backgroundColor:"transparent", boxShadow:"none"}}>
               <div className="leftdiv2">
@@ -59,7 +59,7 @@ function Footer(props) {
               </div>
               </Item>
           </Grid>
-          <div className="ralla2"></div>
+          <div className="ralla2" style={{display: formatpetit2 ? "none": "block"}}></div>
 
           <Grid item xs={8} md={2} xl={2}>
               <Item style={{ backgroundColor:"transparent", boxShadow:"none"}}>
@@ -82,7 +82,7 @@ function Footer(props) {
             </div>
               </Item>
           </Grid>
-          <div className="ralla2"></div>
+          <div className="ralla2" style={{display: formatpetit2 ? "none": "block"}}></div>
 
           <Grid item xs={8} md={2} xl={2}>
               <Item style={{ backgroundColor:"transparent", boxShadow:"none"}}>
@@ -104,7 +104,7 @@ function Footer(props) {
                 </div>
               </Item>
           </Grid>
-          <div className="ralla2"></div>
+          <div className="ralla2" style={{display: formatpetit2 ? "none": "block"}}></div>
 
           <Grid item xs={8} md={2} xl={2}>
               <Item style={{ backgroundColor:"transparent", boxShadow:"none"}}>

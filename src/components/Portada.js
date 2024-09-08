@@ -40,7 +40,7 @@ function Portada() {
   }, [windowSize]);
 
   useEffect(()=> {
-    if (windowSize < 1000){ //PANTALLA MOBIL
+    if (windowSize < 1024){ //PANTALLA MOBIL
       setMobil2(true)
     }
     else {

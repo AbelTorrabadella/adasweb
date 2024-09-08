@@ -42,7 +42,7 @@ function Contacte(props) {
   }, [windowSize]);
 
   useEffect(()=> {
-    if (windowSize < 1000){ //PANTALLA MOBIL
+    if (windowSize < 1025){ //PANTALLA MOBIL
       setMobil(true)
     }
     else {

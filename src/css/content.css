@@ -90,7 +90,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 300px;
 }
 
 .divicona{
@@ -165,6 +164,7 @@
     flex-direction: column;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
+    justify-content: space-around;
 }
 
 .tipus1:hover{
@@ -174,8 +174,7 @@
 .titolssensors{
     font-weight: bold;
     font-size: 25px;
-    margin-top: 20%;
-    margin-bottom: 20%;
+
 }
 
 .ralla3{
