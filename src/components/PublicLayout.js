@@ -27,15 +27,20 @@ const PublicLayout = (props) => {
         if (windowSize < 1025 && props.isPortada === false){ //PANTALLA MOBIL
           setAlturamenu2("220px")
         }
-        else if (windowSize > 1025 && props.isPortada === true) {
+        else if (windowSize < 1025 && props.isPortada === true) {
+          setAlturamenu2("0px")
+        }
+        
+      } )
+      useEffect(()=> {
+        if (windowSize > 1025 && props.isPortada === true) {
           setAlturamenu2("0")
         }
         else if (windowSize > 1025 && props.isPortada === false) {
-            setAlturamenu2("220px")
-          }
+          setAlturamenu2("220px")
+        }
       } )
 
-    
     return (
     <div>
         <Menu isPortada={props.isPortada}/>
