@@ -149,7 +149,7 @@ function Menu(props) {
 
   return (
     <div className="menu1" >
-        <div className="topdeltot" style={{opacity: dalt ? "0" : "1", display: verdader ? "none" : "flex", transition:"all 2s ease-in-out"}}>
+        <div className="topdeltot" style={{opacity: dalt ? "0" : "1", display: verdader ? "none" : "flex", transition:"all 2s ease-in-out",}}>
           <div className="top">
             <AccessAlarmIcon></AccessAlarmIcon>
             <div style={{marginLeft:"20px"}}>Dill a Div: 8:00-13:00 i 15:00-18:00</div>

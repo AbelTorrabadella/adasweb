@@ -24,17 +24,17 @@
 
 .formulari2{
     position: absolute;
-    top: 140px;
     right: 100px;
     display: flex;
     flex-direction: column;
     background: white;
     width: 30%;
     align-items: center;
-    max-height: 800px;
+    /*max-height: 800px;*/
     box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
     border-radius: 5px;
     justify-content: center;
+
 }
 
 .grid3{
@@ -50,7 +50,8 @@
     justify-content: space-evenly;
 }
 .encap1{
-    height: 200px;
+    /*height: 200px;*/
+    min-height: 200px;
     align-items: center;
     display: flex;
     flex-direction: column;

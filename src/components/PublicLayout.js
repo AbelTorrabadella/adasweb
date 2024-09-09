@@ -25,7 +25,7 @@ const PublicLayout = (props) => {
     
       useEffect(()=> {
         if (windowSize < 1025 && props.isPortada === false){ //PANTALLA MOBIL
-          setAlturamenu2("170px")
+          setAlturamenu2("220px")
         }
         else if (windowSize > 1025 && props.isPortada === true) {
           setAlturamenu2("0")
@@ -39,9 +39,8 @@ const PublicLayout = (props) => {
     return (
     <div>
         <Menu isPortada={props.isPortada}/>
-        <div style={{display:"flex",justifyContent:"center" ,position:(props.isPortada ? "" : "relative"), top: alturamenu2}}>
+        <div style={{marginTop: alturamenu2}}></div>
             <Outlet />
-        </div>
         <Footer />
     </div>
     )

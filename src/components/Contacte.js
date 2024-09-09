@@ -85,7 +85,7 @@ function Contacte(props) {
       </div>
         <div className='contacte' style={{display: enviat ? "none" : "flex", alignItems:"center", justifyContent:"center"}} >
             <form ref={form} onSubmit={enviarmail}  className='formulari2'
-            style={{position: (mobil ? "relative" : "absolute"), top: (mobil ? "30px" : "0px"), right: (mobil ? "0" : "150px"), width: (mobil ? "100%" : "30%"), padding:"20px"}}>
+            style={{top: mobil ? "0px": "140px",position: (mobil ? "relative" : "absolute"), marginTop: (mobil ? "50px" : "80px"), right: (mobil ? "0" : "150px"), width: (mobil ? "100%" : "30%"), padding:"20px"}}>
                 <h1>CONTACTE</h1>
                 <div className='div_contacte1'>
                     <input className='inputafegir' style={{marginTop:"5%"}} name="nom" placeholder='Nom i cognoms *' required/>
@@ -107,7 +107,7 @@ function Contacte(props) {
           <span style={{ opacity: opacitatenviat}}>MOTLES GRÀCIES!</span>
         </div>
         <div className="varis">
-            <Grid className="grid3" container spacing={2}>
+            <Grid className="grid3" container spacing={2} style={{marginTop: mobil? "30%": "0%"}}>
               <Grid item xs={12} md={2} xl={2}>
                   <Item style={{boxShadow:"none"}}>
                     <div className="encap1">

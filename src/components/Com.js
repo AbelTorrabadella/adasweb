@@ -95,7 +95,7 @@ useEffect(() => {
 /*-------------------------------------------------------------------- */
   return (
     <div className="com">
-      <div className='explicacions'>
+      <div className='explicacions'  style={{width:"80%"}}>
         <div style={{display:"flex",flexDirection:"column", marginBottom:"5%", marginTop:"2%", textAlign:"justify"}}>
           <h1>COM FEM LES CALIBRACIONS</h1>
           <div style={{height:"2px", width:ampleralla, backgroundColor:"black", transition:"all 1s ease-in-out"}}></div>

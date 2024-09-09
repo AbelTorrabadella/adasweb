@@ -1,6 +1,12 @@
 .preguntes{
     width: 80%;
-    margin-bottom: 8%;
+}
+.mainpreguntes{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
 }
 .pregunta{
     font-weight: 700;

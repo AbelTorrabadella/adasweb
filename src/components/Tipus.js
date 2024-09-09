@@ -34,7 +34,7 @@ function Tipus() {
 
     }));
   return (
-    <div className="primer2" style={{marginBottom:"3%"}}>
+    <div className="primer2">
         <div style={{display:"flex",flexDirection:"column", marginBottom:"4%", marginTop:"2%", textAlign:"justify", width:"80%"}}>
           <h1>TIPUS DE SISTEMES ADAS</h1>
           <div style={{height:"2px", width:ampleralla3, backgroundColor:"black", transition:"all 1s ease-in-out"}}></div>

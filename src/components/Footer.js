@@ -49,7 +49,7 @@ function Footer(props) {
 
 
   return (  
-    <div className="mainfooter" style={{marginTop: (formatpetit2 ? "40%" : "10%")}}>
+    <div className="mainfooter" style={{marginTop: ("10%")}}>
       <div className="topside" style={{width: formatpetit2 ? "100%": "80%"}}>
       <Grid container spacing={2} style={{display:"flex", justifyContent:formatpetit2 ? "center":"space-between", alignItems:"center"}}>
           <Grid item xs={8} md={2} xl={2} sx={{ height: { md: '400px',xl: '400px'}}}  style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
