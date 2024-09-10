@@ -204,7 +204,7 @@ function Menu(props) {
                   </div>
                   </Item>
               </Grid>
-              <Grid item xs={12} md={2} xl={2} sx={{ setPetit: {xs:true, md:false }}} style={{transition:"all 0.25s ease-in-out", fontSize:ralla2}}  className='gridgrid' onMouseEnter={() => {setRalla2(("20px"))}} onMouseLeave={()=> {setRalla2(("18px"))}}>
+              <Grid item xs={12} md={3} xl={2} sx={{ setPetit: {xs:true, md:false }}} style={{transition:"all 0.25s ease-in-out", fontSize:ralla2}}  className='gridgrid' onMouseEnter={() => {setRalla2(("20px"))}} onMouseLeave={()=> {setRalla2(("18px"))}}>
                   <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none", backgroundColor:"transparent"}} className='itemgrid'>
                   <div className='encapsulament'>
                     <div className="bottomborder" onClick={() => {navigate('com'); window.scrollTo(0, 0);}}>
@@ -212,7 +212,7 @@ function Menu(props) {
                   </div>
                   </Item>
               </Grid>
-              <Grid item xs={12} md={2} xl={2} style={{transition:"all 0.25s ease-in-out", fontSize:ralla1}} className='gridgrid' onMouseEnter={() => {setRalla1(("20px"))}} onMouseLeave={()=> {setRalla1(("18px"))}}>
+              <Grid item xs={12} md={3} xl={2} style={{transition:"all 0.25s ease-in-out", fontSize:ralla1}} className='gridgrid' onMouseEnter={() => {setRalla1(("20px"))}} onMouseLeave={()=> {setRalla1(("18px"))}}>
                   <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none", backgroundColor:"transparent"}}>
                   <div className='encapsulament'>
                     <div className="bottomborder" onClick={() => {navigate('tipus');window.scrollTo(0, 0);}}>TIPUS D'ADAS</div>
@@ -220,7 +220,7 @@ function Menu(props) {
               
                   </Item>
               </Grid>
-              <Grid item xs={12} md={2} xl={2} style={{transition:"all 0.25s ease-in-out", fontSize:ralla3}} className='gridgrid' onMouseEnter={() => {setRalla3(("20px"))}} onMouseLeave={()=> {setRalla3(("18px"))}}>
+              <Grid item xs={12} md={1} xl={1} style={{transition:"all 0.25s ease-in-out", fontSize:ralla3}} className='gridgrid' onMouseEnter={() => {setRalla3(("20px"))}} onMouseLeave={()=> {setRalla3(("18px"))}}>
                   <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none", backgroundColor:"transparent"}}>
                   <div className='encapsulament'>
                     <div className="bottomborder" onClick={() => {navigate('preguntes'); window.scrollTo(0, 0);}}>FAQs</div>
