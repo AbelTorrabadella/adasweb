@@ -52,7 +52,7 @@ function Footer(props) {
     <div className="mainfooter" style={{marginTop: ("10%")}}>
       <div className="topside" style={{width: formatpetit2 ? "100%": "80%"}}>
       <Grid container spacing={2} style={{display:"flex", justifyContent:formatpetit2 ? "center":"space-between", alignItems:"center"}}>
-          <Grid item xs={8} md={2} xl={2} sx={{ height: { md: '400px',xl: '400px'}}}  style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
+          <Grid item xs={8} md={3} xl={2} sx={{ height: { md: '400px',xl: '400px'}}}  style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
               <Item  style={{ backgroundColor:"transparent", boxShadow:"none"}}>
               <div className="leftdiv2">
                 <img src={logo} style={{maxWidth:"100%"}}></img>
@@ -61,7 +61,7 @@ function Footer(props) {
           </Grid>
           <div className="ralla2" style={{display: formatpetit2 ? "none": "block"}}></div>
 
-          <Grid item xs={8} md={2} xl={2}>
+          <Grid item xs={8} md={3} xl={2}>
               <Item style={{ backgroundColor:"transparent", boxShadow:"none"}}>
             <div className="divfooter" >
               <div className="titolsfooter" >
@@ -84,7 +84,7 @@ function Footer(props) {
           </Grid>
           <div className="ralla2" style={{display: formatpetit2 ? "none": "block"}}></div>
 
-          <Grid item xs={8} md={2} xl={2}>
+          <Grid item xs={8} md={3} xl={2}>
               <Item style={{ backgroundColor:"transparent", boxShadow:"none"}}>
                 <div className="divfooter">
                   <div className="titolsfooter">
@@ -106,7 +106,7 @@ function Footer(props) {
           </Grid>
           <div className="ralla2" style={{display: formatpetit2 ? "none": "block"}}></div>
 
-          <Grid item xs={8} md={2} xl={2}>
+          <Grid item xs={8} md={3} xl={2}>
               <Item style={{ backgroundColor:"transparent", boxShadow:"none"}}>
                 <div className="divfooter2" > 
                   <div className="titolsfooter">
