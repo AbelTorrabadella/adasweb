@@ -220,7 +220,7 @@ function Menu(props) {
               
                   </Item>
               </Grid>
-              <Grid item xs={12} md={1} xl={1} style={{transition:"all 0.25s ease-in-out", fontSize:ralla3}} className='gridgrid' onMouseEnter={() => {setRalla3(("20px"))}} onMouseLeave={()=> {setRalla3(("18px"))}}>
+              <Grid item xs={12} md={1} xl={2} style={{transition:"all 0.25s ease-in-out", fontSize:ralla3}} className='gridgrid' onMouseEnter={() => {setRalla3(("20px"))}} onMouseLeave={()=> {setRalla3(("18px"))}}>
                   <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none", backgroundColor:"transparent"}}>
                   <div className='encapsulament'>
                     <div className="bottomborder" onClick={() => {navigate('preguntes'); window.scrollTo(0, 0);}}>FAQs</div>
