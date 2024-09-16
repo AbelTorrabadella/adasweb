@@ -26,7 +26,7 @@ function Politica() {
                     d’1 de juliol) i la Llei orgànica 1/2002, de 22 de març, reguladora del dret d’associació (BOE
                     núm. 73, de 26 de març) i els seus estatuts.
                 </p>
-                <p>Els llocs web i adreces URL derivades de www.calibracioadas.cat (en endavant «llocs web») són
+                <p>Els llocs web i adreces URL derivades de www.calibraciosistemesadas.cat (en endavant «llocs web») són
                     responsabilitat de Xavier Gil Pasqual, i la informació que s’hi pugui recaptar s’incorporarà en
                     els seus sistemes de tractament.
                 </p>
@@ -119,7 +119,7 @@ function Politica() {
                     D’acord amb el capítol 3 del RGPD, totes les persones poden exercir els drets d’Accés,
                     Rectificació, Cancel·lació i Oposició (ARCO) amb relació a les seves dades personals, de manera
                     que totes les entitats estan obligades a garantir-ne el compliment. Així, respecte a Xavier Gil
-                    Pasqual, a través del canal d’atenció info@laplanxisteria.cat l’usuari pot exercir qualsevol dels
+                    Pasqual, a través del canal d’atenció xavigil@laplanxisteria.cat l’usuari pot exercir qualsevol dels
                     drets següents (cliqueu-hi a sobre per descarregar-vos el model de sol·licitud):
                 </p>
                 <ul>
