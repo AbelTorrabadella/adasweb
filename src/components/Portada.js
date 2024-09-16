@@ -70,7 +70,7 @@ function Portada() {
         </video>
       </div>
       <div className="textportada" style={{left:dreta, opacity:opacitat}}>
-        <span className="spantext">CALIBREM SISTEMES ADAS</span>
+        <span className="spantext" style={{display:"none"}}>CALIBREM SISTEMES ADAS</span>
       <div style={{display:"flex", justifyContent:"center", alignItems:"center", top:"370px", position:"relative"}}>
       <div className='botohora2' onClick={() => {navigate('/contacte');window.scrollTo(0, 0);}}  onMouseEnter={() => {setAmpladaralla("15%")}} onMouseLeave={() => {setAmpladaralla("0%")}}>
               <div className='rallaboto2' style={{
