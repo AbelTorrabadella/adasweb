@@ -139,7 +139,7 @@ function Content(props) {
                     <Grid item xs={12} md={5} xl={2.5}  style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
                         <Item style={{ backgroundColor:"transparent", boxShadow:"none"}}>
                         <div className='primerquadrat'>
-                            <div className='divicona'><img className='icona' src={normes}></img></div>
+                            <div className='divicona'><img className='icona'></img></div>
                             <div className='titol'>COMPLIMENT NORMATIU</div>
                             <div className='subtext'>
                                 <p>Les normatives de <b>seguretat viària</b> exigeixen que els sistemes ADAS funcionin correctament. Sensors descalibrats poden implicar sancions i responsabilitats legals en cas d'accident.</p>
@@ -151,7 +151,7 @@ function Content(props) {
                     <Grid item xs={12} md={5} xl={2.5}  style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
                         <Item style={{ backgroundColor:"transparent", boxShadow:"none"}}>
                         <div className='primerquadrat'>
-                            <div className='divicona'><img className='icona' src={durabilitat}></img></div>
+                            <div className='divicona'><img className='icona'></img></div>
                             <div className='titol'>DURABILITAT I EFICIÈNCIA</div>
                             <div className='subtext'>
                                 <p>Una bona calibració assegura una <b>major vida útil</b> dels components del vehicle i contribueix a un consum de combustible <b>més eficient</b> gràcies a sistemes com el control de creuer adaptatiu.</p>
