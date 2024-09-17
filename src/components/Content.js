@@ -181,7 +181,7 @@ function Content(props) {
                             </div>
                             <div>
                                 <div className='titolssensors'>CÀMARES</div>
-                                <div>Les càmeres en els cotxes són utilitzades per capturar imatges visuals del seu entorn. Això inclou altres vehicles, senyals de trànsit, vianants i marques vials.</div>
+                                <div>Les càmares en els cotxes són utilitzades per capturar imatges visuals del seu entorn. Això inclou altres vehicles, senyals de trànsit, vianants i marques vials.</div>
                             </div>
 
                         </div>
