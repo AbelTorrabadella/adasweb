@@ -115,7 +115,7 @@ function Content(props) {
                     <Grid item xs={12} md={5} xl={2.5} style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
                         <Item  style={{ backgroundColor:"transparent", boxShadow:"none"}}>
                         <div className='primerquadrat'>
-                            <div className='divicona'><img className='icona' src={seguretat}></img></div>
+                            <div className='divicona'><img className='icona' ></img></div>
                             <div className='titol'>SEGURETAT</div>
                             <div className='subtext'>
                                 <p>Els sistemes ADAS milloren la seguretat activa del vehicle <b>evitant accidents</b> amb funcions com el manteniment de carril i la frenada automàtica. Una mala calibració pot causar respostes inadequades en situacions de risc.</p>                 
@@ -127,7 +127,7 @@ function Content(props) {
                     <Grid item xs={12} md={5} xl={2.5}  style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
                         <Item style={{ backgroundColor:"transparent", boxShadow:"none"}}>
                         <div className='primerquadrat'>
-                            <div className='divicona'><img className='icona' src={fiabilitat}></img></div>
+                            <div className='divicona'><img className='icona' ></img></div>
                             <div className='titol'>FIABILITAT</div>
                             <div className='subtext'>
                                 <p>La precisió dels sensors i radars és <b>essencial</b> per detectar obstacles i vehicles amb <b>exactitud</b>, evitant falses alarmes i <b>garantint</b> una resposta adequada en temps real.</p>
