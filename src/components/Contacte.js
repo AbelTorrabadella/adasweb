@@ -70,12 +70,26 @@ function Contacte(props) {
   };
 
   function IsEmpty() {
-    const consultaField = form.current.querySelector('[name="consulta"]'); //Aixo es per si els camps no estan plens del formulari
-  
-    if (consultaField.value) {
+    const consultaField = form.current.querySelector('[name="consulta"]'); //DECLARO ELS CAMPS
+    const nomField = form.current.querySelector('[name="nom"]');
+    const emailField = form.current.querySelector('[name="email"]');
+    const telField = form.current.querySelector('[name="tel"]');
+    const scalesField = form.current.querySelector('[name="scales"]');
+    
+    let allFieldsFilled = true; //declaro una variable true que em dirà si tots els camps estan plens
+    
+    if (!nomField.value || !emailField.value || !telField.value || !consultaField.value || !scalesField.checked) { // si tots els camps son vuits no enviarà
+      allFieldsFilled = false;
+    }
+    
+    if (allFieldsFilled) {
       setEnviat(true);
-      setOpacitatenviat("1");    
-    } 
+      setOpacitatenviat("1");
+    }
+    else {
+      setEnviat(false);
+      setOpacitatenviat("0");
+    }
   }
   return (
     <div className="maincontacte">
@@ -101,7 +115,7 @@ function Contacte(props) {
             </form>
         </div>
         <div className="enviatok" style={{display: enviat ? "flex" : "none",
-          position: (mobil ? "relative" : "absolute"), top: (mobil ? "30px" : "0px"), 
+          position: (mobil ? "relative" : "absolute"), top: (mobil ? "30px" : "200px"), 
           right: (mobil ? "0" : "100px"), width: (mobil ? "100%" : "30%"), padding:"20px"}}>
           <span style={{ opacity: opacitatenviat}}>LA CONSULTA S'HA ENVIAT CORRECTAMENT!</span>
           <span style={{ opacity: opacitatenviat}}>MOTLES GRÀCIES!</span>
