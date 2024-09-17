@@ -66,7 +66,7 @@ function Portada() {
     <div className="error" style={{width:"100%", height:"auto"}}>
       <div className="slider">
         <img style={{display: mobil2 ? "block" : "none"}} src={fotomobil}></img>
-        <video src={video}  autoPlay={mobil2 ? false : true } muted className="video" style={{display: mobil2 ? "none" : "block"}}></video>
+        <video src={video} loop autoPlay={mobil2 ? false : true } muted className="video" style={{display: mobil2 ? "none" : "block"}}></video>
       </div>
       <div className="textportada" style={{left:dreta, opacity:opacitat}}>
         <span className="spantext" style={{display:"none"}}>CALIBREM SISTEMES ADAS</span>

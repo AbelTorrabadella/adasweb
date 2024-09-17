@@ -124,7 +124,7 @@ function Content(props) {
                         </Item>
                     </Grid>
 
-                    <Grid item xs={12} md={5} xl={2.5}  style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
+                    <Grid item xs={12} md={5} xl={2.5}  style={{transition:"all 0.5s ease-in-out"}}>
                         <Item style={{ backgroundColor:"transparent", boxShadow:"none"}}>
                         <div className='primerquadrat'>
                             <div className='divicona'><img className='icona' src={fiabilitat}></img></div>
@@ -136,7 +136,7 @@ function Content(props) {
                         </Item>
                     </Grid>
                     
-                    <Grid item xs={12} md={5} xl={2.5}  style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
+                    <Grid item xs={12} md={5} xl={2.5}  style={{transition:"all 0.5s ease-in-out"}}>
                         <Item style={{ backgroundColor:"transparent", boxShadow:"none"}}>
                         <div className='primerquadrat'>
                             <div className='divicona'><img className='icona' src={normes}></img></div>
@@ -148,7 +148,7 @@ function Content(props) {
                         </Item>
                     </Grid>
                     
-                    <Grid item xs={12} md={5} xl={2.5}  style={{opacity:opacitat1, transition:"all 0.5s ease-in-out"}}>
+                    <Grid item xs={12} md={5} xl={2.5}  style={{transition:"all 0.5s ease-in-out"}}>
                         <Item style={{ backgroundColor:"transparent", boxShadow:"none"}}>
                         <div className='primerquadrat'>
                             <div className='divicona'><img className='icona' src={durabilitat}></img></div>
