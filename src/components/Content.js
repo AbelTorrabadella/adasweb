@@ -23,6 +23,10 @@ import HandshakeOutlinedIcon from '@mui/icons-material/HandshakeOutlined';
 import TaskOutlinedIcon from '@mui/icons-material/TaskOutlined';
 import SettingsSuggestOutlinedIcon from '@mui/icons-material/SettingsSuggestOutlined';
 
+import CameraIcon from '@mui/icons-material/Camera';
+import TrackChangesIcon from '@mui/icons-material/TrackChanges';
+import SensorsIcon from '@mui/icons-material/Sensors';
+
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
@@ -182,7 +186,7 @@ function Content(props) {
                     <Item style={{ display:"flex", justifyContent:"center", boxShadow:"none"}}>
                         <div className='tipus1'>
                             <div className='divnegre'>
-                                <img src={camera} className='tipussensors'></img>
+                                <CameraIcon className='tipussensors'></CameraIcon>
                             </div>
                             <div>
                                 <div className='titolssensors'>CÀMARES</div>
@@ -198,7 +202,8 @@ function Content(props) {
                     <Item style={{ display:"flex", justifyContent:"center",boxShadow:"none"}}>
                         <div className='tipus1' style={{background:"#1a1a1a"}}>
                             <div className='divnegre' style={{backgroundColor:"white"}}>
-                                <img src={sensor} style={{filter:"none",opacity:opacitatImg, transition:"all 0.5s ease-in-out"}} className='tipussensors' ></img>
+                                <SensorsIcon className='tipussensors' style={{fill:"white"}}></SensorsIcon>
+
                             </div>
                             <div style={{color:"white"}}>
                                 <div className='titolssensors'>SENSORS</div>
@@ -211,7 +216,7 @@ function Content(props) {
                     <Item style={{ display:"flex", justifyContent:"center",boxShadow:"none",transition:"all 0.5s ease-in-out"}}>
                         <div className='tipus1'>
                             <div className='divnegre'>
-                                <img src={radar} className='tipussensors'></img>
+                                <TrackChangesIcon className='tipussensors'></TrackChangesIcon>
                             </div>
                             <div>
                                 <div className='titolssensors'>RADARS I LIDARS</div>
