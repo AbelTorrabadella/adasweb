@@ -126,7 +126,7 @@ function Footer(props) {
       </div>
       <div className="ralla" style={{width:"80%", transition: "all 2s ease-in-out"}}></div>
       <div className="botside">
-          Desenvolupat per Abel Torrabadella Vila
+          <p>Desenvolupat per <b>Abel Torrabadella Vila</b></p>
       </div>
     </div>
   );
