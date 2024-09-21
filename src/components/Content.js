@@ -4,19 +4,11 @@ import Slider2 from './Slider2';
 import foto1 from "../img/foto1.png"
 import foto2 from "../img/foto2.jpg"
 import foto3 from "../img/foto3.png"
-import durabilitat from "../img/durabilitat.png"
-import seguretat from "../img/escut.png"
-import fiabilitat from "../img/fiabilitat.png"
-import normes from "../img/normas.png"
-import mercedes from "../img/mercedes.png"
-import golf from "../img/golf.jpeg"
+
 import byd from "../img/byd.png"
 import Slider from './Slider';
 import three from "../img/360.jpg"
 import carretera from "../img/carretera.jpeg"
-import sensor from "../img/sensor.png"
-import camera from "../img/camera.png"
-import radar from "../img/radar.png"
 
 import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined';
 import HandshakeOutlinedIcon from '@mui/icons-material/HandshakeOutlined';

@@ -4,7 +4,6 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import mercedes from '../img/mercedes.png'
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import EmailIcon from '@mui/icons-material/Email';
