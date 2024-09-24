@@ -75,7 +75,7 @@ function Preguntes() {
                 </Grid>
             </Grid>
             <div className='pregunta' style={{marginTop:"8%"}}>
-                <p>PER QUALSEVOL CONSULTA ENS POTS ESCRIURE A <a href='/contacte' target=' '>CONTACTE</a>, ESTEM A LA TEVA DISPOSICIÓ!</p>
+                <p>PER QUALSEVOL CONSULTA ENS POTS ESCRIURE <b>CONTACTE</b>, ESTEM A LA TEVA DISPOSICIÓ!</p>
             </div>
         </div>
     </div>
